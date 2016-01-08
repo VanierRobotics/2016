@@ -21,6 +21,4 @@ class item extends Controller
         $this->view->render('edit/item');
     }
 
-
-
 }

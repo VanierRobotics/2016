@@ -3,6 +3,7 @@
 <head>
     <title><?= (isset($this->title)) ? $this->title : 'NO TITLE'; ?></title>
 
+    <script src="C:\Users\Web Captain\Downloads\mrdoob-three.js-r73-3-g1f968fe\mrdoob-three.js-1f968fe\build/three.min.js"></script>
     <!-- Jquery-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
@@ -19,10 +20,11 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/cerulean/bootstrap.min.css" rel="stylesheet"-->
     <link href="<?=URL?>/css/bootstrap.min.css" rel="stylesheet">
     <script type="text/javascript" src="<?=URL?>js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?=URL?>js/three.min.js"></script>
     <!--script type="text/javascript" src="<?=URL?>js/npm.js"></script-->
 
     <!--script type="text/javascript" src="<?=URL?>js/lightbox.js"></script-->
-    <script type="text/javascript" src="<?=URL?>js/likes.js"></script>
+    <!--script type="text/javascript" src="<?=URL?>js/likes.js"></script-->
     <link rel="stylesheet" href="<?=URL?>css/default.css"/>
     <!-- Custom CSS (READ THIS PLEASE, TNX : http://verekia.com/less-css/dont-read-less-css-tutorial-highly-addictive)-->
 
