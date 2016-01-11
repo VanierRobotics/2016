@@ -3,7 +3,7 @@
 
 <nav class="navbar navbar-default">
     <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
+        <!-- Brand and toggle get grouped for better mobile display TODO: REDO NAVBAR @Evan take Mass's nav -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                     data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -79,5 +79,4 @@
 </div>
 
 <body>
-
-<div id="content">
+    <div id="content">

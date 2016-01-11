@@ -2,7 +2,7 @@
 
 /**
  * Class Model
- * Base model class
+ * Base threejs class
  */
 class Model
 {
@@ -11,7 +11,7 @@ class Model
 
     /**
      * Model constructor.
-     * All models come with a db connection because is good to have....
+     * All json come with a db connection because is good to have....
      */
     public function __construct()
     {
