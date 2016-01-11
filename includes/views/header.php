@@ -17,6 +17,7 @@
     <script type="text/javascript" src="<?=URL?>js/three.min.js"></script>
     <script type="text/javascript" src="<?=URL?>js/threejs/renderers/Projector.js"></script>
     <script type="text/javascript" src="<?=URL?>js/threejs/renderers/canvasrenderer.js"></script>
+    <script type="text/javascript" src="<?=URL?>js/threejs/controls/orbitcontrols.js"></script>
     <script type="text/javascript" src="<?=URL?>js/threejs/extras/helpers/gridhelper.js"></script>
     <script type="text/javascript" src="<?=URL?>js/threejs/extras/helpers/axishelper.js"></script>
     <script type="text/javascript" src="<?=URL?>js/threejs/extras/helpers/camerahelper.js"></script>
