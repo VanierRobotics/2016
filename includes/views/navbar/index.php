@@ -79,5 +79,4 @@
 </div>
 
 <body>
-
-<div id="content">
+    <div id="content">
