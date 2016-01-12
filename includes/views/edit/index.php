@@ -31,9 +31,14 @@
 		}?>
 			</div>
 		</div>
+		<br/>
+
 	</div>
+	<?php echo 'make add button that shows edit view'?>
 	<div class="row">
 		<div class="col-md-8 col-md-offset-1">
+
+
 	<?php
 			echo '
 			<form action="'.URL.'edit" method="post">
@@ -43,7 +48,7 @@
 				</br>
 				<div class="form-group">
   <label for="page">Select list:</label>
-  <select class="form-control" id="page">
+  <select class="form-control" name="page" id="page">
     <option>Home</option>
     <option>Game</option>
     <option>Vanier</option>

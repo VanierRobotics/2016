@@ -21,6 +21,8 @@ class item extends Controller
         }
         $this->view->st =  $this->model->getSomething();
         $this->view->render('edit/item');
+
+
     }
 
 }
