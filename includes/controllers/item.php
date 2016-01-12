@@ -16,7 +16,9 @@ class item extends Controller
     {
         $this->view->title = 'Edit Text';
         $this->model = $this->getModel("Text");
-        $this->model->getThing();
+        if(isset($_POST['textID'])) {
+           $this->view->onething = $this->model->getThing();
+        }
         $this->view->st =  $this->model->getSomething();
         $this->view->render('edit/item');
     }
