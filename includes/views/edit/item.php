@@ -6,14 +6,14 @@
     <div class="form-group">
         <label for="page">Select list:</label>
         <select class="form-control" name="page" id="page">
-            <option <?php echo (isset($this->onething) && strcmp($this->onething['page'],'HOME') ? '' :'selected'); ?>>Home</option>
-            <option <?php echo (isset($this->onething) && strcmp($this->onething['page'],'GAME') ? '' :'selected'); ?>>Game</option>
-            <option <?php echo (isset($this->onething) && strcmp($this->onething['page'],'VANIER') ? '' :'selected'); ?>>Vanier</option>
-            <option <?php echo (isset($this->onething) && strcmp($this->onething['page'],'ROBOT') ? '' :'selected'); ?>>Robot</option>
-            <option <?php echo (isset($this->onething) && strcmp($this->onething['page'],'JOURNALISM') ? '' :'selected'); ?>>Journalism</option>
-            <option <?php echo (isset($this->onething) && strcmp($this->onething['page'],'TUTORIAL') ? '' :'selected'); ?>>Tutorial</option>
-            <option <?php echo (isset($this->onething) && strcmp($this->onething['page'],'SPONSORS') ? '' :'selected'); ?>>Sponsors</option>
-            <option <?php echo (isset($this->onething) && strcmp($this->onething['page'],'GALLERY') ? '' :'selected'); ?>>Gallery</option>
+            <option <?= (isset($this->onething) && strcmp($this->onething['page'],'HOME') == 0 ? 'selected' :''); ?>>Home</option>
+            <option <?= (isset($this->onething) && strcmp($this->onething['page'],'GAME') == 0 ? 'selected' :''); ?>>Game</option>
+            <option <?= (isset($this->onething) && strcmp($this->onething['page'],'VANIER') == 0 ? 'selected' :''); ?>>Vanier</option>
+            <option <?= (isset($this->onething) && strcmp($this->onething['page'],'ROBOT') == 0 ? 'selected' :''); ?>>Robot</option>
+            <option <?= (isset($this->onething) && strcmp($this->onething['page'],'JOURNALISM') == 0 ? 'selected' :''); ?>>Journalism</option>
+            <option <?= (isset($this->onething) && strcmp($this->onething['page'],'TUTORIAL') == 0 ? 'selected' :''); ?>>Tutorial</option>
+            <option <?= (isset($this->onething) && strcmp($this->onething['page'],'SPONSORS') == 0 ? 'selected' :''); ?>>Sponsors</option>
+            <option <?= (isset($this->onething) && strcmp($this->onething['page'],'GALLERY') == 0? 'selected':''); ?>>Gallery</option>
         </select>
     </div>
 
@@ -22,17 +22,16 @@
         <label for="lang">Select Language:</label>
         <select class="form-control" name="lang" id="lang">
             <option value="en">English</option>
-            <option value="fr" <?php echo (isset($this->onething) && strcmp($this->onething['lang'],'FR') ? '' :'selected'); ?> >French</option>
+            <option value="fr" <?php echo (isset($this->onething) && strcmp($this->onething['lang'],'FR') == 0 ? 'selected':''); ?> >French</option>
         </select>
     </div>
-
-
-<div class="input-group">
+    <div class="input-group">
 				  <span class="input-group-addon" id="basic-addon1">Enter Title</span>
-				  <input required name="class" type="text" class="form-control" aria-describedby="basic-addon1" value="<?= $this->onething['class'] ?>">
-				</div>
+				  <input required name="class" type="text" class="form-control" aria-describedby="basic-addon1"
+                         value="<?= (isset($this->onething) ?  $this->onething['class'] : ''); ?>">
+    </div>
 				</br>Enter Text: </br>
-				<textarea id="text" required name="text" rows="10" cols="50" style="resize: none;"><?= $this->onething['text'] ?>
+				<textarea id="text" required name="text" rows="10" cols="50" style="resize: none;"><?php echo (isset( $this->onething['text'])) ? $this->onething['text'] :'' ; ?>
                 </textarea>
 				<?php
 					$_SESSION["start_time"] = time();
@@ -55,7 +54,7 @@
 
 		<form action="<?= URL ?>edit" method="post">
 
-			<br><input  class="btn" type="submit" value="Cancel (Go Back)">
+				<br><br><input type="submit" value="Cancel (Go Back)">
 
 		</form>
 		<form action="<?= URL ?>edit" method="post">
