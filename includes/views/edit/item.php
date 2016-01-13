@@ -54,13 +54,13 @@
 
 		<form action="<?= URL ?>edit" method="post">
 
-				<br><br><input type="submit" value="Cancel (Go Back)">
+				<br><br><input  class="btn" type="submit" value="Cancel (Go Back)">
 
 		</form>
 		<form action="<?= URL ?>edit" method="post">
 
 			<br><input  class="btn" type="submit" value="Delete Item (because why not)">
-			<input  class="btn" type="hidden" name="delete" value ="<?= $this->onething['id']?>">
+			<input  class="btn" type="hidden" name="delete" value ="<?= (isset($this->onething) ?  $this->onething['id'] : '');?>">
 
 
 		</form>

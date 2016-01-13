@@ -19,15 +19,19 @@ class cms extends Controller
         $this->model = $this->getModel("Cms");
         //Get values from url and set them here...I don't remember how
         //Hardcoded for now
-        $language = 'En';
+        $language = 'EN';
         $Page = 'ROBOT';
        $textsArray =  $this->model->getTexts($language,$Page);
         $sending = '';
         foreach ( $textsArray as $array ) {
-            $sending += '<h1>'.$array['class'].'</h1></br>';
-            $sending += '<p> '.$array['text' ].'</p> </br>';
+            $sending = $sending.'<h1>'.$array['class'].'</h1></br>';
+            $sending = $sending.'<p> '.$array['text' ].'</p> </br>';
         }
-        $this->view->texts = $sending;
+        if( strcmp($sending,'') !== 0)
+            $this->view->texts = $sending;
+        else
+            $this->view->texts = '<h2>Sorry. There is nothing like that in the database</h2>';
+
         $this->view->render('edit/texts');
     }
 
