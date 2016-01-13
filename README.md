@@ -1,5 +1,7 @@
 # Vanier Robotics 2016 Website
 
+## IMPORTANT : When working on a new feature please branch from master then start coding.
+
 ## Local xampp setup:
 1. Open xampp control panel
 2. Open apache config (httpd.conf)
