@@ -20,7 +20,7 @@
     <script type="text/javascript" src="<?=URL?>js/extra_renderers/Projector.js"></script>
     <script type="text/javascript" src="<?=URL?>js/extra_renderers/canvasrenderer.js"></script>
     <script type="text/javascript" src="<?=URL?>js/extra_shaders/SkyShader.js"></script>
-    <script type="text/javascript" src="<?=URL?>js/extra_loaders/colladaloader.js"></script>
+    <script type="text/javascript" src="<?=URL?>js/extra_loaders/colladaloader2.js"></script>
     <script type="text/javascript" src="<?=URL?>js/extra_controls/orbitcontrols.js"></script>
     <script type="text/javascript" src="<?=URL?>js/extras/helpers/gridhelper.js"></script>
     <script type="text/javascript" src="<?=URL?>js/extras/helpers/axishelper.js"></script>
