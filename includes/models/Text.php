@@ -20,11 +20,16 @@ class _Text extends Model
         return $this->db->select('SELECT * FROM  translate');
     }
 
+    public function getPageId()
+    {
+      return $this->db->select('SELECT id FROM translate WHERE parent = :parent AND name = :name', [':parent' => 0, ":name" => $_POST['name']])[0];
+    }
+
     public function DBManip()
     {
       // set parent
       if(isset($_POST['parent']))
-        $parent = intvalue($_POST['parent'])
+        $parent = intvalue(getPageId())
       else
         $parent = 0;
 
