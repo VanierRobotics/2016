@@ -12,51 +12,34 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="<?php echo URL; ?>home">BanaBook</a>
+            <a class="navbar-brand" href="<?php echo URL; ?>home">Vanier Robotics</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="<?php echo URL . (Session::get('my_user') ? 'timeline' : 'home'); ?>">Home <span
+                <li><a href="<?=URL?>langselect?l=en">English/French <span
                             class="sr-only">(current)</span></a></li>
             </ul>
-
-            <!-- USER UID IN SEARCH TO NAVIGATE AND TEST WALLS-->
-            <?php if (Session::get('my_user')) : ?>
-                <form class="navbar-form navbar-left" role="search" action="<?= URL ?>search/index" method="get">
-                    <div class="form-group">
-                        <input type="text" name="search" class="form-control" required placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-            <?php endif; ?>
+            <?php if (!Session::get('my_user')) { ?>
+            <ul class="nav navbar-nav navbar-left">
+                    <li><a href="<?= URL ?>vanier/">Vanier</a></li>
+                    <li><a href="<?= URL ?>robot/">Robot</a></li>
+                    <li><a href="<?= URL ?>game/">Game</a></li>
+                    <li><a href="<?= URL ?>team/">Team</a></li>
+                    <li><a href="<?= URL ?>journalism/">Journalism</a></li>
+                    <li><a href="<?= URL ?>gallery/">Gallery</a></li>
+                    <li><a href="<?= URL ?>tutorial/">Tutorial</a></li>
+                    <li><a href="<?= URL ?>sponsors/">Sponsors</a></li>
+            </ul>
+            <?php } ?>
             <ul class="nav navbar-nav navbar-right">
                 <!-- Change corner link to either logout or login depending on session-->
                 <?php if (Session::get('my_user')) { ?>
-                    <li><a href="<?= URL ?>inbox">My Messages</a></li>
-                    <li><a href="<?= URL ?>wall">My Wall</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                           style="padding: 13px; float: none"
-                           aria-expanded="false">Hi <?= Session::get('my_user')['first_name'] ?> <img
-                                class="media-object thumbnail"
-                                src="<?= URL . Session::get('my_user')['profile_picture'] ?>" alt="..."
-                                style="margin-bottom: auto;display: inline-block; height: 3em">
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="<?= URL ?>wall">My Wall</a></li>
-                            <li><a href="<?= URL ?>friends">My Friends</a></li>
-                            <li><a href="<?= URL ?>groups">My Groups</a></li>
-                            <li><a href="<?= URL ?>pokes">My Pokes</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="<?= URL ?>wall/edit">Manage Account</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="<?= URL ?>auth/doLogout">Logout</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="<?= URL ?>edit/">View Content</a></li>
+                    <li><a href="<?= URL ?>edit/item">Add new text</a></li>
+                    <li><a href="<?= URL ?>auth/doLogout">Logout</a></li>
                 <?php } else { ?>
-                    <li><a href="<?= URL ?>register/page/1">Sign Up</a></li>
                     <li><a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
                 <?php } ?>
             </ul>
@@ -72,7 +55,7 @@
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <?php
-            //require_once PATH . 'views/auth/index.php'
+            require_once PATH . 'views/auth/index.php'
             ?>
         </div>
     </div>
