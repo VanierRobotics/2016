@@ -2,10 +2,6 @@
 
 class _Text extends Model
 {
-
-    /**
-     * _text constructor.
-     */
     public function __construct()
     {
         parent::__construct();
@@ -22,21 +18,36 @@ class _Text extends Model
 
     public function getSomething(){
         return $this->db->select('SELECT * FROM  translate');
-}
-
-
-
-    public function doThings(){
-        if(isset($_POST['insert'])){
-            $this->db->insert('translate', ['page' => $_POST['page'], 'class' => $_POST['class'], 'lang' => $_POST['lang'], 'text' => $_POST['text'] ] );
-        }
-        elseif(isset($_POST['delete'])){
-            $this->db->delete('translate', 'id ='.$_POST['delete']);
-        }
-        elseif(isset($_POST['update'])){
-            $this->db->update('translate', ['page' => $_POST['page'], 'class' => $_POST['class'], 'text' => $_POST['text'], 'lang' => $_POST['lang'] ],' id = ' . $_POST['itemID'] );
-        }
-
     }
 
+    public function DBManip()
+    {
+      // set parent
+      if(isset($_POST['parent']))
+        $parent = intvalue($_POST['parent'])
+      else
+        $parent = 0;
+
+      if(isset($_POST['insert']))
+        addEntry($parent);
+      elseif(isset($_POST['delete']))
+        removeEntry();
+      elseif(isset($_POST['update']))
+        updateEntry();
+    }
+
+    public function addEntry()
+    {
+      $this->db>insert('translate', array('name' => $_POST['name'], 'language' => $_POST['language'], 'text' => $_POST['text']));
+    }
+
+    public function removeEntry()
+    {
+      $this->db->delete('translate', 'id ='.$_POST['delete']);
+    }
+
+    public function updateEntry()
+    {
+        $this->db->update('translate', ['name' => $_POST['name'], 'text' => $_POST['text'], 'language' => $_POST['language'] ],'id = ' . $_POST['id'] );
+    }
 }
