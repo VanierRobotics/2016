@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
     <title><?= (isset($this->title)) ? $this->title : 'NO TITLE'; ?></title>
@@ -14,24 +14,18 @@
     <!-- THREE.js (aka 3D WebGL things) -->
     <script type="text/javascript" src="<?=URL?>js/dat.gui.min.js"></script>
     <script type="text/javascript" src="<?=URL?>js/stats.min.js"></script>
-    <script type="text/javascript" src="<?=URL?>js/three.min.js"></script>
-    <script type="text/javascript" src="<?=URL?>js/threejs/renderers/Projector.js"></script>
-    <script type="text/javascript" src="<?=URL?>js/threejs/renderers/canvasrenderer.js"></script>
-    <script type="text/javascript" src="<?=URL?>js/threejs/controls/orbitcontrols.js"></script>
-    <script type="text/javascript" src="<?=URL?>js/threejs/extras/helpers/gridhelper.js"></script>
-    <script type="text/javascript" src="<?=URL?>js/threejs/extras/helpers/axishelper.js"></script>
-    <script type="text/javascript" src="<?=URL?>js/threejs/extras/helpers/camerahelper.js"></script>
-    <script type="text/javascript">
-        function webglAvailable() {
-            try {
-                var canvas = document.createElement( 'canvas' );
-                return !!( window.WebGLRenderingContext && (
-                    canvas.getContext( 'webgl' ) ||
-                    canvas.getContext('experimental-webgl')) );
-            } catch ( e ) { return false; }
-        }
-    </script>
-    <script type="text/javascript" src="<?=URL?>js/threex.gui.js"></script>
+    <script type="text/javascript" src="<?=URL?>js/three.js"></script>
+
+    <script type="text/javascript" src="<?=URL?>js/bana.lib.js"></script>
+    <script type="text/javascript" src="<?=URL?>js/extra_renderers/Projector.js"></script>
+    <script type="text/javascript" src="<?=URL?>js/extra_renderers/canvasrenderer.js"></script>
+    <script type="text/javascript" src="<?=URL?>js/extra_shaders/SkyShader.js"></script>
+    <script type="text/javascript" src="<?=URL?>js/extra_loaders/colladaloader.js"></script>
+    <script type="text/javascript" src="<?=URL?>js/extra_controls/orbitcontrols.js"></script>
+    <script type="text/javascript" src="<?=URL?>js/extras/helpers/gridhelper.js"></script>
+    <script type="text/javascript" src="<?=URL?>js/extras/helpers/axishelper.js"></script>
+    <script type="text/javascript" src="<?=URL?>js/extras/helpers/camerahelper.js"></script>
+
     <script type="text/javascript" src="<?=URL?>js/threex.windowresize.js"></script>
     <script type="text/javascript" src="<?=URL?>js/threex.universalloader.js"></script>
     <script type="text/javascript" src="<?=URL?>js/threex.objcoord.js"></script>

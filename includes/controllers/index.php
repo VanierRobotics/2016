@@ -11,11 +11,16 @@ class index extends Controller
     public function __construct()
     {
         parent::__construct();
+        $this->view->title = 'Vanier Robotics 2016';
     }
 
     public function index()
     {
-        $this->view->title = 'Home';
+        $this->view->render('home/index');
+    }
+
+    public function map()
+    {
         $this->view->render('home/index');
     }
 

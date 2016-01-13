@@ -10,7 +10,7 @@ class Bootstrap
     private $_controller = null;
 
     private $_controllerPath = '../includes/controllers/'; // Always include trailing slash
-    private $_modelPath = '../includes/json/'; // Always include trailing slash
+    private $_modelPath = '../includes/models/'; // Always include trailing slash
     private $_defaultFile = 'index.php';
 
     /**

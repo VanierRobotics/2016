@@ -15,7 +15,7 @@ abstract class Controller
         $this->view = new View();
     }
 
-    /*
+
     public static function checkMember()
     {
         if (!Session::get('my_user')) {
@@ -33,8 +33,9 @@ abstract class Controller
 
     /**
      * Generate random string used mainly on file uploads
-     * @param $random_string_length well pretty obvious
-     * /
+     * @param $random_string_length int well pretty obvious
+     * @return string random string
+     */
     public static function randomGen($random_string_length)
     {
         $characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -43,7 +44,7 @@ abstract class Controller
             $string .= $characters[mt_rand(0, strlen($characters) - 1)];
         }
         return $string;
-    } */
+    }
 
     /**
      * the one method that every controller should have
