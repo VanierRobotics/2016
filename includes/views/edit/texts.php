@@ -3,8 +3,8 @@
 <style type="text/css">
     .bgimg {
         background-image: url('<?=URL?>images/scrool2.png');
-        background-size: contain;
         background-attachment: scroll;
+        background-repeat: repeat-y;
     }
     
     .idontknow {
