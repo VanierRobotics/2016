@@ -15,6 +15,7 @@
     <script type="text/javascript" src="<?=URL?>js/dat.gui.min.js"></script>
     <script type="text/javascript" src="<?=URL?>js/stats.min.js"></script>
     <script type="text/javascript" src="<?=URL?>js/three.js"></script>
+    <script type="text/javascript" src="<?=URL?>js/tween.js"></script>
 
     <script type="text/javascript" src="<?=URL?>js/bana.lib.js"></script>
     <script type="text/javascript" src="<?=URL?>js/extra_renderers/Projector.js"></script>

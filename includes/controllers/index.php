@@ -24,4 +24,8 @@ class index extends Controller
         $this->view->render('home/index');
     }
 
+    public function evanshit(){
+        $this->view->render('home/evanscorner');
+    }
+
 }

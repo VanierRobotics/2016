@@ -4,7 +4,7 @@
     var sky, sunSphere, castle, desk;
 
     BANA.GFX(5,2000000);
-    BANA.GFX.addHelpers(1000);
+    BANA.GFX.addHelpers(5);
     initControls();
     initModels();
     BANA.GFX.newSky();
