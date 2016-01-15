@@ -6,12 +6,13 @@
  *
  * Basic home class to test mvc
  */
-class index extends Controller
+class en extends Controller
 {
     public function __construct()
     {
         parent::__construct();
         $this->view->title = 'Vanier Robotics 2016';
+        $this->view->language = 'en';
     }
 
     public function index()

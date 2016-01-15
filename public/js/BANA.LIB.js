@@ -21,13 +21,17 @@ BANA.GFX = function(near, far){
     //Renderer Setup
     var canvas = document.createElement( 'canvas' );
     if ( BANA.checkForWebGL() )
-        renderer = new THREE.WebGLRenderer();
+        renderer = new THREE.WebGLRenderer({antialias:true});
     else
         renderer = new THREE.CanvasRenderer();
     renderer.setPixelRatio( window.devicePixelRatio );
     renderer.setSize( window.innerWidth, window.innerHeight-150 );
-    document.body.appendChild( renderer.domElement );
+    renderer.setClearColor(new THREE.Color(0xd3d3d3));//BACKGROUND
+    //SHADOW
+    //renderer.shadowMap.enabled = true;
+    //renderer.shadowMapSoft = true;
 
+    document.body.appendChild( renderer.domElement );
     //CAMERA Setup
     camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, near, far );
     camera.position.set( 0, 100, 2000 );
@@ -96,13 +100,13 @@ BANA.GFX.render =    function() {
     requestAnimationFrame( BANA.GFX.render );
     try{
         onTick();
+        TWEEN.update();
     } catch (Exception) {
         console.log('Something doesn\'t exist yet. Don\'t worry, should be fine now...');
     }
     BANA.GUI.stats.update();
     renderer.render(scene, camera);
-}
-
+};
 
 //////////////////////////////////////////////////////////////
 //     Magical dynamic js variable control with dat.gui     //
@@ -162,8 +166,8 @@ BANA.GUI.addControls = function(controls,options) {
     for (x in controls) {
         BANA.GUI._Controls[controls[x]] = original;
         if (folder_name === false)
-            BANA.GUI._gui.add(BANA.GUI._Controls, controls[x], min, max);
+            BANA.GUI._gui.add(BANA.GUI._Controls, controls[x], min, max);//.onChange( guiUpdate );
         else
-            folder.add(BANA.GUI._Controls, controls[x], min, max);
+            folder.add(BANA.GUI._Controls, controls[x], min, max);//.onChange( guiUpdate );
     }
 };
