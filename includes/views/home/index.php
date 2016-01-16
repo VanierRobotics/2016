@@ -3,7 +3,7 @@
     var camera, controls, scene, renderer, loader;
     var sky, sunSphere, castle, desk, anim;
 
-    BANA.GFX(5,2000000);
+    BANA.GFX(100,2000000);
     BANA.GFX.addHelpers(1000);
     initControls();
     initModels();
@@ -42,7 +42,7 @@
     //Imports and sets up the models required for this page
     function initModels() {
         var plane = new THREE.Mesh(new THREE.PlaneGeometry(10000,10000,10000),new THREE.MeshLambertMaterial({color:0xffffff}));
-        plane.receiveShadow = true;
+        //plane.receiveShadow = true;
         plane.rotation.x = -.5*Math.PI;
         scene.add(plane);
 
@@ -54,13 +54,13 @@
             castle.scale.set(25,25,25);
             castle.translateZ(-1100);
             castle.translateX(300);
-        });*/
-
+        });
+         */
         loader = new THREEx.UniversalLoader();
         loader.load('<?=URL?>blend_models/SchoolGOT.dae',                     function(object3d) {
             scene.add(object3d);
-            object3d.castShadow = true;
-            object3d.recieveShadow = true;
+            //object3d.castShadow = true;
+            //object3d.recieveShadow = true;
             object3d.scale.set(5,5,5);
         });
     }
@@ -106,9 +106,9 @@
          BANA.GUI.addControls(['PositionCameraX', 'PositionCameraY', 'PositionCameraZ'] ,
          { folder_name:"Camera Position", min:-50.0, original:30.0, max:50.0 });
          BANA.GUI.addControls(['RotateCameraX', 'RotateCameraY', 'RotateCameraZ'] ,{ folder_name:"Rotate Camera", min:0.0} );
-         */
+         *
         BANA.GUI.addControls(['PositionCastleX', 'PositionCastleY', 'PositionCastleZ'] ,
             { folder_name:"Castle Position", min:-50.0, max:50.0 });
-        BANA.GUI.addControls(['RotateCastleX', 'RotateCastleY', 'RotateCastleZ'] ,{ folder_name:"Rotate Castle" , min:-5, max:5 } );
+        BANA.GUI.addControls(['RotateCastleX', 'RotateCastleY', 'RotateCastleZ'] ,{ folder_name:"Rotate Castle" , min:-5, max:5 } );*/
     }
 </script>

@@ -29,7 +29,7 @@ class _Text extends Model
     {
       // set parent
       if(isset($_POST['parent']))
-        $parent = intvalue(getPageId())
+        $parent = intvalue(getPageId());
       else
         $parent = 0;
 

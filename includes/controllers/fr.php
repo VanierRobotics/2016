@@ -20,13 +20,36 @@ class fr extends Controller
         $this->view->render('home/index');
     }
 
-    public function k()
-    {
-        $this->view->render('home/backupAnim');
+    public function robot(){
+        $this->view->render('robot/index');
     }
 
-    public function evanshit(){
-        $this->view->render('home/evanscorner');
+    public function jeu(){
+        $this->view->render('game/index');
+    }
+
+    public function vanier(){
+        $this->view->render('vanier/index');
+    }
+
+    public function journalisme($subpage){
+        $this->view->render('journalism/index');
+    }
+
+    public function equipe(){
+        $this->view->render('team/index');
+    }
+
+    public function gallerie(){
+        $this->view->render('gallery/index');
+    }
+
+    public function tutoriel(){
+        $this->view->render('tutorial/index');
+    }
+
+    public function partenaires(){
+        $this->view->render('sponsors/index');
     }
 
 }

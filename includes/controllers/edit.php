@@ -22,6 +22,15 @@ class edit extends Controller
         $this->view->render('edit/index');
     }
 
-
+    public function item()
+    {
+        $this->view->title = 'Edit Text';
+        $this->model = $this->getModel("Text");
+        if(isset($_POST['textID'])) {
+            $this->view->onething = $this->model->getThing();
+        }
+        $this->view->st =  $this->model->getSomething();
+        $this->view->render('edit/item');
+    }
 
 }

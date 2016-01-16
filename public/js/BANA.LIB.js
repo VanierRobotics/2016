@@ -21,7 +21,7 @@ BANA.GFX = function(near, far){
     //Renderer Setup
     var canvas = document.createElement( 'canvas' );
     if ( BANA.checkForWebGL() )
-        renderer = new THREE.WebGLRenderer({antialias:true});
+        renderer = new THREE.WebGLRenderer(); //{antialias:true}
     else
         renderer = new THREE.CanvasRenderer();
     renderer.setPixelRatio( window.devicePixelRatio );
@@ -40,6 +40,9 @@ BANA.GFX = function(near, far){
 
     //SCENE SETUP
     scene = new THREE.Scene();
+
+    if (BANA.GUI.stats === undefined)
+        addStats();
 };
 
 BANA.GFX.newSky =  function() {
@@ -54,6 +57,7 @@ BANA.GFX.newSky =  function() {
     );
     sunSphere.position.y = - 700000;
     sunSphere.visible = false;
+    //sunSphere.castShadow = true;
     scene.add( sunSphere );
 
     sky.uniforms.turbidity.value = 1;
@@ -115,7 +119,8 @@ BANA.GFX.render =    function() {
 BANA.GUI	= function()
 {
     BANA.GUI._gui = new dat.GUI();
-    addStats();
+    if (BANA.GUI.stats === undefined)
+        addStats();
 };
 
 //Array of dat.gui folders
@@ -145,7 +150,7 @@ function addFolder(text) {
         var folder = BANA.GUI._gui;
     }
     return folder;
-}
+};
 
 //Method to add a variable amount of controls
 BANA.GUI.addControls = function(controls,options) {
