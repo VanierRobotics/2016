@@ -30,15 +30,15 @@ class index extends Controller
 
     public function cms(){
         $this->model = $this->getModel('Book');
-        if(isset($_GET['total'])) {
-            echo $this->model->getTotalPages('en','VANIER');
-        } elseif(isset($_GET['book'])) {
-            $this->model->getBook('en','VANIER');
-            foreach($st as $row) {
-                printf($row[text]);
+        if(isset($_GET['lang'],$_GET['book'])) {
+            if(isset($_GET['page'])) {
+                $st = $this->model->getBookPage($_GET['lang'],$_GET['book'],$_GET['page']);
+                if(isset($st[0]))
+                    echo json_encode($st[0]['content']);
+            } else {
+                echo $this->model->getTotalPages($_GET['lang'],$_GET['book']);
             }
         }
-
     }
 
 }

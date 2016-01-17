@@ -1,22 +1,31 @@
 <div id="canvas">
     <div id="book-zoom">
-        <div class="my-book">
-            <div depth="3" class="hard"> <div class="side"></div> </div>
-            <div depth="3" class="hard front-side"> <div class="depth"></div> </div>
-            <div class="own-size"></div>
-            <div class="own-size even"></div>
-            <div class="beforelast hard fixed back-side"> <div class="depth"></div> </div>
-            <div class="last hard"></div>
+        <div class="sj-book">
+            <div depth="5" class="hard"> <div class="side"></div> </div>
+            <div depth="5" class="hard front-side"> <div class="depth"></div> </div>
+            <!--div class="own-size"></div>
+            <div class="own-size even"></div-->
+            <div class="hard fixed back-side pBeforeLast"> <div class="depth"></div> </div>
+            <div class="hard pLast"></div>
         </div>
     </div>
 </div>
 
 <script type="text/javascript">
     var totalPages = 0;
+    $(document).ready(function () {
+        $.ajax({url: 'http://devbana.tk/index/cms?lang=<?=$this->language?>&book=<?=$this->book?>&total=X'}).done(function (response) {
+            totalPages = parseInt(response)+6;
+            $('.pBeforeLast').addClass('p' + (totalPages - 1));
+            $('.pLast').addClass('p' + totalPages);
+        });
+    });
+</script>
 
+<script type="text/javascript">
     function loadApp() {
 
-        var flipbook = $('.my-book');
+        var flipbook = $('.sj-book');
 
         // Check if the CSS was already loaded
 
@@ -26,51 +35,48 @@
         }
 
         // URIs
+
         Hash.on('^page\/([0-9]*)$', {
             yep: function(path, parts) {
 
                 var page = parts[1];
 
                 if (page!==undefined) {
-                    if (flipbook.turn('is'))
-                        flipbook.turn('page', page);
+                    if ($('.sj-book').turn('is'))
+                        $('.sj-book').turn('page', page);
                 }
 
             },
             nop: function(path) {
 
-                if (flipbook.turn('is'))
-                    flipbook.turn('page', 1);
+                if ($('.sj-book').turn('is'))
+                    $('.sj-book').turn('page', 1);
             }
         });
 
         // Arrows
+
         $(document).keydown(function(e){
+
             var previous = 37, next = 39;
 
             switch (e.keyCode) {
                 case previous:
 
-                    flipbook.turn('previous');
+                    $('.sj-book').turn('previous');
 
                     break;
                 case next:
 
-                    flipbook.turn('next');
+                    $('.sj-book').turn('next');
 
                     break;
             }
 
         });
 
-        $.ajax({url: 'http://devbana.tk/index/cms?total=X'}).
-        done(function(response) {
-            totalPages = response;
-        });
-        $('.beforelast').addClass('p'+totalPages-1);
-        $('.last').addClass('p'+totalPages);
-
         // Flipbook
+
         flipbook.bind(($.isTouch) ? 'touchend' : 'click', zoomHandle);
 
         flipbook.turn({
@@ -113,14 +119,14 @@
                     updateDepth(book, page);
 
                     if (page>=2)
-                        $('.my-book .p2').addClass('fixed');
+                        $('.sj-book .p2').addClass('fixed');
                     else
-                        $('.my-book .p2').removeClass('fixed');
+                        $('.sj-book .p2').removeClass('fixed');
 
                     if (page<book.turn('pages'))
-                        $('.my-book .beforelast').addClass('fixed');
+                        $('.sj-book .pBeforeLast').addClass('fixed');
                     else
-                        $('.my-book .beforelast').removeClass('fixed');
+                        $('.sj-book .pBeforeLast').removeClass('fixed');
 
                     Hash.go('page/'+page).update();
 
@@ -136,7 +142,12 @@
 
                     updateDepth(book);
 
+
                     book.turn('center');
+
+                },
+
+                start: function(e, pageObj) {
 
                 },
 
@@ -145,12 +156,18 @@
                     var book = $(this);
 
                     updateDepth(book);
-                },
 
+                    setTimeout(function() {
+
+                    }, 1);
+
+                    moveBar(false);
+
+                },
                 missing: function (e, pages) {
 
                     for (var i = 0; i < pages.length; i++) {
-                        addPage(pages[i], $(this));
+                        addPage("<?=$this->language?>","<?=$this->book?>",pages[i], $(this) );
                     }
 
                 }
@@ -168,72 +185,13 @@
     $('#canvas').css({visibility: 'hidden'});
 
     // Load turn.js
+
     yepnope({
         test : Modernizr.csstransforms,
         yep: ['<?=URL?>js/turnjs/turn.min.js'],
         nope: ['<?=URL?>js/turnjs/turn.html4.min.js', '<?=URL?>css/jquery.ui.html4.css', '<?=URL?>css/book-html4.css'],
         both: ['<?=URL?>js/book-ajax.js', '<?=URL?>css/jquery.ui.css', '<?=URL?>css/book.css'],
-        complete: loadApp
+        complete: $(document).ready(loadApp)
     });
 
 </script>
-<style>
-    .my-book .p1,
-    .my-book .p2,
-    .my-book .p3,
-    .my-book .beforelast,
-    .my-book .last{
-        background-color:white;
-        background-image:url(../../images/book-covers.jpg) !important;
-    }
-
-
-    .my-book .p1 .side{
-        width:5px;
-        height:600px;
-        position:absolute;
-        top:0;
-        left:475px;
-
-        background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #bbb), color-stop(0.5,  #ddd), color-stop(1,  #bbb));
-        background-image:-webkit-linear-gradient(left, #bbb, #ddd, #bbb);
-        background-image:-moz-linear-gradient(left, #bbb, #ddd, #bbb);
-        background-image:-ms-linear-gradient(left, #bbb, #ddd, #bbb);
-        background-image:-o-linear-gradient(left, #bbb, #ddd, #bbb);
-        background-image:linear-gradient(left, #bbb, #ddd, #bbb);
-
-        -webkit-transform:rotateY(-90deg);
-        -moz-transform:rotateY(-90deg);
-        -o-transform:rotateY(-90deg);
-        -ms-transform:rotateY(-90deg);
-        transform:rotateY(-90deg);
-
-        -webkit-transform-origin:top right;
-        -moz-transform-origin:top right;
-        -o-transform-origin:top right;
-        -ms-transform-origin:top right;
-        transform-origin:top right;
-        z-index:100000;
-
-    }
-
-    .my-book .p1{
-        background-position:0 0;
-    }
-
-    .my-book .p2{
-        background-position:-480px 0 !important;
-    }
-
-    .my-book .p3{
-        background-position:-1920px 0 !important;
-    }
-
-    .my-book .beforelast{
-        background-position:-960px 0 !important;
-    }
-
-    .my-book .last{
-        background-position:-1440px 0 !important;
-    }
-</style>

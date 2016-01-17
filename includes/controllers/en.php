@@ -13,6 +13,7 @@ class en extends Controller
         parent::__construct();
         $this->view->title = 'Vanier Robotics 2016';
         $this->view->language = 'en';
+        $this->view->book = 'vanier';
     }
 
     public function k()
