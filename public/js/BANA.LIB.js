@@ -1,7 +1,7 @@
 // A little JS library with things that would otherwise be redundant.
 
 /** @namespace */
-var BANA		= BANA		|| {};
+var BANA	= BANA 		|| {};
 
 //////////////////////////////////////////////////////////////
 //       Methods related to construction of 3D Scenes       //
@@ -24,8 +24,8 @@ BANA.GFX = function(near, far){
         renderer = new THREE.WebGLRenderer(); //{antialias:true}
     else
         renderer = new THREE.CanvasRenderer();
-    renderer.setPixelRatio( window.devicePixelRatio );
-    renderer.setSize( window.innerWidth, window.innerHeight-150 );
+    renderer.setPixelRatio( window.pixelRatio );
+    renderer.setSize( window.innerWidth, window.innerHeight-124 );
     renderer.setClearColor(new THREE.Color(0xd3d3d3));//BACKGROUND
     //SHADOW
     //renderer.shadowMap.enabled = true;
@@ -37,7 +37,7 @@ BANA.GFX = function(near, far){
     camera.position.set( 0, 100, 2000 );
     //camera.setLens(20);
     THREEx.WindowResize(renderer, camera); //Small plugin for automatic resize
-
+    domEvents   = new THREEx.DomEvents(camera, renderer.domElement);//Small plugin for running domEvents on models
     //SCENE SETUP
     scene = new THREE.Scene();
 
@@ -138,7 +138,7 @@ function addStats()
     BANA.GUI.stats.domElement.style.left = '0px';
     BANA.GUI.stats.domElement.style.top = '90px';
     document.body.appendChild( BANA.GUI.stats.domElement );
-};
+}
 
 //Adds a folder to organize dat.gui ....
 function addFolder(text) {
@@ -147,10 +147,10 @@ function addFolder(text) {
         BANA.GUI._Folders.push(folder);
         folder.open();
     } catch (Exception) {
-        var folder = BANA.GUI._gui;
+        folder = BANA.GUI._gui;
     }
     return folder;
-};
+}
 
 //Method to add a variable amount of controls
 BANA.GUI.addControls = function(controls,options) {

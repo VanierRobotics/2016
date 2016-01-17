@@ -1,13 +1,15 @@
 <script>
     //var container;
-    var camera, controls, scene, renderer, loader;
+    var camera, controls, scene, renderer, loader, domEvents;
     var sky, sunSphere, castle, desk, anim;
 
     BANA.GFX(100,2000000);
+    //scene.fog = new THREE.FogExp2( 0x8fbad6, 0.00055);
     BANA.GFX.addHelpers(1000);
     initControls();
     initModels();
-    initAnimations();
+
+    //initAnimations();
     BANA.GFX.newSky();
     BANA.GFX.render();
 
@@ -60,8 +62,11 @@
         loader.load('<?=URL?>blend_models/SchoolGOT.dae',                     function(object3d) {
             scene.add(object3d);
             //object3d.castShadow = true;
-            //object3d.recieveShadow = true;
+            object3d.recieveShadow = true;
             object3d.scale.set(5,5,5);
+            domEvents.addEventListener(object3d, 'click', function(event){
+                initAnimations();
+            }, false);
         });
     }
 
@@ -75,11 +80,10 @@
                 camera.position.z = this.z;
                 camera.lookAt(new THREE.Vector3(0,0,0));
                // camera.rotation.z = this.rotation * (Math.PI/180);
-
             }).start();
 
        var anim2  = new TWEEN.Tween({x: -4, y: 100, z: 2800})
-            .to({ x: -4, y: 4000, z:  2800} ,3000)
+            .to({ x: -4, y: 4000, z:  2800} ,2000)
             .easing(TWEEN.Easing.Linear.None)
             .onUpdate( function(){
                 camera.position.x = this.x;
@@ -89,9 +93,9 @@
                 // camera.rotation.z = this.rotation * (Math.PI/180);
 
             });
-        anim.onComplete(function() {
-            anim2.start();
-        });
+        anim.onComplete(function() {anim2.start();});
+
+        anim2.onComplete(function() {window.open('vanier/', '_self');});
        /* camera.position.x = -4;
         camera.position.y = 80;
         camera.position.z = 2550;

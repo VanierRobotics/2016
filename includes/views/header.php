@@ -1,12 +1,22 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
     <title><?= (isset($this->title)) ? $this->title : 'NO TITLE'; ?></title>
 
     <!-- Jquery-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="<?=URL?>js/modernizr.2.5.3.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <!--script type="text/javascript" src="<?=URL?>js/jquery-ui-1.8.20.custom.min.js"></script-->
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/sunny/jquery-ui.css"/>
+
+    <!-- Turn.js (aka HTML5 book thingny)-->
+    <!--script type="text/javascript" src="<?=URL?>js/jquery.mousewheel.min.js"></script-->
+    <script type="text/javascript" src="<?=URL?>js/turnjs/hash.js"></script>
 
     <!-- Font awesome-->
     <link rel="stylesheet" href="<?=URL?>css/font-awesome.min.css">
@@ -25,13 +35,13 @@
     <script type="text/javascript" src="<?=URL?>js/extra_controls/orbitcontrols.js"></script>
     <script type="text/javascript" src="<?=URL?>js/extras/helpers/gridhelper.js"></script>
     <script type="text/javascript" src="<?=URL?>js/extras/helpers/axishelper.js"></script>
-    <script type="text/javascript" src="<?=URL?>js/extras/helpers/camerahelper.js"></script>
+    <!--script type="text/javascript" src="<?=URL?>js/extras/helpers/camerahelper.js"></script-->
 
     <script type="text/javascript" src="<?=URL?>js/threex.windowresize.js"></script>
     <script type="text/javascript" src="<?=URL?>js/threex.universalloader.js"></script>
     <script type="text/javascript" src="<?=URL?>js/threex.objcoord.js"></script>
     <script type="text/javascript" src="<?=URL?>js/threex.domevents.js"></script>
-    <script type="text/javascript" src="<?=URL?>js/threex.linkify.js"></script>
+    <!--script type="text/javascript" src="<?=URL?>js/threex.linkify.js"></script-->
 
     <!-- Bootstrap Original-->
     <!--link rel="stylesheet" href="<-?=URL?>/css/bootstrap.min.css" /-->

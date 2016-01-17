@@ -12,8 +12,6 @@
 // ```windowResize.stop()```
 // # Code
 
-//
-
 /** @namespace */
 var THREEx	= THREEx 		|| {};
 
@@ -21,12 +19,12 @@ var THREEx	= THREEx 		|| {};
  * Update renderer and camera when the window is resized
  *
  * @param {Object} renderer the renderer to update
- * @param {Object} Camera the camera to update
+ * @param {Object} camera the camera to update
  */
 THREEx.WindowResize	= function(renderer, camera){
     var callback	= function(){
         // notify the renderer of the size change
-        renderer.setSize( window.innerWidth, window.innerHeight-150 );
+        renderer.setSize( window.innerWidth, window.innerHeight-124 );
 
         // update the camera
         camera.aspect	= window.innerWidth / window.innerHeight;

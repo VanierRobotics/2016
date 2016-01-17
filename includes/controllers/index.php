@@ -28,4 +28,17 @@ class index extends Controller
         $this->view->render('home/evanscorner');
     }
 
+    public function cms(){
+        $this->model = $this->getModel('Book');
+        if(isset($_GET['total'])) {
+            echo $this->model->getTotalPages('en','VANIER');
+        } elseif(isset($_GET['book'])) {
+            $this->model->getBook('en','VANIER');
+            foreach($st as $row) {
+                printf($row[text]);
+            }
+        }
+
+    }
+
 }

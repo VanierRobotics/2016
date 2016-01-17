@@ -18,8 +18,8 @@ class _Cms extends Model
         parent::__construct();
     }
 
-    public function getTexts($language,$Page){
-        return $this->db->select("SELECT class, text FROM translate WHERE lang = :lang AND page = :page", [':lang' => $language,':page' => $Page]);
+    public function getText($language,$page){
+        return $this->db->select("SELECT class, text FROM translate WHERE lang = :lang AND page = :page", [':lang' => $language,':page' => $page]);
     }
 
 }
