@@ -1,35 +1,44 @@
 <form action="<?= URL.'edit'?>" method="post">
 
-    </br>Enter new Text
-
     </br>
-    <div class="form-group">
-        <label for="page">Select list:</label>
+    <div class="col-md-offset-2 col-md-8 form-group">
+        <label for="page">Select from page list:</label>
         <select class="form-control" name="page" id="page">
-            <option <?= (isset($this->onething) && strcmp($this->onething['page'],'HOME') == 0 ? 'selected' :''); ?>>Home</option>
-            <option <?= (isset($this->onething) && strcmp($this->onething['page'],'GAME') == 0 ? 'selected' :''); ?>>Game</option>
-            <option <?= (isset($this->onething) && strcmp($this->onething['page'],'VANIER') == 0 ? 'selected' :''); ?>>Vanier</option>
-            <option <?= (isset($this->onething) && strcmp($this->onething['page'],'ROBOT') == 0 ? 'selected' :''); ?>>Robot</option>
-            <option <?= (isset($this->onething) && strcmp($this->onething['page'],'JOURNALISM') == 0 ? 'selected' :''); ?>>Journalism</option>
-            <option <?= (isset($this->onething) && strcmp($this->onething['page'],'TUTORIAL') == 0 ? 'selected' :''); ?>>Tutorial</option>
-            <option <?= (isset($this->onething) && strcmp($this->onething['page'],'SPONSORS') == 0 ? 'selected' :''); ?>>Sponsors</option>
-            <option <?= (isset($this->onething) && strcmp($this->onething['page'],'GALLERY') == 0? 'selected':''); ?>>Gallery</option>
+            <option <?= (isset($this->onething) && strcmp($this->onething['book'],'HOME') == 0 ? 'selected' :''); ?>>Home</option>
+            <option <?= (isset($this->onething) && strcmp($this->onething['book'],'GAME') == 0 ? 'selected' :''); ?>>Game</option>
+            <option <?= (isset($this->onething) && strcmp($this->onething['book'],'VANIER') == 0 ? 'selected' :''); ?>>Vanier</option>
+            <option <?= (isset($this->onething) && strcmp($this->onething['book'],'ROBOT') == 0 ? 'selected' :''); ?>>Robot</option>
+            <option <?= (isset($this->onething) && strcmp($this->onething['book'],'JOURNALISM') == 0 ? 'selected' :''); ?>>Journalism</option>
+            <option <?= (isset($this->onething) && strcmp($this->onething['book'],'TUTORIAL') == 0 ? 'selected' :''); ?>>Tutorial</option>
+            <option <?= (isset($this->onething) && strcmp($this->onething['book'],'SPONSORS') == 0 ? 'selected' :''); ?>>Sponsors</option>
+            <option <?= (isset($this->onething) && strcmp($this->onething['book'],'GALLERY') == 0? 'selected':''); ?>>Gallery</option>
         </select>
     </div>
 
+    <div class="col-md-offset-2 col-md-8 form-group">
+        <label for="page">Select subpage:</label>
+        <select class="form-control" name="page" id="page">
+            <option <?= (isset($this->onething) && strcmp($this->onething['subpage'],'') == 0 ? 'selected' :''); ?>></option>
+            <option <?= (isset($this->onething) && strcmp($this->onething['subpage'],'BUILD') == 0 ? 'selected' :''); ?>>Build</option>
+            <option <?= (isset($this->onething) && strcmp($this->onething['subpage'],'KIOSK') == 0 ? 'selected' :''); ?>>Kiosk</option>
+            <option <?= (isset($this->onething) && strcmp($this->onething['subpage'],'VIDEO') == 0 ? 'selected' :''); ?>>Video</option>
+            <option <?= (isset($this->onething) && strcmp($this->onething['subpage'],'WEB') == 0 ? 'selected' :''); ?>>Web</option>
+        </select>
+    </div>
 
-    <div class="form-group">
+    <div class="col-md-offset-2 col-md-8 form-group">
         <label for="lang">Select Language:</label>
         <select class="form-control" name="lang" id="lang">
             <option value="en">English</option>
             <option value="fr" <?php echo (isset($this->onething) && strcmp($this->onething['lang'],'FR') == 0 ? 'selected':''); ?> >French</option>
         </select>
     </div>
-    <div class="input-group">
-				  <span class="input-group-addon" id="basic-addon1">Enter Title</span>
-				  <input required name="class" type="text" class="form-control" aria-describedby="basic-addon1"
-                         value="<?= (isset($this->onething) ?  $this->onething['class'] : ''); ?>">
+    <div class="col-md-offset-2 col-md-8 input-group">
+				  <span class="input-group-addon" id="basic-addon1">Enter Page Number</span>
+				  <input required name="pageid" type="number" class="form-control" aria-describedby="basic-addon1"
+                         value="<?= (isset($this->onething) ?  $this->onething['pageid'] : ''); ?>">
     </div>
+    <div class="col-md-offset-2 col-md-8">
 				</br>Enter Text: </br>
 				<textarea id="text" required name="text" rows="10" cols="50" style="resize: none;"><?php echo (isset( $this->onething['text'])) ? $this->onething['text'] :'' ; ?>
                 </textarea>
@@ -47,22 +56,19 @@
                         echo '<br><input class="btn" type="submit" name="submitForm" value="Click To Submit">' ;
                     }
                 ?>
-
-
-		<input class="btn" type = "reset" value = "Reset" >
-		</form>
-
-		<form action="<?= URL ?>edit" method="post">
-
-				<br><br><input  class="btn" type="submit" value="Cancel (Go Back)">
-
-		</form>
-		<form action="<?= URL ?>edit" method="post">
-
-			<br><input  class="btn" type="submit" value="Delete Item (because why not)">
-			<input  class="btn" type="hidden" name="delete" value ="<?= (isset($this->onething) ?  $this->onething['id'] : '');?>">
-
-
-		</form>
+    <input class="btn" type = "reset" value = "Reset" >
+    </div>
+</form>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+            <form action="<?= URL ?>edit" method="post">
+                <br><input  class="btn" type="submit" value="Cancel (Go Back)">
+            </form>
+            <form action="<?= URL ?>edit" method="post">
+                <input  class="btn" type="submit" value="Delete Item (because why not)">
+                <input  class="btn" type="hidden" name="delete" value ="<?= (isset($this->onething) ?  $this->onething['id'] : '');?>">
+            </form>
+        </div>
+    </div>
 
 

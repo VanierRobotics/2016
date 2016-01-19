@@ -35,7 +35,6 @@ function loadPage(lang, book_name, page) {
         contentType: 'application/json; charset=utf-8',
         dataType: 'json'
     }).done(function(pageHtml) {
-            console.log(pageHtml);
 			$('.sj-book .p' + page).html(pageHtml);
 		});
 }

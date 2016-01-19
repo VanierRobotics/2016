@@ -11,26 +11,26 @@ class edit extends Controller
     public function __construct()
     {
         parent::__construct();
-        self::checkMember();
+        //self::checkMember();
     }
 
     public function index()
     {
         $this->view->title = 'Edit';
-        $this->model = $this->getModel("Text");
-        $this->model->doThings();
-        $this->view->st =  $this->model->getSomething();
+        $this->model = $this->getModel("Book");
+        $this->model->DBManip();
+        $this->view->st =  $this->model->getAllEntries();
         $this->view->render('edit/index');
     }
 
     public function item()
     {
         $this->view->title = 'Edit Text';
-        $this->model = $this->getModel("Text");
+        $this->model = $this->getModel("Book");
         if(isset($_POST['textID'])) {
-            $this->view->onething = $this->model->getThing();
+            $this->view->onething = $this->model->getByID();
         }
-        $this->view->st =  $this->model->getSomething();
+        $this->view->st =  $this->model->getAllEntries();
         $this->view->render('edit/item');
     }
 
