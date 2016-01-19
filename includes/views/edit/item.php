@@ -3,7 +3,7 @@
     </br>
     <div class="col-md-offset-2 col-md-8 form-group">
         <label for="page">Select from page list:</label>
-        <select class="form-control" name="page" id="page">
+        <select class="form-control" name="book" id="book">
             <option <?= (isset($this->onething) && strcmp($this->onething['book'],'HOME') == 0 ? 'selected' :''); ?>>Home</option>
             <option <?= (isset($this->onething) && strcmp($this->onething['book'],'GAME') == 0 ? 'selected' :''); ?>>Game</option>
             <option <?= (isset($this->onething) && strcmp($this->onething['book'],'VANIER') == 0 ? 'selected' :''); ?>>Vanier</option>
@@ -16,8 +16,8 @@
     </div>
 
     <div class="col-md-offset-2 col-md-8 form-group">
-        <label for="page">Select subpage:</label>
-        <select class="form-control" name="page" id="page">
+        <label for="subpage">Select subpage:</label>
+        <select class="form-control" name="subpage" id="subpage">
             <option <?= (isset($this->onething) && strcmp($this->onething['subpage'],'') == 0 ? 'selected' :''); ?>></option>
             <option <?= (isset($this->onething) && strcmp($this->onething['subpage'],'BUILD') == 0 ? 'selected' :''); ?>>Build</option>
             <option <?= (isset($this->onething) && strcmp($this->onething['subpage'],'KIOSK') == 0 ? 'selected' :''); ?>>Kiosk</option>

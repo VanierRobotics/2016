@@ -55,26 +55,26 @@ class _Book extends Model
             $parent = 0;
 
         if(isset($_POST['insert']))
-            addEntry($parent);
+            $this->addEntry($parent);
         elseif(isset($_POST['delete']))
-            removeEntry();
+            $this->removeEntry();
         elseif(isset($_POST['update']))
-            updateEntry();
+            $this->updateEntry();
     }
 
     public function addEntry()
     {
-        return $this->db>insert('book', array('name' => $_POST['name'], 'language' => $_POST['language'], 'text' => $_POST['text']));
+        return $this->db>insert('book', array('book' => $_POST['book'], 'subpage' => $_POST['subpage'], 'pageid' => $_POST['pageid'], 'lang' => $_POST['lang'], 'content' => $_POST['text']));
     }
 
     public function removeEntry()
     {
-       return $this->db->delete('translate', 'id ='.$_POST['delete']);
+       return $this->db->delete('book', 'id ='.$_POST['delete']);
     }
 
     public function updateEntry()
     {
-        $this->db->update('translate', ['name' => $_POST['name'], 'text' => $_POST['text'], 'language' => $_POST['language'] ],'id = ' . $_POST['id'] );
+        $this->db->update('translate', 'book', ['book' => $_POST['book'], 'subpage' => $_POST['subpage'], 'pageid' => $_POST['pageid'], 'lang' => $_POST['lang'], 'content' => $_POST['text']] ,'id = ' . $_POST['itemID'] );
     }
 
 }

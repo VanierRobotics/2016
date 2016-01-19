@@ -1,6 +1,6 @@
 	<div class="panel panel-default">
 		<div class="panel-body">
-			This is where You edit things
+			<h2>This is where you edit things</h2>
 		</div>
 	</div>
     <div class="col-md-offset-2">
