@@ -41,6 +41,7 @@ class auth extends Controller
 
         //render login partial view
         $this->view->title = 'Login';
+        var_dump(Hash::create('sha256','password', HASH_PW_KEY));
         $this->view->render('auth/index');
     }
 

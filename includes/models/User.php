@@ -5,7 +5,6 @@ class _User extends Model
     private $userID;
     private $username;
     private $password;
-    private $email;
     private $fname;
     private $lname;
 
@@ -22,7 +21,6 @@ class _User extends Model
                 $this->userID = 0;
                 $this->username = 'guest';
                 $this->password = 'nop';
-                $this->email = 'nop';
                 $this->fname = 'Guest';
                 $this->lname = '';
                 break;
@@ -35,7 +33,7 @@ class _User extends Model
                 else //that user doesn't exist, give error and redirect to self
                     header('Location: ../wall?u=' . Session::get('my_user')['id']);
                 break;
-            default : //check if wall exists TODO@Alex Add access control based on friendship
+            default :
                 $st = $this->db->select('SELECT * FROM users WHERE user_id = :uid', array(
                     ':uid' => $tempID,
                 ));
@@ -67,7 +65,6 @@ class _User extends Model
         $this->userID = $st['user_id'];
         $this->username = $st['username'];
         //self::setPassword($st['password']);
-        self::setEmail($st['email']);
         self::setFName($st['first_name']);
         self::setLName($st['last_name']);
     }
@@ -81,7 +78,6 @@ class _User extends Model
             'id' => $this->getUserID(),
             'username' => $this->getUsername(),
             //'pass'      => $this->getPassword(),
-            'email' => $this->getEmail(),
             'first_name' => $this->getFname(),
             'last_name' => $this->getLname()
         ]);

@@ -48,14 +48,8 @@ class _Book extends Model
 
     public function DBManip()
     {
-        // set parent
-        if(isset($_POST['parent']))
-            $parent = (int) $this->getPageID();
-        else
-            $parent = 0;
-
         if(isset($_POST['insert']))
-            $this->addEntry($parent);
+            $this->addEntry();
         elseif(isset($_POST['delete']))
             $this->removeEntry();
         elseif(isset($_POST['update']))
@@ -64,7 +58,7 @@ class _Book extends Model
 
     public function addEntry()
     {
-        return $this->db>insert('book', array('book' => $_POST['book'], 'subpage' => $_POST['subpage'], 'pageid' => $_POST['pageid'], 'lang' => $_POST['lang'], 'content' => $_POST['text']));
+        return $this->db->insert('book', array('book' => $_POST['book'], 'subpage' => $_POST['subpage'], 'pageid' => $_POST['pageid'], 'lang' => $_POST['lang'], 'content' => $_POST['text']));
     }
 
     public function removeEntry()
@@ -74,7 +68,7 @@ class _Book extends Model
 
     public function updateEntry()
     {
-        $this->db->update('translate', 'book', ['book' => $_POST['book'], 'subpage' => $_POST['subpage'], 'pageid' => $_POST['pageid'], 'lang' => $_POST['lang'], 'content' => $_POST['text']] ,'id = ' . $_POST['itemID'] );
+        $this->db->update('book', ['book' => $_POST['book'], 'subpage' => $_POST['subpage'], 'pageid' => $_POST['pageid'], 'lang' => $_POST['lang'], 'content' => $_POST['text']] ,'id = ' . $_POST['itemID'] );
     }
 
 }
