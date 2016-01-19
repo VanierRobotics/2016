@@ -11,6 +11,7 @@ class en extends Controller
     public function __construct()
     {
         parent::__construct();
+        self::checkMember();
         $this->view->title = 'Vanier Robotics 2016';
         $this->view->language = 'en';
         $this->view->book = 'vanier';

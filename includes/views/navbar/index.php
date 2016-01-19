@@ -18,7 +18,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <?php if (!Session::get('my_user')) { ?>
+                <?php if (Session::get('my_user')) { ?>
                 <li><a href="<?=URL.$this->language?>/vanier/">Vanier</a></li>
                 <li><a href="<?=URL.$this->language?>/robot/">Robot</a></li>
                 <li><a href="<?=URL.($this->language === 'en' ? 'en/game/' : 'fr/jeu/')?>"><?=($this->language === 'en') ? 'Game' : 'Jeu'?></a></li>
