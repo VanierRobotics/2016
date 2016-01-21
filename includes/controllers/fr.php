@@ -11,7 +11,7 @@ class fr extends Controller
     public function __construct()
     {
         parent::__construct();
-        self::checkMember();
+        //self::checkMember();
         $this->view->title = 'Robotique Vanier 2016';
         $this->view->language = 'fr';
     }

@@ -11,7 +11,7 @@ class index extends Controller
     public function __construct()
     {
         parent::__construct();
-        self::checkMember();
+        //self::checkMember();
         $this->view->title = 'Vanier Robotics 2016';
     }
 
