@@ -1,4 +1,25 @@
-<script>
+<!-- THREE.js (aka 3D WebGL things) -->
+<script type="text/javascript" src="<?=URL?>js/dat.gui.min.js"></script>
+<script type="text/javascript" src="<?=URL?>js/stats.min.js"></script>
+<script type="text/javascript" src="<?=URL?>js/three.js"></script>
+<script type="text/javascript" src="<?=URL?>js/tween.js"></script>
+
+<script type="text/javascript" src="<?=URL?>js/bana.lib.js"></script>
+<script type="text/javascript" src="<?=URL?>js/extra_renderers/Projector.js"></script>
+<script type="text/javascript" src="<?=URL?>js/extra_renderers/canvasrenderer.js"></script>
+<script type="text/javascript" src="<?=URL?>js/extra_shaders/SkyShader.js"></script>
+<script type="text/javascript" src="<?=URL?>js/extra_loaders/colladaloader2.js"></script>
+<script type="text/javascript" src="<?=URL?>js/extra_controls/orbitcontrols.js"></script>
+<script type="text/javascript" src="<?=URL?>js/extras/helpers/gridhelper.js"></script>
+<script type="text/javascript" src="<?=URL?>js/extras/helpers/axishelper.js"></script>
+<!--script type="text/javascript" src="<?=URL?>js/extras/helpers/camerahelper.js"></script-->
+
+<script type="text/javascript" src="<?=URL?>js/threex.windowresize.js"></script>
+<script type="text/javascript" src="<?=URL?>js/threex.universalloader.js"></script>
+<script type="text/javascript" src="<?=URL?>js/threex.objcoord.js"></script>
+<script type="text/javascript" src="<?=URL?>js/threex.domevents.js"></script>
+<!--script type="text/javascript" src="<?=URL?>js/threex.linkify.js"></script-->
+<script type="text/javascript">
     //var container;
     var camera, controls, scene, renderer, loader, domEvents;
     var sky, sunSphere, castle, desk, anim;

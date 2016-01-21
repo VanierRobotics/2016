@@ -1,3 +1,4 @@
+<script src="<?=URL?>js/ckeditor/ckeditor.js"></script>
 <form action="<?= URL.'edit'?>" method="post">
 
     </br>
@@ -40,7 +41,7 @@
     </div>
     <div class="col-md-offset-2 col-md-8">
 				</br>Enter Text: </br>
-				<textarea id="text" required name="text" rows="10" cols="50" style="resize: none;"><?php echo (isset( $this->onething['text'])) ? $this->onething['text'] :'' ; ?>
+				<textarea id="text" required name="text" rows="10" cols="50" style="resize: none;"><?= (isset( $this->onething['content'])) ? $this->onething['content'] :'' ; ?>
                 </textarea>
 				<?php
 					$_SESSION["start_time"] = time();
@@ -58,6 +59,24 @@
                 ?>
     <input class="btn" type = "reset" value = "Reset" >
     </div>
+    <script type="text/javascript">
+        CKEDITOR.replace('text');/*
+        $("#save").click(function(){
+            var data = $( '#editor1' ).val();
+            $.ajax({
+                type:"POST",
+                url:"<?=URL?>",
+                data: "editor1="+data,
+                timeout:15000,
+                error:function(XMLHttpRequest, textStatus, errorThrown){
+                    alert("ERROR");
+                },
+                success:function(response){
+                    alert("Success: "+response);
+                }
+            });
+        })*/
+    </script>
 </form>
     <div class="row">
         <div class="col-md-offset-2 col-md-8">

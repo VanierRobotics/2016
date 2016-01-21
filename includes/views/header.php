@@ -13,6 +13,9 @@
     <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <!--script type="text/javascript" src="<?=URL?>js/jquery-ui-1.8.20.custom.min.js"></script-->
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/sunny/jquery-ui.css"/>
+    <script>
+        UPLOADCARE_PUBLIC_KEY = 'BECAUSE_PUBLIC_KEYS';
+    </script>
 
     <!-- Turn.js (aka HTML5 book thingny)-->
     <!--script type="text/javascript" src="<?=URL?>js/jquery.mousewheel.min.js"></script-->
@@ -20,28 +23,6 @@
 
     <!-- Font awesome-->
     <link rel="stylesheet" href="<?=URL?>css/font-awesome.min.css">
-
-    <!-- THREE.js (aka 3D WebGL things) -->
-    <script type="text/javascript" src="<?=URL?>js/dat.gui.min.js"></script>
-    <script type="text/javascript" src="<?=URL?>js/stats.min.js"></script>
-    <script type="text/javascript" src="<?=URL?>js/three.js"></script>
-    <script type="text/javascript" src="<?=URL?>js/tween.js"></script>
-
-    <script type="text/javascript" src="<?=URL?>js/bana.lib.js"></script>
-    <script type="text/javascript" src="<?=URL?>js/extra_renderers/Projector.js"></script>
-    <script type="text/javascript" src="<?=URL?>js/extra_renderers/canvasrenderer.js"></script>
-    <script type="text/javascript" src="<?=URL?>js/extra_shaders/SkyShader.js"></script>
-    <script type="text/javascript" src="<?=URL?>js/extra_loaders/colladaloader2.js"></script>
-    <script type="text/javascript" src="<?=URL?>js/extra_controls/orbitcontrols.js"></script>
-    <script type="text/javascript" src="<?=URL?>js/extras/helpers/gridhelper.js"></script>
-    <script type="text/javascript" src="<?=URL?>js/extras/helpers/axishelper.js"></script>
-    <!--script type="text/javascript" src="<?=URL?>js/extras/helpers/camerahelper.js"></script-->
-
-    <script type="text/javascript" src="<?=URL?>js/threex.windowresize.js"></script>
-    <script type="text/javascript" src="<?=URL?>js/threex.universalloader.js"></script>
-    <script type="text/javascript" src="<?=URL?>js/threex.objcoord.js"></script>
-    <script type="text/javascript" src="<?=URL?>js/threex.domevents.js"></script>
-    <!--script type="text/javascript" src="<?=URL?>js/threex.linkify.js"></script-->
 
     <!-- Bootstrap Original-->
     <!--link rel="stylesheet" href="<-?=URL?>/css/bootstrap.min.css" /-->
