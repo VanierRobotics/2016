@@ -26,6 +26,10 @@ class index extends Controller
     }
 
     public function evanshit(){
+        //make method that gets random file name form array
+
+        //send that shit to view.
+        $this->view->transistor = 'laoder.gif';
         $this->view->render('home/evanscorner');
     }
 

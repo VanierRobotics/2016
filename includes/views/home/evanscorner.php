@@ -7,12 +7,55 @@
  */
 
 ?>
+
+
+
 <style>
-    body { margin: 0; }
-    canvas { width: 100%; height: 100% }
+    .loader {
+        position: fixed;
+        left: 0px;
+        top: 5%;
+        width: 100%;
+        height: 85%;
+        z-index: 9999;
+        background: url('<?= URL ?>images/transitions/<?=$this->transistor?>') 50% 50% rgb(249,249,249);
+    }
 </style>
 
+
 <script>
+    $(function()
+    {
+
+        $(window).load(function() {
+            $(".loader").fadeOut("slow");
+        })
+        $("#content") .click(function() {
+            $("#content").fadeOut(10000, function() {
+                window.location.href = "number2.html";
+            });
+        });
+    });
+
+</script>
+
+<div class="loader"></div>
+<h1 style="margin: 0px">THINGS</h1>
+
+
+
+
+
+
+<!--
+<style>
+
+    body { margin: 0; }
+    canvas { width: 100%; height: 100% }
+
+</style>
+
+<script> /*
     var scene = new THREE.Scene();
     var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
     var move = true;
@@ -45,21 +88,22 @@
 
    render();
 
-
+*/
 </script>
-
+<!--
 <div id="target" style="position:absolute; width: 200px; height: 200px; background: #e90519; ">
     evan is a boss ass bitch </br>
     extra line for cool reasons.
 </div>
-<script>
 
+<script>
+/*
     init();
     animate();
 
     function init(){
         var target = document.getElementById("target");
-/*
+
         var tween = new TWEEN.Tween({x: 0, y: 0, rotation: 0})
                 .to({ x: 900, y: 1000, rotation: 0}, 2000)
                      .easing(TWEEN.Easing.Circular.InOut)
@@ -70,7 +114,7 @@
                                         target.style.MozTransform = 'rotate('+Math.floor(this.rotation) + 'deg)';
                                         target.style.webkitTransform = 'rotate(' + Math.floor(this.rotation)+'deg)';
         }).start();x: 0, y: -800, z: 2
-*/
+
         var tween2 = new TWEEN.Tween({x: 0, y: -800, z: 2 ,rotation:0})
             .to({ x: 0, y: 0, z: 1250, rotation:-90 } ,1500)
             .easing(TWEEN.Easing.Linear.None)
@@ -107,5 +151,7 @@
         TWEEN.update();
 
     }
-
+*/
 </script>
+-->
+
