@@ -3,24 +3,24 @@
 <!-- THREE.js (aka 3D WebGL things) -->
 <script type="text/javascript" src="<?=URL?>js/dat.gui.min.js"></script>
 <script type="text/javascript" src="<?=URL?>js/stats.min.js"></script>
-<script type="text/javascript" src="<?=URL?>js/three.js"></script>
+<script type="text/javascript" src="<?=URL?>js/3d/three.js"></script>
 <script type="text/javascript" src="<?=URL?>js/tween.js"></script>
 
 <script type="text/javascript" src="<?=URL?>js/bana.lib.js"></script>
-<script type="text/javascript" src="<?=URL?>js/extra_renderers/Projector.js"></script>
-<script type="text/javascript" src="<?=URL?>js/extra_renderers/canvasrenderer.js"></script>
-<script type="text/javascript" src="<?=URL?>js/extra_shaders/SkyShader.js"></script>
-<script type="text/javascript" src="<?=URL?>js/extra_loaders/colladaloader2.js"></script>
-<script type="text/javascript" src="<?=URL?>js/extra_controls/orbitcontrols.js"></script>
-<script type="text/javascript" src="<?=URL?>js/extras/helpers/gridhelper.js"></script>
-<script type="text/javascript" src="<?=URL?>js/extras/helpers/axishelper.js"></script>
-<!--script type="text/javascript" src="<?=URL?>js/extras/helpers/camerahelper.js"></script-->
+<script type="text/javascript" src="<?=URL?>js/3d/extra_renderers/Projector.js"></script>
+<script type="text/javascript" src="<?=URL?>js/3d/extra_renderers/canvasrenderer.js"></script>
+<script type="text/javascript" src="<?=URL?>js/3d/extra_shaders/SkyShader.js"></script>
+<script type="text/javascript" src="<?=URL?>js/3d/extra_loaders/colladaloader2.js"></script>
+<script type="text/javascript" src="<?=URL?>js/3d/extra_controls/orbitcontrols.js"></script>
+<script type="text/javascript" src="<?=URL?>js/3d/extras/helpers/gridhelper.js"></script>
+<script type="text/javascript" src="<?=URL?>js/3d/extras/helpers/axishelper.js"></script>
+<!--script type="text/javascript" src="<?=URL?>js/3d/extras/helpers/camerahelper.js"></script-->
 
-<script type="text/javascript" src="<?=URL?>js/threex.windowresize.js"></script>
-<script type="text/javascript" src="<?=URL?>js/threex.universalloader.js"></script>
-<script type="text/javascript" src="<?=URL?>js/threex.objcoord.js"></script>
-<script type="text/javascript" src="<?=URL?>js/threex.domevents.js"></script>
-<!--script type="text/javascript" src="<?=URL?>js/threex.linkify.js"></script-->
+<script type="text/javascript" src="<?=URL?>js/3d/threex.windowresize.js"></script>
+<script type="text/javascript" src="<?=URL?>js/3d/threex.universalloader.js"></script>
+<script type="text/javascript" src="<?=URL?>js/3d/threex.objcoord.js"></script>
+<script type="text/javascript" src="<?=URL?>js/3d/threex.domevents.js"></script>
+<!--script type="text/javascript" src="<?=URL?>js/3d/threex.linkify.js"></script-->
 <script type="text/javascript">
     //var container;
     var camera, controls, scene, renderer, loader, domEvents;
@@ -94,7 +94,7 @@
     }
 
     function initAnimations() {
-        anim  = new TWEEN.Tween({x: -4, y: 80, z: 2550})
+        anim  = new TWEEN.Tween({x: camera.position.x, y: camera.position.y, z: camera.position.z})
             .to({ x: -4, y: 100, z: 2800 } ,1000)
             .easing(TWEEN.Easing.Linear.None)
             .onUpdate( function(){
@@ -118,7 +118,7 @@
             });
         anim.onComplete(function() {anim2.start();});
 
-        anim2.onComplete(function() {window.open('vanier/', '_self');});
+        anim2.onComplete(function() {window.open('/en/', '_self');});
         /* camera.position.x = -4;
          camera.position.y = 80;
          camera.position.z = 2550;

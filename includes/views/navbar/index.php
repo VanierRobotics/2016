@@ -12,7 +12,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>  <?php if (!property_exists($this,"language")) {$this->language = 'en';} ?>
-            <a class="navbar-brand" href="<?=URL.$this->language?>/home"><?=($this->language === 'en') ? 'Vanier Robotics' : 'Robotique Vanier'?></a>
+            <a class="navbar-brand" href="<?=URL//.$this->language?>"><?=($this->language === 'en') ? 'Vanier Robotics' : 'Robotique Vanier'?></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

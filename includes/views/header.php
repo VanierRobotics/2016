@@ -13,9 +13,7 @@
     <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <!--script type="text/javascript" src="<?=URL?>js/jquery-ui-1.8.20.custom.min.js"></script-->
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/sunny/jquery-ui.css"/>
-    <script>
-        UPLOADCARE_PUBLIC_KEY = 'BECAUSE_PUBLIC_KEYS';
-    </script>
+    <script type="text/javascript">UPLOADCARE_PUBLIC_KEY = 'BECAUSE_PUBLIC_KEYS';</script>
 
     <!-- Turn.js (aka HTML5 book thingny)-->
     <!--script type="text/javascript" src="<?=URL?>js/jquery.mousewheel.min.js"></script-->
@@ -38,7 +36,7 @@
     <?php //Autoloads views javascript files specified by
     if (isset($this->js)) {
         foreach ($this->js as $js) {
-            echo '<script type="text/javascript" src="' . URL . '../include/views/' . $js . '"></script>';
+            echo '<script type="text/javascript" src="' . URL . '../includes/views/' . $js . '"></script>';
         }
     } ?>
 </head>
