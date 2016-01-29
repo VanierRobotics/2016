@@ -1,70 +1,22 @@
+<script src="<?=URL?>js/jquery.parallax.min.js"></script>
+<script type="text/javascript">		$(function() { $("#wallpaper").parallax(); });</script>
+
 <style>
-    .shelf
+    .scene
     {
-        width:auto;
-        height:15px;
-        background-image: url("<?=URL?>images/bookshelf_texture.png");
-        background-repeat: repeat;
-        position: fixed;
+        position : relative;
+        left : 0px;
+        top : 0px;
+        width : 100%;
+        height : 100%;
 
-
+        background-image : url("<?=URL?>images/home/layer3.png");
     }
-
-    .book
-    {
-        width: 50px;
-        height: 100px;
-        background-image: url("<?=URL?>images/book.jpg");
-        background-size: 50px 100px;
-        margin-right: 30px;
-        display: inline-block;
-    }
-
-    .book:hover{
-        background-size: 75px 125px;
-        width: 75px;
-        height: 125px;
-        //margin-left: -25px;
-        //margin-right: -25px;
-
-        -webkit-transition:  1s; /* Safari and Chrome */
-
-    }
-
 </style>
-<script>
 
-
-</script>
-
-<div class="container">
-    <div class="row">
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <div class="book"></div>
-            <div class="book"></div>
-            <div class="book"></div>
-
-
-            <div class="shelf">
-
-            </div>
-
-        </div>
-        <div class="col-md-2"></div>
-
-
-
-    </div>
-
+<div class="scene">
+    <ul id="wallpaper">
+        <li class="layer" data-depth="0.30"><img src="<?=URL?>images/home/layer1.png"/></li>
+        <li class="layer" data-depth="0.20"><img src="<?=URL?>images/home/layer2.png"/></li>
+    </ul>
 </div>

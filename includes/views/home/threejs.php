@@ -1,20 +1,17 @@
 <!-- THIS IS THE LANGUAGE SELECT PAGE... INSERT ICE WALL WEBGL THING HERE -->
 
 <!-- THREE.js (aka 3D WebGL things) -->
-<script type="text/javascript" src="<?=URL?>js/dat.gui.min.js"></script>
-<script type="text/javascript" src="<?=URL?>js/stats.min.js"></script>
+<script type="text/javascript" src="<?=URL?>js/3d/dat.gui.min.js"></script>
+<script type="text/javascript" src="<?=URL?>js/3d/stats.min.js"></script>
 <script type="text/javascript" src="<?=URL?>js/3d/three.js"></script>
 <script type="text/javascript" src="<?=URL?>js/tween.js"></script>
 
-<script type="text/javascript" src="<?=URL?>js/bana.lib.js"></script>
+<script type="text/javascript" src="<?=URL?>js/3d/bana.lib.js"></script>
 <script type="text/javascript" src="<?=URL?>js/3d/extra_renderers/Projector.js"></script>
 <script type="text/javascript" src="<?=URL?>js/3d/extra_renderers/canvasrenderer.js"></script>
 <script type="text/javascript" src="<?=URL?>js/3d/extra_shaders/SkyShader.js"></script>
 <script type="text/javascript" src="<?=URL?>js/3d/extra_loaders/colladaloader2.js"></script>
 <script type="text/javascript" src="<?=URL?>js/3d/extra_controls/orbitcontrols.js"></script>
-<script type="text/javascript" src="<?=URL?>js/3d/extras/helpers/gridhelper.js"></script>
-<script type="text/javascript" src="<?=URL?>js/3d/extras/helpers/axishelper.js"></script>
-<!--script type="text/javascript" src="<?=URL?>js/3d/extras/helpers/camerahelper.js"></script-->
 
 <script type="text/javascript" src="<?=URL?>js/3d/threex.windowresize.js"></script>
 <script type="text/javascript" src="<?=URL?>js/3d/threex.universalloader.js"></script>
@@ -72,25 +69,29 @@
         scene.add(plane);
 
         //TAKE A BLENDER THIGNY AND LOAD IT INTO SCENE
-        //loader = new THREE.JSONLoader();
-        /*loader.load('<?=URL?>blend_models/RingFinal.json',                     function(geometry) {
+        loader = new THREE.JSONLoader();
+        loader.load('<?=URL?>blend_models/SchoolGOT.json',                     function(geometry,materials) {
          castle = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial( {color:0x58c8ed} ));
          scene.add(castle);
          castle.scale.set(25,25,25);
          castle.translateZ(-1100);
          castle.translateX(300);
          });
-         */
+        /*
         loader = new THREEx.UniversalLoader();
         loader.load('<?=URL?>blend_models/SchoolGOT.dae',                     function(object3d) {
             scene.add(object3d);
+            model.traverse( function( child ) {
+                if ( child instanceof THREE.Mesh )
+                    child.geometry.computeVertexNormals();
+            });
             //object3d.castShadow = true;
             object3d.recieveShadow = true;
             object3d.scale.set(5,5,5);
             domEvents.addEventListener(object3d, 'click', function(event){
                 initAnimations();
             }, false);
-        });
+        });*/
     }
 
     function initAnimations() {

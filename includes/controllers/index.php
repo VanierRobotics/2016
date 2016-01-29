@@ -17,12 +17,7 @@ class index extends Controller
 
     public function index()
     {
-        $this->view->render('home/langselect');
-    }
-
-    public function k()
-    {
-        $this->view->render('home/keyframe');
+        $this->view->render('home/index');
     }
 
     public function evanshit(){

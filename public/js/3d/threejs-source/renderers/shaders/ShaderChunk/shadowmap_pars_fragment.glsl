@@ -11,24 +11,39 @@
 	float unpackDepth( const in vec4 rgba_depth ) {
 
 		const vec4 bit_shift = vec4( 1.0 / ( 256.0 * 256.0 * 256.0 ), 1.0 / ( 256.0 * 256.0 ), 1.0 / 256.0, 1.0 );
-		float depth = dot( rgba_depth, bit_shift );
-		return depth;
+		return dot( rgba_depth, bit_shift );
+
+	}
+
+	float texture2DCompare( sampler2D depths, vec2 uv, float compare ) {
+
+		return step( unpackDepth( texture2D( depths, uv ) ), compare );
+
+	}
+
+	float texture2DShadowLerp( sampler2D depths, vec2 size, vec2 uv, float compare ) {
+
+		const vec2 offset = vec2( 0.0, 1.0 );
+
+		vec2 texelSize = vec2( 1.0 ) / size;
+		vec2 centroidUV = floor( uv * size + 0.5 ) / size;
+
+		float lb = texture2DCompare( depths, centroidUV + texelSize * offset.xx, compare );
+		float lt = texture2DCompare( depths, centroidUV + texelSize * offset.xy, compare );
+		float rb = texture2DCompare( depths, centroidUV + texelSize * offset.yx, compare );
+		float rt = texture2DCompare( depths, centroidUV + texelSize * offset.yy, compare );
+
+		vec2 f = fract( uv * size + 0.5 );
+
+		float a = mix( lb, lt, f.y );
+		float b = mix( rb, rt, f.y );
+		float c = mix( a, b, f.x );
+
+		return c;
 
 	}
 
 	#ifdef POINT_LIGHT_SHADOWS
-
-		// adjustShadowValue1K() upacks the depth value stored in @textureData, adds @bias to it, and then
-		// comapres the result with @testDepth. If @testDepth is larger than or equal to that result, then
-		// @shadowValue is incremented by 1.0.
-
-		void adjustShadowValue1K( const float testDepth, const vec4 textureData, const float bias, inout float shadowValue ) {
-
-			const vec4 bitSh = vec4( 1.0 / ( 256.0 * 256.0 * 256.0 ), 1.0 / ( 256.0 * 256.0 ), 1.0 / 256.0, 1.0 );
-			if ( testDepth >= dot( textureData, bitSh ) * 1000.0 + bias )
-				shadowValue += 1.0;
-
-		}
 
 		// cubeToUV() maps a 3D direction vector suitable for cube texture mapping to a 2D
 		// vector suitable for 2D texture mapping. This code uses the following layout for the

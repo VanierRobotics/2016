@@ -21,14 +21,16 @@ BANA.GFX = function(near, far){
     //Renderer Setup
     var canvas = document.createElement( 'canvas' );
     if ( BANA.checkForWebGL() )
-        renderer = new THREE.WebGLRenderer(); //{antialias:true}
+        renderer = new THREE.WebGLRenderer({antialias:true}); //{antialias:true}
     else
         renderer = new THREE.CanvasRenderer();
     renderer.setPixelRatio( window.pixelRatio );
     renderer.setSize( window.innerWidth, window.innerHeight-124 );
     renderer.setClearColor(new THREE.Color(0xd3d3d3));//BACKGROUND
+
     //SHADOW
     //renderer.shadowMap.enabled = true;
+    //renderer.shadowMapEnabled= true;
     //renderer.shadowMapSoft = true;
 
     document.body.appendChild( renderer.domElement );
@@ -43,6 +45,24 @@ BANA.GFX = function(near, far){
 
     if (BANA.GUI.stats === undefined)
         addStats();
+};
+
+BANA.GFX.importModel = function(geometry, materials) {
+    //json texture had to be overidden to allow for cross domain images
+    //this code can be removed if hosted locally and everything can be contained in same folder
+    //THREE.ImageUtils.crossOrigin = '';
+
+    //texture reapplied with correct permissions
+    //materials[0].map = THREE.ImageUtils.loadTexture(texture);
+
+    model = new THREE.Mesh( geometry, materials[0] );
+    model.scale.set (10,10,10);
+
+    model.traverse( function( child ) {
+        if ( child instanceof THREE.Mesh )
+            child.geometry.computeVertexNormals();
+    });
+    scene.add( model );
 };
 
 BANA.GFX.newSky =  function() {
@@ -76,7 +96,10 @@ BANA.GFX.newSky =  function() {
     sunSphere.position.y = distance * Math.sin( phi ) * Math.sin( theta );
     sunSphere.position.z = distance * Math.sin( phi ) * Math.cos( theta );
     sky.uniforms.sunPosition.value.copy( sunSphere.position );
-    //sunSphere.visible = true;
+    sunSphere.visible = true;
+    //var hemi = THREE.HemisphereLight(0xff2442,0xe43d22);
+    //hemi.castShadow = true;
+    //scene.add(hemi);
 };
 
 //Initializes Orbit Controls
