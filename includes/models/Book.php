@@ -22,8 +22,7 @@ class _Book extends Model
     public function getTotalPages($language,$book,$subpage = null){
         $pass = [':lang' => $language,':book' => $book];
         //is_null($subpage) ? :$pass[] = [':subpage' => $subpage];
-        $st = $this->db->select('SELECT pageid FROM book
-                                  WHERE lang = :lang AND book = :book',$pass);
+        $st = $this->db->select('SELECT pageid FROM book WHERE lang = :lang AND book = :book',$pass);
                                     //. (is_null($subpage) ? :' AND subpage = :subpage'),$pass);
         return count($st);
     }
