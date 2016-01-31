@@ -31,28 +31,31 @@ class en extends Controller
 
     public function robot(){
         $this->view->book = 'robot';
-        $this->view->render('vanier/index');
+        $this->view->render('book/index');
     }
 
     public function game(){
-        $this->view->render('game/index');
+        $this->view->book = 'game';
+        $this->view->render('book/index');
     }
 
     public function vanier(){
         $this->view->book = 'vanier';
-        $this->view->render('vanier/index');
+        $this->view->render('book/index');
     }
 
-    public function journalism($subpage){
-        $this->view->render('journalism/index');
+    public function journalism($subpage = 'index'){
+        $this->view->render('journalism/'.$subpage);
     }
 
     public function team(){
-        $this->view->render('team/index');
+        $this->view->book = 'robot';
+        $this->view->render('book/index');
     }
 
     public function gallery(){
-        $this->view->render('gallery/index');
+        $this->view->book = 'gallery';
+        $this->view->render('book/index');
     }
 
     public function tutorial(){

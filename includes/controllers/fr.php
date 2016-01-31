@@ -30,7 +30,8 @@ class fr extends Controller
     }
 
     public function vanier(){
-        $this->view->render('vanier/index');
+        $this->view->book = 'vanier';
+        $this->view->render('book/index');
     }
 
     public function journalisme($subpage){
