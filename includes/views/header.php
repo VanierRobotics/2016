@@ -15,9 +15,9 @@
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/sunny/jquery-ui.css"/>
     <script type="text/javascript">UPLOADCARE_PUBLIC_KEY = 'BECAUSE_PUBLIC_KEYS';</script>
 
-    <!-- Turn.js (aka HTML5 book thingny)-->
-    <!--script type="text/javascript" src="<?=URL?>js/jquery.mousewheel.min.js"></script-->
-    <script type="text/javascript" src="<?=URL?>js/turnjs/hash.js"></script>
+    <!-- Animsition : page transitions-->
+    <link rel="stylesheet" href="<?=URL?>css/animsition.min.css">
+    <script type="text/javascript" src="<?=URL?>js/animsition.js"></script>
 
     <!-- Font awesome-->
     <link rel="stylesheet" href="<?=URL?>css/font-awesome.min.css">

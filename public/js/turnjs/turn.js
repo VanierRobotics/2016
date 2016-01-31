@@ -71,7 +71,7 @@ var has3d,
 
     // Display
 
-    display: 'double',
+    display: 'single',
 
     // Duration of transition in milliseconds
 
@@ -87,7 +87,7 @@ var has3d,
 
     // Corners used when turning the page
 
-    turnCorners: 'bl,br',
+    turnCorners: 'bl,br,l,r',
 
     // Events
 

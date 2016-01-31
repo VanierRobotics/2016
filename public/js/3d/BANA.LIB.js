@@ -33,7 +33,7 @@ BANA.GFX = function(near, far){
     //renderer.shadowMapEnabled= true;
     //renderer.shadowMapSoft = true;
 
-    document.body.appendChild( renderer.domElement );
+    $('#content').append( renderer.domElement );
     //CAMERA Setup
     camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, near, far );
     camera.position.set( 0, 100, 2000 );

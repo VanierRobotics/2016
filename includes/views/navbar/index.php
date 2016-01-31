@@ -17,7 +17,7 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav animsition-overlay" data-animsition-overlay="true">
                 <?php if (Session::get('my_user')) { ?>
                 <li><a href="<?=URL.$this->language?>/vanier/">Vanier</a></li>
                 <li><a href="<?=URL.$this->language?>/robot/">Robot</a></li>

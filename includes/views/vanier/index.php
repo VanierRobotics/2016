@@ -22,7 +22,7 @@
     var totalPages = 0;
     $(document).ready(function () {
         $.ajax({url: 'http://devbana.tk/index/cms?lang=<?=$this->language?>&book=<?=$this->book?>&total=X'}).done(function (response) {
-            totalPages = parseInt(response)+120;
+            totalPages = parseInt(response);
             $('.pBeforeLast').addClass('p' + (totalPages - 1));
             $('.pLast').addClass('p' + totalPages);
         });
