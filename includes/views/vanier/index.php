@@ -1,4 +1,4 @@
-<div id="canvas">
+<div id="canvas" class="container-fluid">
     <div id="book-zoom">
         <div class="sj-book">
             <div depth="5" class="hard"> <div class="side"></div> </div>
@@ -21,7 +21,6 @@
         });
     });
 </script>
-
 <script type="text/javascript">
     function loadApp() {
 
