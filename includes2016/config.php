@@ -1,8 +1,8 @@
 <?php
 
 // Always provide a TRAILING SLASH (/) AFTER A PATH
-define('URL', 'http://devbana.tk/');
-define('PATH', '../includes/');
+define('URL', 'http://devbana.tk/robotics2016/da2016/');
+define('PATH', '../includes2016/');
 define('LIBS', PATH . 'core/');
 
 
