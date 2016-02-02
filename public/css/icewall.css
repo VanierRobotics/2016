@@ -1,0 +1,44 @@
+body {
+    font-family: monospace;
+    font-size: 18px;
+    background: url(../images/a-game-of-thrones-genesis_82819-1920x1200.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+
+
+
+
+label {
+    display: inline-block;
+    margin-right: 1em;
+    padding: 0.4em 0;
+    cursor: pointer;
+}
+
+button {
+    font-family: monospace;
+    position: absolute;
+    text-align: right;
+    padding: 0 1.2em;
+    background: #039;
+    font-size: 24px;
+    cursor: pointer;
+    height: 80px;
+    top: 260px;
+}
+
+#rightShark{
+    right: 20%;
+}
+#leftShark{
+    left: 20%;
+}
+
+button:hover {
+    background: #2489db;
+}
