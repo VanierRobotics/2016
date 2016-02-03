@@ -4,7 +4,7 @@ Options -Multiviews
 RewriteEngine On
 Options -Indexes
 
-RewriteBase /robotics2016/da2016
+RewriteBase /
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
