@@ -8,10 +8,24 @@
 3. Add the following lines at the end of the file:
 ```
 <VirtualHost *:80>
-DocumentRoot "C:\Users\<username>\Documents\GitHub\robotics2016\public"
+DocumentRoot "C:\Users\<username>\Documents\GitHub\robotics2016\da2016"
 ServerName devbana.tk
 ServerAlias www.devbana.tk
 </VirtualHost>
+
+<Directory "C:\Users\<username>\Documents\GitHub\robotics2016">
+   Order allow,deny
+   AllowOverride all
+   Allow from all
+   Require all granted
+</Directory>
+
+<Directory "C:\Users\<username>\Documents\GitHub\robotics2016\da2016">
+   Order allow,deny
+   AllowOverride all
+   Allow from all
+   Require all granted
+</Directory>
 ```
 4. Go to C:\Windows\System32\drivers\etc and edit the hosts file
 5. add the following line:
