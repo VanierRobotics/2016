@@ -14,9 +14,6 @@
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/sunny/jquery-ui.css"/>
     <script type="text/javascript">UPLOADCARE_PUBLIC_KEY = 'BECAUSE_PUBLIC_KEYS';</script>
 
-    <!-- Parallax.js (the cool one)-->
-    <script src="<?=URL?>js/jquery.parallax.min.js"></script>
-
     <!-- HRIM - Hoverable Responsive Image Maps -->
     <script src="<?=URL?>js/hoverImageMaps/jquery.maphilight.min.js"></script>
     <script src="<?=URL?>js/hoverImageMaps/imageMapResizer.js"></script>
