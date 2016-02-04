@@ -64,7 +64,7 @@ class auth extends Controller
         if ($user->authenticate($name, $pass)) {
             if (isset($_POST['inputRemember']))
                 setcookie('rememberBana', 'name=' . $name . '&pass=' . $pass, time() + (3600 * 24 * 30));
-            header('Location: ../timeline');
+            header('Location: ../edit');
         } else {
             header('Location: ../auth?error=1');
         }

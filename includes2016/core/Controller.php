@@ -57,7 +57,7 @@ abstract class Controller
      * @param null $param
      * @param string $modelPath
      */
-    public function loadModel($name, $param = null, $modelPath = '../includes/models/')
+    public function loadModel($name, $param = null, $modelPath = PATH.'models/')
     {
         $path = $modelPath . $name . '.php';
 
@@ -82,7 +82,7 @@ abstract class Controller
      * @param string $modelPath
      * @return null
      */
-    public function getModel($name, $param = null, $modelPath = '../includes/models/')
+    public function getModel($name, $param = null, $modelPath = PATH.'models/')
     {
         $path = $modelPath . $name . '.php';
 

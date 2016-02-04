@@ -31,7 +31,7 @@ class _User extends Model
                 if (count($st) > 0)
                     $this->init_self($st[0]);
                 else //that user doesn't exist, give error and redirect to self
-                    header('Location: ../wall?u=' . Session::get('my_user')['id']);
+                    header('Location: ../');
                 break;
             default :
                 $st = $this->db->select('SELECT * FROM users WHERE user_id = :uid', array(
@@ -40,7 +40,7 @@ class _User extends Model
                 if (count($st) > 0)
                     $this->init_generic($st[0]);
                 else //that user doesn't exist, give error and redirect to self
-                    header('Location: ../wall?u=' . Session::get('my_user')['id']);
+                    header('Location: ../');
                 break;
         }
     }
