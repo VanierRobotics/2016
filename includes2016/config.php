@@ -8,9 +8,9 @@ define('LIBS', PATH . 'core/');
 
 define('DB_TYPE', 'mysql');
 define('DB_HOST', 'teambana.com');
-define('DB_NAME', 'andrew_db');
-define('DB_USER', 'robotics2016');
-define('DB_PASS', 'yjymase6y');
+define('DB_NAME', 'robotics_2016');
+define('DB_USER', 'readshit');
+define('DB_PASS', 'ezeze8a8e');
 /*
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'crc_bilingual');
