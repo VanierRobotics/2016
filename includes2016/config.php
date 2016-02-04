@@ -6,6 +6,7 @@ define('PATH', '../includes2016/');
 define('LIBS', PATH . 'core/');
 
 
+
 define('DB_TYPE', 'mysql');
 define('DB_HOST', 'teambana.com');
 define('DB_NAME', 'robotics_2016');
