@@ -1,13 +1,13 @@
 /* Steve jobs' book */
 
 .my-book .even{
-	background-image:url(../images/gradient-page-left.jpg);
+	background-image:url(../images/book/gradient-page-left.jpg);
 	background-position:right top;
 	background-repeat:repeat-y;
 }
 
 .my-book .odd{
-	background-image:url(../images/gradient-page-right.jpg);
+	background-image:url(../images/book/gradient-page-right.jpg);
 	background-position:left top;
 	background-repeat:repeat-y;
 }
