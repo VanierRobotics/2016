@@ -168,13 +168,6 @@
 
                     moveBar(false);
 
-                },
-                missing: function (e, pages) {
-
-                    for (var i = 0; i < pages.length; i++) {
-                        addPage("<?=$this->language?>","<?=$this->book?>",pages[i], $(this) );
-                    }
-
                 }
             }
         });

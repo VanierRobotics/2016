@@ -28,7 +28,7 @@ function updateDepth(book, newPage) {
 
 }
 
-function loadPage(lang, book_name, page) {
+function loadPage(page) {
     $.ajax({
         type: 'POST',
         url: 'http://devbana.tk/index/cms?lang='+lang+'&book='+book_name+'&page='+page,

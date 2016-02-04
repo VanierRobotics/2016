@@ -19,7 +19,7 @@
 
     <!-- HRIM - Hoverable Responsive Image Maps -->
     <script src="<?=URL?>js/hoverImageMaps/jquery.maphilight.min.js"></script>
-    <script src="<?=URL?>js/hoverImageMaps/imageMapResizer.min.js"></script>
+    <script src="<?=URL?>js/hoverImageMaps/imageMapResizer.js"></script>
     <script src="<?=URL?>js/hoverImageMaps/rollover.js"></script>
 
     <!-- Animsition : page transitions-->
