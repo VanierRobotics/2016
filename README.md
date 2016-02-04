@@ -8,7 +8,7 @@
 3. Add the following lines at the end of the file:
 ```
 <VirtualHost *:80>
-DocumentRoot "C:\Users\<username>\Documents\GitHub\robotics2016\da2016"
+DocumentRoot "C:\Users\<username>\Documents\GitHub\robotics2016"
 ServerName devbana.tk
 ServerAlias www.devbana.tk
 </VirtualHost>
