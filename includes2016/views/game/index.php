@@ -1,5 +1,28 @@
-THIS IS THE COMPETITION DESCRIPTION PAGE
+<script src="<?=URL?>js/jquery.parallax.min.js"></script>
+<script type="text/javascript">		//$(function() { $("#wallpaper").parallax(); });</script>
 
-- Part of the homebrew cms thingny.
-- Same design as other description pages (Vanier, Game, Journalism&Subpages, Sponsors)
-- Hopefully HTML,CSS and PHP. please no javascript.
+<style>
+    .game {
+        position: fixed;
+        width : 100%;
+        height : 100%;
+
+        background: url(<?=URL?>images/medieval-room.png) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+
+    }
+    .testing{
+
+    }
+</style>
+
+<div class="game">
+    <ul id="wallpaper">
+    </ul>
+
+    <img class="testing" src="<?=URL?>images/game-room-hover.png">
+</div>

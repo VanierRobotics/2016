@@ -1,0 +1,81 @@
+body
+{
+	overflow : hidden;
+	font-family: "Bookman Old Style";
+}
+
+li{
+	height:100% !important;
+	width: auto !important;
+}
+
+.layer{
+	height: 100% !important;
+}
+
+.container
+{
+	position : absolute;
+	left : 0%;
+	top : 0px;
+	width : 120%;
+	height : 100% !important;
+	perspective : 1000px;
+}
+
+#scene
+{
+	position : absolute;
+	left : -10%;
+	top : 0px;
+	width : 120%;
+	height : 100% !important;
+	background-image : url("../images/bg.png");
+	background-size : cover;
+	transition : 1s;
+}
+
+.wallpaper img
+{
+	margin-top : -3%;
+	width : 77% !important;
+	height : 100%;
+}
+
+
+/* The buttons */
+.button
+{
+	position : absolute;
+	width : 120px;
+	height : 70px;
+
+	padding-top : 2em;
+	
+	border-radius : 60px;
+	border : black solid 2px;
+	background-color : rgba(0,0,0,0.35);
+	
+	text-align : center;
+	color : white;
+	
+	cursor : pointer;
+	transition : .5s;
+}
+
+.button:hover
+{
+	border-color: white;
+}
+
+.enButton
+{
+	left : 25%;
+	top : 40%;
+}
+
+.frButton
+{
+	right : 45%;
+	top : 40%;
+}
