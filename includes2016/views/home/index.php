@@ -1,7 +1,5 @@
-<script src="<?=URL?>js/jquery.parallax.min.js"></script>
-<script type="text/javascript">		//$(function() { $("#wallpaper").parallax(); });</script>
 
-<style>
+<!--style>
     .scene {
         position: fixed;
         width : 100%;
@@ -15,9 +13,13 @@
 
 
     }
-</style>
+</style-->
+<map id="mymap" name="mymap">
+    <area shape="poly" alt="Click" title="Build" coords="611,0,568,532,460,412,331,516,376,-2" href="<?=URL?>" target="_self" />
+</map>
 
-<div class="scene">
-    <ul id="wallpaper">
-    </ul>
-</div>
+<img src="<?=URL?>images/home/got.jpg" usemap="#mymap" width=100% height=100%/>
+
+
+
+

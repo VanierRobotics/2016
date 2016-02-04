@@ -30,7 +30,7 @@ li{
 	top : 0px;
 	width : 120%;
 	height : 100% !important;
-	background-image : url("../images/bg.png");
+	background-image : url("../images/icewall/bg.png");
 	background-size : cover;
 	transition : 1s;
 }

@@ -3,7 +3,7 @@
 <script type="text/javascript" src="<?=URL?>js/turnjs/hash.js"></script>
 <style>
     body {
-        background-image : url('<?=URL?>images/wood.jpg');
+        background-image : url('<?=URL?>images/book/wood.jpg');
         background-size: cover;
     }
 </style>

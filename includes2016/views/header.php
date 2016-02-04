@@ -11,9 +11,16 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="<?=URL?>js/modernizr.2.5.3.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-    <!--script type="text/javascript" src="<?=URL?>js/jquery-ui-1.8.20.custom.min.js"></script-->
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/sunny/jquery-ui.css"/>
     <script type="text/javascript">UPLOADCARE_PUBLIC_KEY = 'BECAUSE_PUBLIC_KEYS';</script>
+
+    <!-- Parallax.js (the cool one)-->
+    <script src="<?=URL?>js/jquery.parallax.min.js"></script>
+
+    <!-- HRIM - Hoverable Responsive Image Maps -->
+    <script src="<?=URL?>js/hoverImageMaps/jquery.maphilight.min.js"></script>
+    <script src="<?=URL?>js/hoverImageMaps/imageMapResizer.min.js"></script>
+    <script src="<?=URL?>js/hoverImageMaps/rollover.js"></script>
 
     <!-- Animsition : page transitions-->
     <link rel="stylesheet" href="<?=URL?>css/animsition.min.css">
