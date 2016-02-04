@@ -36,7 +36,7 @@ class en extends Controller
 
     public function game(){
         $this->view->book = 'game';
-        $this->view->render('book/index');
+        $this->view->render('game/index');
     }
 
     public function vanier(){

@@ -6,9 +6,14 @@
         position: fixed;
         width : 100%;
         height : 100%;
-        background-image : url("<?=URL?>images/home/got.jpg");
-        background-size: contain;
-        background-repeat: round;
+
+        background: url(<?=URL?>images/home/got.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+
     }
 </style>
 
