@@ -19,13 +19,7 @@ $.fn.maphilight.defaults = {
     shadowOpacity: 0.8,
     shadowPosition: 'outside',
     shadowFrom: false
-}
-
-    $(document).ready(function($){
-        $('img[usemap]').maphilight();
-        $('map').imageMapResize();
-    });
-
+};
 
 $(window).bind('resize', function(e)
 {
@@ -39,5 +33,28 @@ $(window).bind('resize', function(e)
         }, 250);
     });
 });
+
+$(document).ready(function($){
+
+    $('img[usemap]').maphilight();
+    $('map').imageMapResize();
+
+    $('area').qtip({
+        style: {
+            classes: 'qtip-dark qtip-shadow qtip-bootstrap',
+        },
+        position: {
+            target: 'mouse', // Track the mouse as the positioning target
+            adjust: { x: 5, y: 5 } // Offset it slightly from under the mouse
+        },
+        hide: {
+            effect: function() {
+                $(this).hide('puff', 500);
+            }
+        }
+    });
+});
+
+
 
 
