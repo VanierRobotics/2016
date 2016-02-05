@@ -25,7 +25,7 @@ class fr extends Controller
         $this->view->render('robot/index');
     }
 
-    public function jeu(){
+    public function competition(){
         $this->view->render('game/index');
     }
 
