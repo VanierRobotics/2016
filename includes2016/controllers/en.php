@@ -48,9 +48,9 @@ class en extends Controller
         $this->view->render('journalism/'.$subpage);
     }
 
-    public function team(){
-        $this->view->book = 'robot';
-        $this->view->render('book/index');
+    public function team($team = 'index'){
+
+        $this->view->render('team/build');
     }
 
     public function gallery(){
