@@ -4,6 +4,7 @@
 <!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <head>
     <title><?= (isset($this->title)) ? $this->title : 'NO TITLE'; ?></title>
 
@@ -44,4 +45,5 @@
         }
     } ?>
 </head>
+
 
