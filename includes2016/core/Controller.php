@@ -57,9 +57,12 @@ abstract class Controller
      * @param null $param
      * @param string $modelPath
      */
-    public function loadModel($name, $param = null, $modelPath = PATH.'models/')
+    public function loadModel($name, $param = null, $modelPath = null)
     {
-        $path = $modelPath . $name . '.php';
+        if ($modelPath !== null)
+            $path = $modelPath . $name . '.php';
+        else
+            $path = PATH . 'models/' . $name . '.php';
 
         if (file_exists($path)) {
             /** @noinspection PhpIncludeInspection */
@@ -82,16 +85,17 @@ abstract class Controller
      * @param string $modelPath
      * @return null
      */
-    public function getModel($name, $param = null, $modelPath = PATH.'models/')
+    public function getModel($name, $param = null, $modelPath = null)
     {
-        $path = $modelPath . $name . '.php';
+        if ($modelPath !== null)
+            $path = $modelPath . $name . '.php';
+        else
+            $path = PATH . 'models/' . $name . '.php';
 
         if (file_exists($path)) {
             /** @noinspection PhpIncludeInspection */
-            /** @noinspection PhpIncludeInspection */
             require_once $modelPath . $name . '.php';
             $modelName = '_' . $name;
-            //echo 'got params:' . $param;
             if (isset($param))
                 return new $modelName($param);
             else
@@ -102,7 +106,7 @@ abstract class Controller
 
     /**
      * Lazy way of making a bootstrap styled alert
-     * @param $msg what you want to say
+     * @param $msg String what you want to say
      * @param string $type type of alert (look on twitter bootstrap alerts section)
      */
     public static function anAlert($msg, $type = 'warning')
