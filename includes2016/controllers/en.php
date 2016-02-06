@@ -49,8 +49,11 @@ class en extends Controller
     }
 
     public function team($team = 'index'){
-
-        $this->view->render('team/build');
+        $this->view->team = $team;
+        $this->view->bios = $this->getModel('Bio')->getBios('en', $team);
+        $this->view->challengeText = "Biggest challenges you encountered?";
+        $this->view->learningText  = "Biggest learning experience?";
+        $this->view->render('team/index');
     }
 
     public function gallery(){

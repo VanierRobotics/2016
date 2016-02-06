@@ -6,6 +6,7 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title><?= (isset($this->title)) ? $this->title : 'NO TITLE'; ?></title>
 
     <!-- Jquery-->
@@ -28,7 +29,7 @@
 
     <!-- Bootstrap Theme @http://bootswatch>
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/cerulean/bootstrap.min.css" rel="stylesheet"-->
-    <link href="<?=URL?>/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?=URL?>css/bootstrap.min.css" rel="stylesheet">
     <script type="text/javascript" src="<?=URL?>js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="<?=URL?>css/default.css"/>

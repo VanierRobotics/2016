@@ -373,3 +373,47 @@ body, ul, table, form{
     background-repeat:repeat-y;
 }
 
+.polaroid {
+    margin-left: 22%;
+    margin-top: 2%;
+    position: relative;
+    width: 250px;
+}
+
+.polaroid img {
+    width: 230px;
+    border: 6px solid #fff;
+    border-bottom: 30px solid #fff;
+    -webkit-box-shadow: 3px 3px 3px #777;
+    -moz-box-shadow: 3px 3px 3px #777;
+    box-shadow: 3px 3px 3px #777;
+}
+
+.polaroid p {
+    height: 15px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.bioContent {
+    position: absolute;
+    padding: 0 2% 5% 5%;
+}
+
+.bioContent h4 {
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+}
+
+.bioContent p {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+}
+
