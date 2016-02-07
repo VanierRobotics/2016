@@ -38,8 +38,20 @@ class fr extends Controller
         $this->view->render('journalism/index');
     }
 
-    public function equipe(){
-        $this->view->render('team/index');
+    public function equipe($team = 'index'){
+        if ($team == 'index') {
+            $this->view->render('team/index');
+            return;
+        }
+        $this->view->team = ucfirst($team);
+        /** @var _Bio $bioModel */
+        $bioModel = $this->getModel('Bio');
+        $this->view->bios = $bioModel->getBios('fr', $team);
+        $this->view->captainBio = $bioModel->getCaptainBio('fr', $team)[0];
+        $this->view->captain    = 'Captain';
+        $this->view->challengeText = "Quelles sont les plus grands défis que vous avez rencontrés?";
+        $this->view->learningText  = "Quel était votre expérience d'apprentissage plus grand?";
+        $this->view->render('team/bioBook');
     }
 
     public function gallerie(){

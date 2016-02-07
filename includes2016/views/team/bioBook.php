@@ -19,12 +19,31 @@
             <div depth="5" class="hard front-side">
                 <div class="depth"></div>
             </div>
+            <!-- Captain's Bio page -->
+            <?php $capbio = $this->captainBio ?>
+            <div class="own-size">
+                <div class="polaroid captain">
+                    <p><?= $this->captain . ' ' . $capbio['bio_GOTName'] ?></br><?= '(' . $capbio['bio_FullName'] . ')'?></p>
+                    <img src="<?= URL ?>images/bios/<?= $capbio['bio_Image'] ?>"/>
+                </div>
+                <div class="bioContent">
+                    <h4><?= $this->challengeText ?></h4>
+                    <p>
+                        <?= $capbio['bio_Challenges'] ?>
+                    </p>
+                    <h4><?= $this->learningText ?></h4>
+                    <p>
+                        <?= $capbio['bio_Experience'] ?>
+                    </p>
+                    <p class="page-footer"><?= $this->team . ' - ' . '2' ?></p>
+                </div>
+            </div>
             <?php
-            $pageCount = 2;
+            $pageCount = 3;
             foreach ($this->bios as $bio) { ?>
-                <div>
+                <div class="own-size">
                     <div class="polaroid">
-                        <p><?= $bio['bio_FullName'] ?></p>
+                        <p><?= $bio['bio_GOTName'] ?></br><?= '(' . $bio['bio_FullName'] . ')'?></p>
                         <img src="<?= URL ?>images/bios/<?= $bio['bio_Image'] ?>"/>
                     </div>
                     <div class="bioContent">
