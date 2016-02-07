@@ -5,6 +5,7 @@
  * Class Index
  *
  * Basic home class to test mvc
+ * @property int language
  */
 class fr extends Controller
 {
@@ -14,7 +15,7 @@ class fr extends Controller
         //self::checkMember();
         $this->view->title = 'Robotique Vanier 2016';
         $this->view->language = 'fr';
-        $this->lang = 1;
+        $this->language = 1;
     }
 
     public function index()
@@ -25,8 +26,9 @@ class fr extends Controller
 
     public function robot(){
         $this->view->book = 'robot';
-        $this->model = $this->getModel('Book');
-        $this->view->texts = $this->model-> getBookPage($this->lang, 'GAME');
+        /** @var _Book $book */
+        $book = $this->getModel('Book');
+        $this->view->texts = $book->getBookPage($this->language, 'GAME');
         $this->view->render('book/index');
     }
 
@@ -37,8 +39,9 @@ class fr extends Controller
 
     public function vanier(){
         $this->view->book = 'vanier';
-        $this->model = $this->getModel('Book');
-        $this->view->texts = $this->model-> getTeamPage($this->lang, 'JOURNALISM', 'VIDEO');
+        /** @var _Book $book */
+        $book = $this->getModel('Book');
+        $this->view->texts = $book->getTeamPage($this->language, 'JOURNALISM', 'VIDEO');
         $this->view->render('book/index');
     }
 
@@ -67,6 +70,58 @@ class fr extends Controller
         $this->view->captain = 'Capitaine';
         $this->view->challengeText = "Quelles sont les plus grands défis que vous avez rencontrés?";
         $this->view->learningText = "Quel était votre expérience d'apprentissage plus grand?";
+
+        $mentors = '';
+        switch (strtolower($team)) {
+            case 'build':
+                $mentors = '<div class="polaroid mentor topLeft">
+                                <p>Phoenix Roy <br/><span style="color:gray">(Conception)</span></p>
+                                <img src="' . URL . 'images/bios/PhoenixRoy.jpg"/>
+                            </div>
+                            <div class="polaroid mentor topRight">
+                                <p>Mathew de Marchie<br/><span style="color:gray">(Construction)</span></p>
+                                <img src="' . URL . 'images/bios/nopic.jpg"/>
+                            </div>';
+                break;
+            case 'kiosk':
+                $mentors = '<div class="polaroid mentor topLeft">
+                                <p>Richard Mondoux <br/><span style="color:gray">(Conception)</span></p>
+                                <img src="' . URL . 'images/bios/RichardMondoux.jpg"/>
+                            </div>
+                            <div class="polaroid mentor topRight">
+                                <p>John Lynch <br/><span style="color:gray">(Charpenterie)</span></p>
+                                <img src="' . URL . 'images/bios/nopic.jpg"/>
+                            </div>';
+                break;
+            case 'web':
+                $mentors = '<div class="polaroid mentor topLeft">
+                                <p>Haritos Kavallos <br/><span style="color:gray">(PHP + MySQL)</span></p>
+                                <img src="' . URL . 'images/bios/HaritosKavallos.jpg"/>
+                            </div>
+                            <div class="polaroid mentor topRight">
+                                <p>Maksym Gryb <br/><span style="color:gray">(PHP + Backend)</span></p>
+                                <img src="' . URL . 'images/bios/MaksymGryb.jpg"/>
+                            </div>
+                            <div class="polaroid mentor bottomLeft">
+                                <p>Thush Sitham <br/><span style="color:gray">(HTML + jQuery)</span></p>
+                                <img src="' . URL . 'images/bios/ThushanthSithambararajan.jpg"/>
+                            </div>
+                            <div class="polaroid mentor bottomRight">
+                                <p>Manpreet Singh <br/><span style="color:gray">(HTML + Conception)</span></p>
+                                <img src="' . URL . 'images/bios/ManpreetSingh.jpg"/>
+                            </div>';
+                break;
+            case 'video':
+                $mentors = '<div class="polaroid mentor topLeft">
+                                <p>Marco Purich <br/><span style="color:gray">(Blender)</span></p>
+                                <img src="' . URL . 'images/bios/MarcoPurich.jpg"/>
+                            </div>';
+                break;
+            default:
+                break;
+        }
+        $this->view->mentors = $mentors;
+
         $this->view->render('team/bioBook');
     }
 
