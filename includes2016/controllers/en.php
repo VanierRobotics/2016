@@ -58,9 +58,9 @@ class en extends Controller
         $bioModel = $this->getModel('Bio');
         $this->view->bios = $bioModel->getBios('en', $team);
         $this->view->captainBio = $bioModel->getCaptainBio('en', $team)[0];
-        $this->view->captain    = 'Captain';
+        $this->view->captain = 'Captain';
         $this->view->challengeText = "Biggest challenges you encountered?";
-        $this->view->learningText  = "Biggest learning experience?";
+        $this->view->learningText = "Biggest learning experience?";
         $this->view->render('team/bioBook');
     }
 

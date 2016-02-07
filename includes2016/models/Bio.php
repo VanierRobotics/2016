@@ -35,7 +35,8 @@ class _Bio extends Model
         return $this->db->select($query, [':team' => $team, ':lang' => $lang]);
     }
 
-    public function getCaptainBio($lang, $team) {
+    public function getCaptainBio($lang, $team)
+    {
         $query = "SELECT
                       bio_FullName,
                       bio_Image,

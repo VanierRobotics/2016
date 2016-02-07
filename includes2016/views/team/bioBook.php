@@ -23,7 +23,8 @@
             <?php $capbio = $this->captainBio ?>
             <div class="own-size">
                 <div class="polaroid captain">
-                    <p><?= $this->captain . ' ' . $capbio['bio_GOTName'] ?></br><?= '(' . $capbio['bio_FullName'] . ')'?></p>
+                    <p><?= $this->captain . ' ' . $capbio['bio_GOTName'] ?>
+                        <br/><?= '(' . $capbio['bio_FullName'] . ')' ?></p>
                     <img src="<?= URL ?>images/bios/<?= $capbio['bio_Image'] ?>"/>
                 </div>
                 <div class="bioContent">
@@ -43,7 +44,8 @@
             foreach ($this->bios as $bio) { ?>
                 <div class="own-size">
                     <div class="polaroid">
-                        <p><?= $bio['bio_GOTName'] ?></br><?= '(' . $bio['bio_FullName'] . ')'?></p>
+                        <p><?= $bio['bio_GOTName'] ?>
+                            <br/><?= '(' . $bio['bio_FullName'] . ')' ?></p>
                         <img src="<?= URL ?>images/bios/<?= $bio['bio_Image'] ?>"/>
                     </div>
                     <div class="bioContent">
@@ -61,7 +63,7 @@
                 <?php
                 $pageCount++;
             }
-            if (($pageCount%2) === 1) print '<div></div>';
+            if (($pageCount % 2) === 1) print '<div></div>';
             ?>
             <div class="hard fixed back-side pBeforeLast">
                 <div class="depth"></div>
