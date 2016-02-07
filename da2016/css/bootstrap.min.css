@@ -6262,11 +6262,11 @@ button.close {
     display: none;
     overflow: hidden;
     position: fixed;
-    top: 0;
+    top: 60px;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 1050;
+    z-index: 9999999;
     -webkit-overflow-scrolling: touch;
     outline: 0
 }

@@ -14,8 +14,6 @@
 <!--[if !IE]>
 <html lang="en">
 <![endif]-->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <head>
     <!-- OpenGraph Stuff for pretty links in facebook -->
@@ -30,6 +28,7 @@
 
 
     <meta name="robots" content="noindex"> <!-- because no one can see us before we are done -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title><?= (isset($this->title)) ? $this->title : 'NO TITLE'; ?></title>
 
