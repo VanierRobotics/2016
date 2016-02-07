@@ -60,7 +60,7 @@ class en extends Controller
             $this->view->teamCaptain = $bioModel->getCaptainBio('en', 'TeamCaptain')[0];
             $this->view->tcText = 'Team Captain';
         }
-        $bioModel = $this->getModel('Bio');
+        $this->view->team = ucfirst($team);
         $this->view->bios = $bioModel->getBios('en', $team);
         $this->view->captainBio = $bioModel->getCaptainBio('en', $team)[0];
         $this->view->captain = 'Captain';
