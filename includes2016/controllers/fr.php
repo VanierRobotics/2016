@@ -27,11 +27,11 @@ class fr extends Controller
     public function robot(){
         $this->view->book = 'robot';
         /** @var _Book $book */
-        $book = $this->getModel('Book');
-        $this->view->texts = $book->getBookPage($this->lang, 'GAME');
+        //$book = $this->getModel('Book');
+        //$this->view->texts = $book->getBookPage($this->lang, 'GAME');
         $this->view->render('book/index');
     }
-
+	
     public function competition(){
         $this->view->book = 'game';
         $this->model = $this->getModel('Book');
@@ -147,6 +147,8 @@ class fr extends Controller
 
     public function partenaires()
     {
+		$book = $this->getModel('Book');
+		$this->view->texts = $book->getBookPage($this->lang,'SPONSORS');
         $this->view->render('sponsors/index');
     }
 
