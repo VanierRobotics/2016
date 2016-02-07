@@ -45,6 +45,7 @@ class fr extends Controller
     public function equipe($team = 'index')
     {
         if ($team == 'index') {
+            $this->view->funcName = 'equipe';
             $this->view->render('team/index');
             return;
         }

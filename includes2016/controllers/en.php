@@ -50,6 +50,7 @@ class en extends Controller
 
     public function team($team = 'index'){
         if ($team == 'index') {
+            $this->view->funcName = 'team';
             $this->view->render('team/index');
             return;
         }
