@@ -49,8 +49,17 @@ class fr extends Controller
         $this->view->render('book/index');
     }
 
-    public function journalisme($subpage = 'index'){
-        $this->view->render('journalism/'.$subpage);
+    public function journalisme($subpage = 'index')
+    {
+
+        if($subpage=='index')
+            $this->view->render('journalism/'.$subpage);
+        else{
+            $this->model = $this->getModel('Book');
+            $this->view->texts = $this->model->getTeamPage($this->language, 'JOURNALISM', strtoupper($subpage));
+            $this->view->team = $subpage;
+            $this->view->render('journalism/buildBook');
+        }
     }
 
     public function equipe($team = 'index')
