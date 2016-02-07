@@ -15,6 +15,7 @@ class en extends Controller
         $this->view->title = 'Vanier Robotics 2016';
         $this->view->language = 'en';
         $this->lang = 0;
+
     }
 
     public function evanshit(){
