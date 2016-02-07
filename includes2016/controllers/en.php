@@ -50,8 +50,7 @@ class en extends Controller
     {
         $this->view->book = 'vanier';
         $this->model = $this->getModel('Book');
-        $this->view->texts = $this->model->getTeamPage($this->lang, 'JOURNALISM', 'BUILD');
-        $this->view->render('book/index');
+        $this->view->render('vanier/index');
     }
 
     public function journalism($subpage = 'index')
