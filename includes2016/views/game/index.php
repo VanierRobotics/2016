@@ -24,6 +24,15 @@
         width: 80%;
     }
 
+    .sj-book .p1,
+    .sj-book .p2,
+    .sj-book .p3,
+    .sj-book .pBeforeLast,
+    .sj-book .pLast {
+        background-color: white;
+        background-image: url(<?=URL?>images/book/CompetitionBook.jpg) !important;
+    }
+
     /* The Close Button */
     .close {
         color: #aaaaaa;
