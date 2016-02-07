@@ -50,7 +50,7 @@
                     <?php
                     $page = '';
                     $params = '';
-                    if (explode('/',$_SERVER['REQUEST_URI'])[2] != '') {
+                    if (array_key_exists(2,explode('/',$_SERVER['REQUEST_URI'])) && explode('/',$_SERVER['REQUEST_URI'])[2] != '') {
                         $page = explode('/', $_SERVER['REQUEST_URI'])[2];
                         $params = substr($_SERVER['REQUEST_URI'], strpos($_SERVER['REQUEST_URI'], $page) + strlen($page));
                     }
