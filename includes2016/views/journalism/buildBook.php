@@ -12,6 +12,7 @@
     .sj-book .pLast {
         background-color: white;
         background-image: url(<?=URL?>images/teams/<?= $this->team . 'Book.jpg'?>)!important;
+
     }
 
 </style>
