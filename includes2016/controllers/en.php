@@ -49,8 +49,19 @@ class en extends Controller
     }
 
     public function team($team = 'index'){
-
-        $this->view->render('team/build');
+        if ($team == 'index') {
+            $this->view->render('team/index');
+            return;
+        }
+        $this->view->team = ucfirst($team);
+        /** @var _Bio $bioModel */
+        $bioModel = $this->getModel('Bio');
+        $this->view->bios = $bioModel->getBios('en', $team);
+        $this->view->captainBio = $bioModel->getCaptainBio('en', $team)[0];
+        $this->view->captain = 'Captain';
+        $this->view->challengeText = "Biggest challenges you encountered?";
+        $this->view->learningText = "Biggest learning experience?";
+        $this->view->render('team/bioBook');
     }
 
     public function gallery(){

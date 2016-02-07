@@ -94,7 +94,7 @@ abstract class Controller
 
         if (file_exists($path)) {
             /** @noinspection PhpIncludeInspection */
-            require_once $modelPath . $name . '.php';
+            require_once $path;
             $modelName = '_' . $name;
             if (isset($param))
                 return new $modelName($param);

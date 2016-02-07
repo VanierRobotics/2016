@@ -8,6 +8,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <head>
+    <meta name="robots" content="noindex"> <!-- because no one can see us before we are done -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title><?= (isset($this->title)) ? $this->title : 'NO TITLE'; ?></title>
 
     <!-- Jquery-->
@@ -30,7 +32,7 @@
 
     <!-- Bootstrap Theme @http://bootswatch>
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/cerulean/bootstrap.min.css" rel="stylesheet"-->
-    <link href="<?=URL?>/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?=URL?>css/bootstrap.min.css" rel="stylesheet">
     <script type="text/javascript" src="<?=URL?>js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="<?=URL?>css/default.css"/>
