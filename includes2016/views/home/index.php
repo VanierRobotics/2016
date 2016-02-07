@@ -2,7 +2,7 @@
         $journalism = 'journalism'.($this->language = 'en' ? '':'e');
         $bios_build = $journalism.'/build';
         $bios_web   = $journalism.'/web';
-        $bios_video = $journalism.'/vid';
+        $bios_video = $journalism.'/video';
         $bios_kiosk = $journalism.'/kiosk';
         $gallery = 'galler'.($this->language = 'en' ? 'ie':'y');
         $tuto = 'tutori'.($this->language = 'en' ? 'el':'al');
