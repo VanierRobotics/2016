@@ -8,6 +8,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <head>
+    <!-- OpenGraph Stuff for pretty links in facebook -->
+    <meta property="og:title" content="<?= (isset($this->title)) ? $this->title : 'NO TITLE'; ?>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Vanier Robotics's entry for the CRC's Pythagorium 2016 Web Design and Journalism competition.">
+    <meta property="og:url" content="<?=URL?>" />
+    <meta property="og:image" content="<?=URL?>images/fblogo.png" />
+    <meta property="og:site_name" content="Vanier Robotics 2016" />
+<!--    <meta property="og:video" content="" /> TODO: Put link to youtube video here-->
+
+
     <meta name="robots" content="noindex"> <!-- because no one can see us before we are done -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title><?= (isset($this->title)) ? $this->title : 'NO TITLE'; ?></title>
