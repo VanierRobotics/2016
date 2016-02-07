@@ -36,7 +36,7 @@
                         <p>
                             <?= $bio['bio_Experience'] ?>
                         </p>
-                        <p><?= $this->team . ' - ' . $pageCount ?></p>
+                        <p class="page-footer"><?= $this->team . ' - ' . $pageCount ?></p>
                     </div>
                 </div>
                 <?php

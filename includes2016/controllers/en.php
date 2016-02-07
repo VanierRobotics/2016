@@ -49,7 +49,7 @@ class en extends Controller
     }
 
     public function team($team = 'index'){
-        $this->view->team = $team;
+        $this->view->team = ucfirst($team);
         $this->view->bios = $this->getModel('Bio')->getBios('en', $team);
         $this->view->challengeText = "Biggest challenges you encountered?";
         $this->view->learningText  = "Biggest learning experience?";

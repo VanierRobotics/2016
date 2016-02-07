@@ -403,6 +403,9 @@ body, ul, table, form{
 .bioContent {
     position: absolute;
     padding: 0 2% 5% 5%;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
 }
 
 .bioContent h4 {
@@ -415,5 +418,12 @@ body, ul, table, form{
     font-size: 14px;
     padding: 0;
     margin: 0;
+}
+
+.bioContent > .page-footer{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    bottom: 10px;
 }
 
