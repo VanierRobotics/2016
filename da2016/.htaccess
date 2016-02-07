@@ -1,3 +1,4 @@
+AddType text/cache-manifest .appchache
 Options -Multiviews
 RewriteEngine On
 Options -Indexes

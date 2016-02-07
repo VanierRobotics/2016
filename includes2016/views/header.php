@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <!--[if lt IE 7 ]>
-<html lang="en" class="ie6">
+<html lang="en" class="ie6" manifest="demo.appcache">
 <![endif]-->
 <!--[if IE 7 ]>
-<html lang="en" class="ie7">
+<html lang="en" class="ie7" manifest="demo.appcache">
 <![endif]-->
 <!--[if IE 8 ]>
-<html lang="en" class="ie8">
+<html lang="en" class="ie8" manifest="demo.appcache">
 <![endif]-->
 <!--[if IE 9 ]>
-<html lang="en" class="ie9">
+<html lang="en" class="ie9" manifest="demo.appcache">
 <![endif]-->
 <!--[if !IE]>
-<html lang="en">
+<html lang="en" manifest="demo.appcache">
 <![endif]-->
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
     <!-- OpenGraph Stuff for pretty links in facebook -->
     <meta property="og:title" content="<?= (isset($this->title)) ? $this->title : 'NO TITLE'; ?>"/>
     <meta property="og:type" content="website"/>
