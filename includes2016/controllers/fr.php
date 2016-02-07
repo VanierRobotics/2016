@@ -30,20 +30,19 @@ class fr extends Controller
         $this->view->render('book/index');
     }
 
-    public function jeu(){
+    public function jeu()
+    {
         $this->view->book = 'game';
         $this->model = $this->getModel('Book');
         $this->view->texts = $this->model->getBookPage($this->lang, 'GAME');
         $this->view->render('game/index');
     }
 
-    public function vanier(){
+    public function vanier()
+    {
         $this->view->book = 'vanier';
-        $this->model = $this->getModel('Book');
-        $this->view->texts = $this->model-> getTeamPage($this->lang, 'JOURNALISM', 'VIDEO');
         $this->view->render('book/index');
     }
-
 
     public function journalisme($subpage = 'index'){
         $this->view->render('journalism/'.$subpage);
