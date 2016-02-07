@@ -41,7 +41,7 @@ body, ul, table, form {
 }
 
 .sj-book h1 {
-    font-family: "Stempel-Garamond-W01-Roman";
+    font-family: "Stempel-Garamond-W01-Roman", serif;
     font-size: 38px;
     font-weight: lighter;
     margin: 20px 0;
@@ -60,7 +60,7 @@ body, ul, table, form {
 }
 
 .sj-book .book-content {
-    font-family: "Stempel-Garamond-W01-Roman";
+    font-family: "Stempel-Garamond-W01-Roman", serif;
     font-size: 16px;
     margin: 70px 40px;
 }
@@ -375,7 +375,7 @@ body, ul, table, form {
 
 .polaroid img {
     width: 210px;
-    border: 6px solid #fff;
+    border: 7px solid #fff;
     border-bottom: 45px solid #fff;
     -webkit-box-shadow: 3px 3px 3px #777;
     -moz-box-shadow: 3px 3px 3px #777;
@@ -422,3 +422,45 @@ body, ul, table, form {
     bottom: 10px;
 }
 
+.own-size.mentors h2 {
+    font-weight: bolder;
+    text-align: center;
+    font-size: 200%;
+}
+
+.polaroid.mentor {
+    width: 140px;
+}
+
+.polaroid.mentor img {
+    width: 140px;
+}
+
+.polaroid.mentor.topLeft {
+    position: absolute;
+    left: 0;
+    margin-top: 0;
+    margin-left: 10%;
+}
+
+.polaroid.mentor.topRight {
+    position: absolute;
+    right: 0;
+    margin-top: 0;
+    margin-right: 10%;
+}
+
+.polaroid.mentor.bottomRight {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 5%;
+    margin-right: 10%;
+}
+
+.polaroid.mentor.bottomLeft {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 5%;
+    margin-left: 10%;
+}

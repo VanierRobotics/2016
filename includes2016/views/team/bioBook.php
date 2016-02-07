@@ -9,9 +9,6 @@
         background-size: cover;
     }
 
-    .sj-book .p1,
-    .sj-book .p2,
-    .sj-book .p3,
     .sj-book .pBeforeLast,
     .sj-book .pLast {
         background-color: white;
@@ -29,6 +26,27 @@
             <div depth="5" class="hard front-side">
                 <div class="depth"></div>
             </div>
+            <div class="own-size mentors">
+                <h2><?= $this->team ?> Mentors</h2>
+                <div class="polaroid mentor topLeft">
+                    <p>Some Name</p>
+                    <img src="<?= URL ?>images/bios/nopic.jpg"/>
+                </div>
+                <div class="polaroid mentor topRight">
+                    <p>Some Name</p>
+                    <img src="<?= URL ?>images/bios/nopic.jpg"/>
+                </div>
+                <div class="polaroid mentor bottomRight">
+                    <p>Some Name</p>
+                    <img src="<?= URL ?>images/bios/nopic.jpg"/>
+                </div>
+                <div class="polaroid mentor bottomLeft">
+                    <p>Some Name</p>
+                    <img src="<?= URL ?>images/bios/nopic.jpg"/>
+                </div>
+
+            </div>
+
             <!-- Captain's Bio page -->
             <?php
             $pageCount = 2;
