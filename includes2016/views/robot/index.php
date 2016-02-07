@@ -1,11 +1,4 @@
 <!-- Turn.js (aka HTML5 book thingny)-->
-<?php
-	/* 	Since Alex will be plugging the DB and will use a 'foreach' loop later to display the content, 
-		I stored some random book stuff from what Georges did and stored them in a array and used a 'foreach'
-		loop myself. Kinda makes life easier for later, I think :|
-	*/ 
-	include 'book_contents.php';
-?>
 <script type="text/javascript" src="<?=URL?>js/turnjs/hash.js"></script>
 <style>
     body {
@@ -30,13 +23,13 @@
             <?php
                 $i = 0;
 				
-				foreach($robot_book as $key => $book_txt)
+				foreach($this->texts as $text)
 				{
                     $i++;
                     ($i%2) ? $even= '' : $even= 'even';
 					echo('	<div class="own-size '.$even.'">
 								<div class="book-content">');
-					echo $book_txt;
+					echo $text['content'];
 					echo(' 	</div>
 							<span class="page-number">'.($i+2).'</span></div>');
 				}

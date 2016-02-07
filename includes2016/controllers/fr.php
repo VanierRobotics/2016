@@ -27,8 +27,8 @@ class fr extends Controller
     public function robot(){
         $this->view->book = 'robot';
         /** @var _Book $book */
-        //$book = $this->getModel('Book');
-        //$this->view->texts = $book->getBookPage($this->lang, 'GAME');
+        $book = $this->getModel('Book');
+        $this->view->texts = $book->getBookPage($this->lang, 'GAME');
         $this->view->render('book/index');
     }
 	
@@ -43,13 +43,12 @@ class fr extends Controller
         $this->view->book = 'vanier';
         /** @var _Book $book */
         $book = $this->getModel('Book');
-        $this->view->texts = $book->getTeamPage($this->lang, 'JOURNALISM', 'VIDEO');
+        $this->view->texts = $book->getBookPage($this->lang, 'VANIER');
         $this->view->render('book/index');
     }
 
     public function journalisme($subpage = 'index')
     {
-
         if($subpage=='index')
             $this->view->render('journalism/'.$subpage);
         else{
