@@ -17,7 +17,7 @@ class index extends Controller
 
     public function index()
     {
-        $this->view->render('language/index');
+        $this->view->render('language/index',true);
     }
 
     public function evanshit(){

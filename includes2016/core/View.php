@@ -62,11 +62,12 @@ class View
         if ($noInclude) {
             /** @noinspection PhpIncludeInspection */
             /** @noinspection PhpIncludeInspection */
+            require PATH . 'views/header.php';
             require PATH . 'views/' . $name . '.php';
         } else {
             /** @noinspection PhpIncludeInspection */
             /** @noinspection PhpIncludeInspection */
-            require PATH . 'views/header.php'; //replace by navbar eventually
+            require PATH . 'views/header.php';
             /** @noinspection PhpIncludeInspection */
             /** @noinspection PhpIncludeInspection */
             require PATH . 'views/navbar/index.php';

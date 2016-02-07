@@ -209,7 +209,7 @@ body, ul, table, form {
 }
 
 .sj-book .depth {
-    background-image: url(../images/book/pages-depth.png);
+    background-image: url(../images/book/page-depth.png);
     position: absolute;
     top: 7px;
     width: 16px;
