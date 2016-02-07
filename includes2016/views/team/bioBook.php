@@ -101,6 +101,7 @@
                 $pageCount++;
             }
             print '<div class="own-size mentors">';
+            print '<h2>Mentors</h2>';
             print $this->mentors;
             print '<p class="page-footer">' . $this->team . ' - ' . $pageCount . '</p>';
             print '</div>';
