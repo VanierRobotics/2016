@@ -14,6 +14,7 @@ class fr extends Controller
         //self::checkMember();
         $this->view->title = 'Robotique Vanier 2016';
         $this->view->language = 'fr';
+        $this->lang = 1;
     }
 
     public function index()
@@ -21,21 +22,26 @@ class fr extends Controller
         $this->view->render('home/index');
     }
 
-    public function robot()
-    {
-        $this->view->render('robot/index');
+
+    public function robot(){
+        $this->view->book = 'robot';
+        $this->model = $this->getModel('Book');
+        $this->view->texts = $this->model-> getBookPage($this->lang, 'GAME');
+        $this->view->render('book/index');
     }
 
-    public function competition()
-    {
+    public function competition(){
+        $this->view->book = 'game';
         $this->view->render('game/index');
     }
 
-    public function vanier()
-    {
+    public function vanier(){
         $this->view->book = 'vanier';
+        $this->model = $this->getModel('Book');
+        $this->view->texts = $this->model-> getTeamPage($this->lang, 'JOURNALISM', 'VIDEO');
         $this->view->render('book/index');
     }
+
 
     public function journalisme($subpage = 'index'){
         $this->view->render('journalism/'.$subpage);
