@@ -1,4 +1,4 @@
-
+<?php     $link = URL . $this->language . (($this->language === 'en') ? '/team' : '/equipe'); ?>
 <link rel="stylesheet" href="<?=URL?>css/journalismBooks.css">
 
 
@@ -8,7 +8,7 @@
     </header>
     <div class="main">
         <ul id="bk-list" class="bk-list clearfix">
-            <a href="./Video" >
+            <a href="<?=$link?>/Video" >
                 <li>
                     <div class="bk-book book-1">
                         <div class="bk-front">
@@ -22,7 +22,7 @@
                 </li>
             </a>
 
-            <a href="./Build" >
+            <a href="<?=$link?>/Build" >
                 <li>
                     <div class="bk-book book-2">
                         <div class="bk-front">
@@ -36,7 +36,7 @@
                 </li>
             </a>
 
-            <a href="./Web" >
+            <a href="<?=$link?>/Web" >
                 <li>
                     <div class="bk-book book-3">
                         <div class="bk-front">
@@ -50,7 +50,7 @@
                 </li>
             </a>
 
-            <a href="./Kiosk" >
+            <a href="<?=$link?>/Kiosk" >
                 <li>
                     <div class="bk-book book-4">
                         <div class="bk-front">

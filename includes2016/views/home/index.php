@@ -8,6 +8,7 @@ $bios_video = $team . '/video';
 $bios_kiosk = $team . '/kiosk';
 $gallery = 'galler' . ($this->language = 'en' ? 'ie' : 'y');
 $tuto = 'tutori' . ($this->language = 'en' ? 'el' : 'al');
+$popup = ($this->language === 'en') ? 'Click on banners, doors and other highlighted objects to navigate.' : 'Cliquer sur banner, porte, et autre merde. merci, baguette.';
 ?>
 
 <!-- HRIM - Hoverable Responsive Image Maps -->
@@ -38,6 +39,25 @@ $tuto = 'tutori' . ($this->language = 'en' ? 'el' : 'al');
 
 <img src="<?=URL?>images/home/got.jpg" usemap="#mymap" width=100%/>
 
+<script type="text/javascript">
+    $(function() {
+        $('#footer').qtip({
+            style: {
+                classes: 'qtip-dark qtip-shadow qtip-bootstrap',
+            },
+            position: {
+                adjust: { x: -1000, y: -300 }
+            },
+            content: '<?=$popup?>',
+            show: {
+                delay: 1500,
+                    when: false, // Don't specify a show event
+                    ready: true // Show the tooltip when ready
+                },
+                hide: {
+                delay: 4000
+            }
+        });
+    });
 
-
-
+</script>

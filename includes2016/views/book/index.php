@@ -3,7 +3,7 @@
 <style>
     body {
         background-image : url('<?=URL?>images/book/wood.jpg');
-        background-size: cover;
+        background-size: 100% 100%;
     }
 </style>
 

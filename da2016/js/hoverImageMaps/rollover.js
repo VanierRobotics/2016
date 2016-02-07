@@ -39,24 +39,6 @@ $(document).ready(function($){
     $('img[usemap]').maphilight();
     $('map').imageMapResize();
 
-    $('#footer').qtip({
-        style: {
-            classes: 'qtip-dark qtip-shadow qtip-bootstrap',
-        },
-        position: {
-            adjust: { x: -1000, y: -200 }
-        },
-        content: 'Click on banners, doors and other highlighted objects to navigate.',
-        show: {
-            delay: 1500,
-            when: false, // Don't specify a show event
-            ready: true // Show the tooltip when ready
-        },
-        hide: {
-            delay: 4000
-        }
-    });
-
     $('area').qtip({
         style: {
             classes: 'qtip-dark qtip-shadow qtip-bootstrap',
