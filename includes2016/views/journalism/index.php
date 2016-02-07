@@ -2,6 +2,9 @@
 
 
 <div class="container">
+    <header class="clearfix">
+        <h1>Vanier Robotics 2016</h1>
+    </header>
     <div class="main">
         <ul id="bk-list" class="bk-list clearfix">
             <a href="./Video" >
