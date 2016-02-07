@@ -29,7 +29,7 @@ class fr extends Controller
         /** @var _Book $book */
         //$book = $this->getModel('Book');
         //$this->view->texts = $book->getBookPage($this->lang, 'GAME');
-        $this->view->render('book/index');
+        $this->view->render('robot/index');
     }
 	
     public function competition(){
