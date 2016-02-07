@@ -1,8 +1,6 @@
 <!-- Turn.js (aka HTML5 book thingny)-->
 <script type="text/javascript" src="<?= URL ?>js/turnjs/hash.js"></script>
-<script type="text/javascript" src="<?= URL ?>js/turnjs/turn.js"></script>
 <script type="text/javascript" src="<?= URL ?>js/turnjs/zoom.min.js"></script>
-<script type="text/javascript" src="<?= URL ?>js/turnjs/scissor.min.js"></script>
 <style>
     body {
         background-image: url('<?=URL?>images/book/wood.jpg');
