@@ -89,7 +89,16 @@
             </div>
         </div>
 
-
+        <script type="text/javascript">
+            // Load turn.js
+            yepnope({
+                test : Modernizr.csstransforms,
+                yep: ['<?=URL?>js/turnjs/turn.min.js'],
+                nope: ['<?=URL?>js/turnjs/turn.html4.min.js', '<?=URL?>css/jquery.ui.html4.css', '<?=URL?>css/book-html4.css'],
+                both: ['<?=URL?>js/turnjs/book.js', '<?=URL?>css/jquery.ui.css', '<?=URL?>css/book.css'],
+                complete: delayLoad
+            });
+        </script>
     </div>
 
 </div>
@@ -106,14 +115,7 @@
 
     // When the user clicks the button, open the modal
     btn.onclick = function() {
-        yepnope({
-            test : Modernizr.csstransforms,
-            yep: ['<?=URL?>js/turnjs/turn.min.js'],
-            nope: ['<?=URL?>js/turnjs/turn.html4.min.js', '<?=URL?>css/jquery.ui.html4.css', '<?=URL?>css/book-html4.css'],
-            both: ['<?=URL?>js/turnjs/book.js', '<?=URL?>css/jquery.ui.css', '<?=URL?>css/book.css'],
-            complete: delayLoad
-        });
-
+        modal.style.display = "block";
     }
 
     // When the user clicks on <span> (x), close the modal
