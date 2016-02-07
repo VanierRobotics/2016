@@ -39,7 +39,7 @@
 
                        ');
 
-                echo('  <div class="book-content"> <p>END</p> </div>
+                echo('  <div class="book-content"> <p></p> </div>
                         <span class="page-number">'.$i.'</span></div>');
 
             }
