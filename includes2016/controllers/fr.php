@@ -15,7 +15,7 @@ class fr extends Controller
         //self::checkMember();
         $this->view->title = 'Robotique Vanier 2016';
         $this->view->language = 'fr';
-        $this->language = 1;
+        $this->lang = 1;
     }
 
     public function index()
@@ -28,24 +28,25 @@ class fr extends Controller
         $this->view->book = 'robot';
         /** @var _Book $book */
         $book = $this->getModel('Book');
-        $this->view->texts = $book->getBookPage($this->language, 'GAME');
+        $this->view->texts = $book->getBookPage($this->lang, 'GAME');
         $this->view->render('book/index');
     }
 
-    public function jeu()
-    {
+    public function competition(){
         $this->view->book = 'game';
         $this->model = $this->getModel('Book');
         $this->view->texts = $this->model->getBookPage($this->lang, 'GAME');
         $this->view->render('game/index');
     }
 
-    public function vanier()
-    {
+    public function vanier(){
         $this->view->book = 'vanier';
+<<<<<<< Temporary merge branch 1
         /** @var _Book $book */
         $book = $this->getModel('Book');
         $this->view->texts = $book->getTeamPage($this->language, 'JOURNALISM', 'VIDEO');
+=======
+>>>>>>> Temporary merge branch 2
         $this->view->render('book/index');
     }
 
