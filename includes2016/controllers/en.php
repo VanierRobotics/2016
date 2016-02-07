@@ -62,6 +62,7 @@ class en extends Controller
         else{
             $this->model = $this->getModel('Book');
             $this->view->texts = $this->model->getTeamPage($this->lang, 'JOURNALISM', strtoupper($subpage));
+            $this->view->team = $subpage;
             $this->view->render('journalism/buildBook');
         }
     }
