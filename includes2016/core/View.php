@@ -1,49 +1,8 @@
 <?php
 
 /**
+ * @property string language
  * @property string title
- * @property array posts
- * @property string error
- * @property string name
- * @property string description
- * @property string privacy
- * @property array groups
- * @property bool validName
- * @property string members
- * @property mixed receivedMessages
- * @property mixed sentMessages
- * @property mixed messages
- * @property mixed fromid
- * @property mixed toid
- * @property string noUserError
- * @property null post
- * @property _User|bool newUser
- * @property mixed genders
- * @property bool|DateTime minDate
- * @property mixed countries
- * @property string gender
- * @property string country
- * @property bool canSubmit
- * @property string usernameError
- * @property string passwordError
- * @property string emailError
- * @property string firstNameError
- * @property string lastNameError
- * @property string genderError
- * @property string phoneError
- * @property string cityError
- * @property string provinceError
- * @property string countryError
- * @property string codeError
- * @property string foundUsers
- * @property string foundGroups
- * @property string id
- * @property string friendButtonText
- * @property string friendButtonTarget
- * @property string user
- * @property string dobError
- * @property string addressError
- * @property DateTime maxDate
  */
 class View
 {
@@ -60,8 +19,6 @@ class View
     public function render($name, $noInclude = false)
     {
         if ($noInclude) {
-            /** @noinspection PhpIncludeInspection */
-            /** @noinspection PhpIncludeInspection */
             require PATH . 'views/header.php';
             require PATH . 'views/' . $name . '.php';
         } else {

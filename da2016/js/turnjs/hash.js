@@ -287,11 +287,6 @@ function loadApp() {
 	$('#canvas').css({visibility: ''});
 }
 
-
-// Hide canvas
-$('#canvas').css({visibility: 'hidden'});
-
-
 function delayLoad(){
     setTimeout(function() {loadApp()},50);
 }

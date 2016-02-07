@@ -7,7 +7,7 @@
                 <script type="text/javascript">
                     $(window).resize(function () {
                         $('.alert').css('display','block');
-                    };
+                    });
                 </script>
             </div>
             <p class="text-center">&copy;Vanier Robotics <?php echo date("Y"); ?> |

@@ -27,6 +27,7 @@
             <div depth="5" class="hard front-side">
                 <div class="depth"></div>
             </div>
+
             <!-- Captain's Bio page -->
             <?php
             $pageCount = 2;
@@ -99,7 +100,12 @@
                 <?php
                 $pageCount++;
             }
-            if (($pageCount % 2) === 1) print '<div></div>';
+            print '<div class="own-size mentors">';
+            print $this->mentors;
+            print '<p class="page-footer">' . $this->team . ' - ' . $pageCount . '</p>';
+            print '</div>';
+            $pageCount++;
+            if (($pageCount % 2) === 1) print '<div class="own-size"></div>';
             ?>
             <div class="hard fixed back-side pBeforeLast">
                 <div class="depth"></div>
@@ -110,6 +116,9 @@
 </div>
 
 <script type="text/javascript">
+    // Hide canvas
+    $('#canvas').css('visibility', 'hidden');
+
     // Load turn.js
     yepnope({
         test: Modernizr.csstransforms,
