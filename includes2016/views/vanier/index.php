@@ -16,7 +16,6 @@
     }
 </style>
 
-
 <div id="canvas" class="container-fluid">
     <div id="book-zoom">
         <div class="sj-book">
