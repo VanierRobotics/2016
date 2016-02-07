@@ -38,13 +38,15 @@ class en extends Controller
         $this->view->book = 'robot';
         /** @var _Book $book */
         $book = $this->getModel('Book');
-        $this->view->texts = $book->getBookPage($this->language, 'GAME');
+        $this->view->texts = $book->getBookPage($this->lang, 'GAME');
         $this->view->render('book/index');
     }
 
-    public function competition()
+    public function game()
     {
         $this->view->book = 'game';
+        $this->model = $this->getModel('Book');
+        $this->view->texts = $this->model->getBookPage($this->lang, 'GAME');
         $this->view->render('game/index');
     }
 
@@ -52,8 +54,7 @@ class en extends Controller
     {
         $this->view->book = 'vanier';
         $this->model = $this->getModel('Book');
-        $this->view->texts = $this->model->getTeamPage($this->lang, 'JOURNALISM', 'BUILD');
-        $this->view->render('book/index');
+        $this->view->render('vanier/index');
     }
 
     public function journalism($subpage = 'index')

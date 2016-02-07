@@ -41,15 +41,26 @@ class fr extends Controller
 
     public function vanier(){
         $this->view->book = 'vanier';
+<<<<<<< Temporary merge branch 1
         /** @var _Book $book */
         $book = $this->getModel('Book');
         $this->view->texts = $book->getTeamPage($this->language, 'JOURNALISM', 'VIDEO');
+=======
+>>>>>>> Temporary merge branch 2
         $this->view->render('book/index');
     }
 
+    public function journalisme($subpage = 'index')
+    {
 
-    public function journalisme($subpage = 'index'){
-        $this->view->render('journalism/'.$subpage);
+        if($subpage=='index')
+            $this->view->render('journalism/'.$subpage);
+        else{
+            $this->model = $this->getModel('Book');
+            $this->view->texts = $this->model->getTeamPage($this->language, 'JOURNALISM', strtoupper($subpage));
+            $this->view->team = $subpage;
+            $this->view->render('journalism/buildBook');
+        }
     }
 
     public function equipe($team = 'index')
