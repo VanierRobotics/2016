@@ -116,6 +116,9 @@
 </div>
 
 <script type="text/javascript">
+    // Hide canvas
+    $('#canvas').css('visibility', 'hidden');
+
     // Load turn.js
     yepnope({
         test: Modernizr.csstransforms,
