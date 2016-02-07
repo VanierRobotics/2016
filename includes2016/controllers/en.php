@@ -14,7 +14,6 @@ class en extends Controller
         //self::checkMember();
         $this->view->title = 'Vanier Robotics 2016';
         $this->view->language = 'en';
-        $this->lang = 0;
     }
 
     public function evanshit(){
@@ -32,8 +31,6 @@ class en extends Controller
 
     public function robot(){
         $this->view->book = 'robot';
-        $this->model = $this->getModel('Book');
-        $this->view->texts = $this->model-> getBookPage($this->lang, 'GAME');
         $this->view->render('book/index');
     }
 
@@ -44,8 +41,6 @@ class en extends Controller
 
     public function vanier(){
         $this->view->book = 'vanier';
-        $this->model = $this->getModel('Book');
-        $this->view->texts = $this->model-> getTeamPage($this->lang, 'JOURNALISM', 'BUILD');
         $this->view->render('book/index');
     }
 

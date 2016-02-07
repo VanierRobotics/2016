@@ -1,14 +1,14 @@
 <?php
 $link = URL . $this->language . '/';
-$team = ($this->language === 'en') ? 'team' : 'equipe';
+$team = $this->language === 'en' ? 'team' : 'equipe';
 $journalism = 'journalism'.(($this->language === 'en') ? ' ' : 'e');
 $bios_build = $team . '/build';
 $bios_web = $team . '/web';
 $bios_video = $team . '/video';
 $bios_kiosk = $team . '/kiosk';
-$gallery = 'galler' . (($this->language === 'en') ? 'ie' : 'y');
-$tuto = 'tutori' . (($this->language ==='en') ? 'el' : 'al');
-$popup = ($this->language === 'en') ? 'Click on banners, doors and other highlighted objects to navigate.' : 'Cliquer sur les bannières, les portes, et d\'autres objets pour naviguer.';
+$gallery = 'galler' . ($this->language = 'en' ? 'ie' : 'y');
+$tuto = 'tutori' . ($this->language = 'en' ? 'el' : 'al');
+$popup = ($this->language === 'en') ? 'Click on banners, doors and other highlighted objects to navigate.' : 'Cliquer sur banner, porte, et autre merde. merci, baguette.';
 ?>
 
 <!-- HRIM - Hoverable Responsive Image Maps -->
@@ -59,4 +59,5 @@ $popup = ($this->language === 'en') ? 'Click on banners, doors and other highlig
             }
         });
     });
+
 </script>
