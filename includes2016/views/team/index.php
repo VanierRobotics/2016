@@ -1,11 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Alex
- * Date: 2016-02-07
- * Time: 12:32 AM
- */
-?>
+
 <link rel="stylesheet" href="<?=URL?>css/journalismBooks.css">
 
 

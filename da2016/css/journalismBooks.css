@@ -142,12 +142,12 @@
 .book-1 .bk-front > div,
 .book-1 .bk-cover,
 .book-1 .bk-back {
-    background-image: url(../images/journalism/book1cover.png);
+    background-image: url(../images/teams/book1cover.png);
     background-size: cover;
 }
 
 .book-1 .bk-left {
-    background-image: url(../images/journalism/book1side.png);
+    background-image: url(../images/teams/book1side.png);
     background-size: cover;
 }
 
@@ -155,11 +155,11 @@
 
 .book-2 .bk-front > div ,
 .book-2 .bk-back {
-    background-image: url(../images/journalism/book2cover.png);
+    background-image: url(../images/teams/book2cover.png);
     background-size: cover;
 }
 .book-2 .bk-left {
-    background-image: url(../images/journalism/book2side.png);
+    background-image: url(../images/teams/book2side.png);
     background-size: cover;
 }
 
@@ -172,11 +172,11 @@
 .book-3 .bk-front > div,
 .book-3 .bk-back,
 .book-3 .bk-front:after {
-    background-image: url(../images/journalism/book3cover.png);
+    background-image: url(../images/teams/book3cover.png);
     background-size: cover;
 }
 .book-3 .bk-left {
-    background-image: url(../images/journalism/book3side.png);
+    background-image: url(../images/teams/book3side.png);
     background-size: cover;
 }
 
@@ -191,12 +191,12 @@
 .book-4 .bk-front:after,
 .book-4 .bk-cover {
 	background-color: red;
-	background-image: url(../images/journalism/book4cover.png);
+	background-image: url(../images/teams/book4cover.png);
 	background-size: cover;
 }
 
 .book-4 .bk-left {
-    background-image: url(../images/journalism/book4side.png);
+    background-image: url(../images/teams/book4side.png);
     background-size: cover;
 }
 
@@ -250,7 +250,7 @@ body {
 }
 
 body {
-	background: url(../images/journalism/wall.jpg);
+	background: url(../images/teams/wall.jpg);
 	background-repeat: repeat;
 }
 
@@ -291,6 +291,6 @@ a {
 	height: 21em;
 	z-index: -1;
 	margin-top: -25px;
-	background: transparent url(../images/journalism/shelf.png) no-repeat center center;
+	background: transparent url(../images/teams/shelf.png) no-repeat center center;
 	position: relative;
 }
