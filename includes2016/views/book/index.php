@@ -13,8 +13,9 @@
             <div depth="5" class="hard"> <div class="side"></div> </div>
             <div depth="5" class="hard front-side"> <div class="depth"></div> </div>
             <?php
-                $pages = 2; //REPLACE WITH FOREACH BASED ON SHIT FROM CONTROLLER
-                for ($i = 1; $i<=$pages; $i++) {
+                $i=0;
+                foreach($this->texts as $text) {
+                    $i++;
                     ($i%2) ? $even= '' : $even= 'even'; //It's set to double display mode hence puting even pages as even. (why? because cover textures..)
                 echo('<div class="own-size '.$even.'">
                        <div class="book-content">');
