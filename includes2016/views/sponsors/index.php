@@ -13,16 +13,14 @@
             <div depth="5" class="hard"> <div class="side"></div> </div>
             <div depth="5" class="hard front-side"> <div class="depth"></div> </div>
             <?php
-                $i = 0;
-				$sponsor_book = $this->language;
-				
-				foreach($sponsor_book as $key => $book_txt)
+                $i = 0;				
+				foreach($this->texts as $text)
 				{
                     $i++;
                     ($i%2) ? $even= '' : $even= 'even';
 					echo('	<div class="own-size '.$even.'">
 								<div class="book-content">');
-					echo $book_txt;
+					echo $text['content'];
 					echo(' 	</div>
 							<span class="page-number">'.($i+2).'</span></div>');
 				}
@@ -32,7 +30,7 @@
 					$i++;
 					($i%2) ? $even= '' : $even= 'even';
 					echo('<div class="own-size '.$even.'">');
-					echo('  <div class="book-content"> <p>END</p> </div>
+					echo('  <div class="book-content"> </div>
 							<span class="page-number">'.($i+2).'</span></div>');
 				}
             ?>
