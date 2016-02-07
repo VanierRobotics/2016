@@ -39,7 +39,7 @@ class en extends Controller
         $this->view->render('book/index');
     }
 
-    public function competition()
+    public function game()
     {
         $this->view->book = 'game';
         $this->model = $this->getModel('Book');

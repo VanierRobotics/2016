@@ -30,8 +30,10 @@ class fr extends Controller
         $this->view->render('book/index');
     }
 
-    public function competition(){
+    public function jeu(){
         $this->view->book = 'game';
+        $this->model = $this->getModel('Book');
+        $this->view->texts = $this->model->getBookPage($this->lang, 'GAME');
         $this->view->render('game/index');
     }
 
