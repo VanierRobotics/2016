@@ -15,7 +15,7 @@
     .sj-book .pBeforeLast,
     .sj-book .pLast {
         background-color: white;
-        background-image: url(<?=URL?>images/teams/<?= $this->team . 'Book.jpg'?>)!important;
+        background-image: url(<?=URL?>images/teams/<?= $this->team . 'Book.jpg'?>) !important;
     }
 
 </style>
@@ -30,6 +30,34 @@
                 <div class="depth"></div>
             </div>
             <!-- Captain's Bio page -->
+            <?php
+            $pageCount = 2;
+            if (isset($this->teamCaptain)) {
+                $capbio = $this->teamCaptain;
+                ?>
+                <div class="own-size">
+                    <div class="polaroid captain">
+                        <p><?= $this->tcText . ' ' . $capbio['bio_GOTName'] ?>
+                            <br/><?= '(' . $capbio['bio_FullName'] . ')' ?></p>
+                        <img src="<?= URL ?>images/bios/<?= $capbio['bio_Image'] ?>"/>
+                    </div>
+                    <div class="bioContent">
+                        <h4><?= $this->challengeText ?></h4>
+                        <p>
+                            <?= $capbio['bio_Challenges'] ?>
+                        </p>
+                        <h4><?= $this->learningText ?></h4>
+                        <p>
+                            <?= $capbio['bio_Experience'] ?>
+                        </p>
+                        <p class="page-footer"><?= $this->team . ' - ' . $pageCount ?></p>
+                    </div>
+                </div>
+                <?php
+                $pageCount++;
+            }
+            ?>
+
             <?php $capbio = $this->captainBio ?>
             <div class="own-size">
                 <div class="polaroid captain">
@@ -46,11 +74,11 @@
                     <p>
                         <?= $capbio['bio_Experience'] ?>
                     </p>
-                    <p class="page-footer"><?= $this->team . ' - ' . '2' ?></p>
+                    <p class="page-footer"><?= $this->team . ' - ' . $pageCount ?></p>
                 </div>
             </div>
             <?php
-            $pageCount = 3;
+            $pageCount++;
             foreach ($this->bios as $bio) { ?>
                 <div class="own-size">
                     <div class="polaroid">
@@ -86,7 +114,7 @@
 <script type="text/javascript">
     // Load turn.js
     yepnope({
-        test : Modernizr.csstransforms,
+        test: Modernizr.csstransforms,
         yep: ['<?=URL?>js/turnjs/turn.min.js'],
         nope: ['<?=URL?>js/turnjs/turn.html4.min.js', '<?=URL?>css/jquery.ui.html4.css', '<?=URL?>css/book-html4.css'],
         both: ['<?=URL?>js/turnjs/book.js', '<?=URL?>css/jquery.ui.css', '<?=URL?>css/book.css'],

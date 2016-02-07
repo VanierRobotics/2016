@@ -49,13 +49,17 @@ class en extends Controller
     }
 
     public function team($team = 'index'){
+        /** @var _Bio $bioModel */
+        $bioModel = $this->getModel('Bio');
         if ($team == 'index') {
             $this->view->funcName = 'team';
             $this->view->render('team/index');
             return;
         }
-        $this->view->team = ucfirst($team);
-        /** @var _Bio $bioModel */
+        if ($team == 'web') {
+            $this->view->teamCaptain = $bioModel->getCaptainBio('en', 'TeamCaptain')[0];
+            $this->view->tcText = 'Team Captain';
+        }
         $bioModel = $this->getModel('Bio');
         $this->view->bios = $bioModel->getBios('en', $team);
         $this->view->captainBio = $bioModel->getCaptainBio('en', $team)[0];

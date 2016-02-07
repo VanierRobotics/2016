@@ -43,17 +43,22 @@ class fr extends Controller
 
     public function equipe($team = 'index')
     {
+        /** @var _Bio $bioModel */
+        $bioModel = $this->getModel('Bio');
         if ($team == 'index') {
             $this->view->funcName = 'equipe';
             $this->view->render('team/index');
             return;
         }
+        if ($team == 'web') {
+            $this->view->teamCaptain = $bioModel->getCaptainBio('fr', 'TeamCaptain')[0];
+            $this->view->tcText = 'Capitaine d\'équipe';
+        }
+
         $this->view->team = ucfirst($team);
-        /** @var _Bio $bioModel */
-        $bioModel = $this->getModel('Bio');
         $this->view->bios = $bioModel->getBios('fr', $team);
         $this->view->captainBio = $bioModel->getCaptainBio('fr', $team)[0];
-        $this->view->captain = 'Captain';
+        $this->view->captain = 'Capitaine';
         $this->view->challengeText = "Quelles sont les plus grands défis que vous avez rencontrés?";
         $this->view->learningText = "Quel était votre expérience d'apprentissage plus grand?";
         $this->view->render('team/bioBook');
