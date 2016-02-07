@@ -29,9 +29,9 @@
 					($i%2) ? $even= '' : $even= 'even'; //It's set to double display mode hence puting even pages as even. (why? because cover textures..)
                     echo(	'<div class="own-size '.$even.'">');
                     
-					echo(							
-							$book_txt					
-							
+					echo(		'<div class="book-content">'						
+							.		$book_txt					
+							.	'</div>'
 							.	'<span class="page-number">13</span>');
 						
 					/*//TODO: @alex to use : echo into book-content cos css. we also have a table of content.. IMPORTANT check out zoom feature for headshots.
