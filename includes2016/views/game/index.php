@@ -4,24 +4,24 @@
         display: none; /* Hidden by default */
         position: fixed; /* Stay in place */
         z-index: 1; /* Sit on top */
-        padding-top: 100px; /* Location of the box */
+        padding-top: 2em; /* Location of the box */
         left: 0;
         top: 0;
         width: 100%; /* Full width */
         height: 100%; /* Full height */
         overflow: auto; /* Enable scroll if needed */
         background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        background-color: rgba(0, 0, 0, 0.3); /* Black w/ opacity */
     }
 
     /* Modal Content */
     .modal-content {
-        background-image : url('<?=URL?>images/book/wood.jpg');
-        background-size: cover;
-        margin: auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%;
+        margin: 0;
+        padding: 0;
+        width: auto;
+        height: auto;
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
     }
 
     .sj-book .p1,
@@ -35,7 +35,8 @@
 
     /* The Close Button */
     .close {
-        color: #aaaaaa;
+        color: #000000;
+        top: 2em;
         float: right;
         font-size: 28px;
         font-weight: bold;
@@ -77,8 +78,7 @@
                         echo('<div class="own-size '.$even.'">
                        <div class="book-content">');
                         echo $text['content'];
-                        echo('  </div>
-                        <span class="page-number">'.$i.'</span></div>');
+                        echo('</div> <span class="page-number">'.$i.'</span></div>');
                     }
                     if($i%2){
                         $i++;
@@ -86,8 +86,7 @@
                         echo('<div class="own-size '.$even.'">
 
                        ');
-
-                        echo('  <div class="book-content"> <p>END</p> </div>
+                        echo('  <div class="book-content"> </div>
                         <span class="page-number">'.$i.'</span></div>');
 
                     }
