@@ -39,6 +39,8 @@ class en extends Controller
 
     public function competition(){
         $this->view->book = 'game';
+        $this->model = $this->getModel('Book');
+        $this->view->texts = $this->model-> getBookPage($this->lang, 'GAME');
         $this->view->render('game/index');
     }
 
