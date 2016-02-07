@@ -350,16 +350,12 @@ body, ul, table, form {
 
 .ie8 .sj-book .even,
 .ie9 .sj-book .even {
-    background-image: url(../images/book/page-left.jpg);
-    background-position: right top;
-    background-repeat: repeat-y;
+    background: url(../images/book/page-left.jpg) repeat-y right top;
 }
 
 .ie8 .sj-book .odd,
 .ie9 .sj-book .odd {
-    background-image: url(../images/book/page-right.jpg);
-    background-position: left top;
-    background-repeat: repeat-y;
+    background: url(../images/book/page-right.jpg) repeat-y left top;
 }
 
 .polaroid.captain {
@@ -425,7 +421,7 @@ body, ul, table, form {
 .own-size.mentors h2 {
     font-weight: bolder;
     text-align: center;
-    font-size: 200%;
+    font-size: 180%;
 }
 
 .polaroid.mentor {
@@ -439,14 +435,14 @@ body, ul, table, form {
 .polaroid.mentor.topLeft {
     position: absolute;
     left: 0;
-    margin-top: 0;
+    margin-top: -2%;
     margin-left: 10%;
 }
 
 .polaroid.mentor.topRight {
     position: absolute;
     right: 0;
-    margin-top: 0;
+    margin-top: -2%;
     margin-right: 10%;
 }
 
@@ -454,13 +450,21 @@ body, ul, table, form {
     position: absolute;
     bottom: 0;
     right: 0;
-    margin-bottom: 5%;
+    margin-bottom: 8%;
     margin-right: 10%;
 }
 
 .polaroid.mentor.bottomLeft {
     position: absolute;
     bottom: 0;
-    margin-bottom: 5%;
+    margin-bottom: 8%;
     margin-left: 10%;
+}
+
+.mentors > .page-footer {
+    position: absolute;
+    bottom: -5px;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
 }

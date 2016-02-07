@@ -17,11 +17,13 @@ class en extends Controller
         $this->lang = 0;
     }
 
-    public function evanshit(){
+    public function evanshit()
+    {
         $this->view->render('home/evanscorner');
     }
 
-    public function threejs(){
+    public function threejs()
+    {
         $this->view->render('home/threejs');
     }
 
@@ -30,30 +32,35 @@ class en extends Controller
         $this->view->render('home/index');
     }
 
-    public function robot(){
+    public function robot()
+    {
         $this->view->book = 'robot';
         $this->model = $this->getModel('Book');
-        $this->view->texts = $this->model-> getBookPage($this->lang, 'GAME');
+        $this->view->texts = $this->model->getBookPage($this->lang, 'GAME');
         $this->view->render('book/index');
     }
 
-    public function competition(){
+    public function competition()
+    {
         $this->view->book = 'game';
         $this->view->render('game/index');
     }
 
-    public function vanier(){
+    public function vanier()
+    {
         $this->view->book = 'vanier';
         $this->model = $this->getModel('Book');
-        $this->view->texts = $this->model-> getTeamPage($this->lang, 'JOURNALISM', 'BUILD');
+        $this->view->texts = $this->model->getTeamPage($this->lang, 'JOURNALISM', 'BUILD');
         $this->view->render('book/index');
     }
 
-    public function journalism($subpage = 'index'){
-        $this->view->render('journalism/'.$subpage);
+    public function journalism($subpage = 'index')
+    {
+        $this->view->render('journalism/' . $subpage);
     }
 
-    public function team($team = 'index'){
+    public function team($team = 'index')
+    {
         /** @var _Bio $bioModel */
         $bioModel = $this->getModel('Bio');
         if ($team == 'index') {
@@ -71,19 +78,77 @@ class en extends Controller
         $this->view->captain = 'Captain';
         $this->view->challengeText = "Biggest challenges you encountered?";
         $this->view->learningText = "Biggest learning experience?";
+
+        $mentors = '';
+        switch (strtolower($team)) {
+            case 'build':
+                $mentors = '
+                                <h2>Build Mentors</h2>
+                                <div class="polaroid mentor topLeft">
+                                    <p>Phoenix Roy <br/><span style="color:gray">(Design)</span></p>
+                                    <img src="' . URL . 'images/bios/PhoenixRoy.jpg"/>
+                                </div>
+                            ';
+                break;
+            case 'kiosk':
+                $mentors = '<h2>Kiosk Mentors</h2>
+                                <div class="polaroid mentor topLeft">
+                                    <p>Richard Mondoux <br/><span style="color:gray">(Design)</span></p>
+                                    <img src="' . URL . 'images/bios/RichardMondoux.jpg"/>
+                                </div>
+                                <div class="polaroid mentor topRight">
+                                    <p>John Lynch <br/><span style="color:gray">(Carpentry)</span></p>
+                                    <img src="' . URL . 'images/bios/nopic.jpg"/>
+                                </div>';
+                break;
+            case 'web':
+                $mentors = '<h2>Web Mentors</h2>
+                                <div class="polaroid mentor topLeft">
+                                    <p>Haritos Kavallos <br/><span style="color:gray">(PHP + MySQL)</span></p>
+                                    <img src="' . URL . 'images/bios/HaritosKavallos.jpg"/>
+                                </div>
+                                <div class="polaroid mentor topRight">
+                                    <p>Maksym Gryb <br/><span style="color:gray">(PHP + Backend)</span></p>
+                                    <img src="' . URL . 'images/bios/MaksymGryb.jpg"/>
+                                </div>
+                                <div class="polaroid mentor bottomLeft">
+                                    <p>Thush Sitham <br/><span style="color:gray">(HTML + jQuery)</span></p>
+                                    <img src="' . URL . 'images/bios/ThushanthSithambararajan.jpg"/>
+                                </div>
+                                <div class="polaroid mentor bottomRight">
+                                    <p>Manpreet Singh <br/><span style="color:gray">(HTML + Design)</span></p>
+                                    <img src="' . URL . 'images/bios/ManpreetSingh.jpg"/>
+                                </div>';
+                break;
+            case 'video':
+                $mentors = '
+                                <h2>Video Mentors</h2>
+                                <div class="polaroid mentor topLeft">
+                                    <p>Marco Purich <br/><span style="color:gray">(Blender)</span></p>
+                                    <img src="' . URL . 'images/bios/MarcoPurich.jpg"/>
+                                </div>';
+                break;
+            default:
+                break;
+        }
+        $this->view->mentors = $mentors;
+
         $this->view->render('team/bioBook');
     }
 
-    public function gallery(){
+    public function gallery()
+    {
         $this->view->book = 'gallery';
         $this->view->render('book/index');
     }
 
-    public function tutorial(){
+    public function tutorial()
+    {
         $this->view->render('tutorial/index');
     }
 
-    public function sponsors(){
+    public function sponsors()
+    {
         $this->view->render('sponsors/index');
     }
 
