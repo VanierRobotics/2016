@@ -1,118 +1,129 @@
 /* General */
-html, body{
-	width:100%;
-	height:100%;
-}
-html {
-	background:#000;
-}
 body
 {
-	overflow : hidden;
+    overflow : hidden;
+    background:#000;
 }
 
 .container
 {
-	position : absolute;
-	left : 0;
-	top : 0;
-	width : 100%;
-	height : 100%;
-	overflow:hidden;
-	perspective : 1000px;
-	animation : fadeIn 2s;
+    position : absolute;
+    left : 0%;
+    top : 0px;
+    width : 100%;
+    height : 100%;
+    overflow:hidden;
+    perspective : 1000px;
+    animation : fadeIn 2s;
 }
 
 #scene
 {
-	position : absolute;
-	left : 0;
-	top : 0;
-	width : 100%;
-	height : 100%;
-	background-image : url("../images/icewall/bg.png");
-	background-size : cover;
-	transform : translateZ(100px);
-	transition : 1s;
+    position : absolute;
+    left : 0%;
+    top : 0px;
+    width : 100%;
+    height : 100%;
+    background-image : url("../images/icewall/bg.png");
+    background-size : cover;
+    transform : translateZ(100px);
+    transition : 1s;
 }
 
 @keyframes fadeIn
 {
-	from
-	{
-		opacity : 0;
-	}
+    from
+    {
+        opacity : 0;
+    }
 
-	to
-	{
-		opacity : 1;
-	}
+    to
+    {
+        opacity : 1;
+    }
 }
 
 .layer
 {
-	overflow:hidden;
-}
-/*
-	Class used to fade out the scene and change page url
-*/
-
-.fadeOut
-{
-	opacity : 0;
+    overflow:hidden;
 }
 
 
 
 /* The home page design */
-.wallpaper img
+.wallpaper
 {
-	bottom : 100%;
+    position : absolute;
+    left : 0%;
+    top : 0%;
+    width : 100%;
+    height : 100%;
 }
 
 .button
 {
-	position : absolute !important;
-	width : 150px;
-	height : 60px;
+    position : absolute !important;
+    top : 40%;
+    width : 150px;
+    height : 45px;
 
 
-	border : white solid 2px;
+    border : #ddd7c5 solid 2px;
 
-	text-align : center;
-	color : white;
+    text-align : center;
+    color : #ddd7c5;
 
-	cursor : pointer;
-	transition : .5s;
-	font-family: 'Satisfy', cursive;
-	font-size:35px;
+    cursor : pointer;
+    transition : .5s;
+    font-family: 'Satisfy', cursive;
+    font-size:35px;
 }
 
 .button:hover
 {
-	background:rgba(255,255,255,0.2);
-	text-shadow: -1px 0 5px rgba(255, 255, 255, 1);
+    background:rgba(255,255,255,0.2);
+    /*text-shadow: -1px 0px 5px rgba(255, 255, 255, 1);*/
+    text-shadow : -1px 0px 5px #ddd7c5;
 }
 
 .enButton
 {
-	left : 35%;
-	margin-left:-60px;
-	top : 40%;
+    left : 35%;
+    margin-left:-60px;
 }
 
 .frButton
 {
-	right : 35%;
-	margin-right:-60px;
-	top : 40%;
-}
-.sparkley {
-
+    right : 35%;
+    margin-right:-60px;
 }
 
-/*.sparkley:hover {*/
+.vLogo
+{
+    position : absolute;
+    width : 300px;
+    height : 300px;
 
-	/*color: transparentize( rgba(255,255,255,1),0.8 );*/
+    left : 50%;
+    margin-left : -150px;
+    margin-top : -150px;
+    top : 40%;
 
-/*}*/
+    background-image : url("../images/vLogo.png");
+    background-size: cover;
+}
+
+
+/*
+	Class used when lang is selected
+*/
+
+.fadeOut
+{
+    opacity : 0;
+}
+
+.centerButton
+{
+    left : 50%;
+}
