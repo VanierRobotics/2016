@@ -30,15 +30,11 @@
     <div class="col-md-offset-2 col-md-8 form-group">
         <label for="lang">Select Language:</label>
         <select class="form-control" name="lang" id="lang">
-            <option value="en">English</option>
-            <option value="fr" <?php echo (isset($this->onething) && strcmp($this->onething['lang'],'FR') == 0 ? 'selected':''); ?> >French</option>
+            <option value="0">English</option>
+            <option value="1" <?php echo (isset($this->onething) && strcmp($this->onething['lang'],'FR') == 0 ? 'selected':''); ?> >French</option>
         </select>
     </div>
-    <div class="col-md-offset-2 col-md-8 input-group">
-				  <span class="input-group-addon" id="basic-addon1">Enter Page Number</span>
-				  <input required name="pageid" type="number" class="form-control" aria-describedby="basic-addon1"
-                         value="<?= (isset($this->onething) ?  $this->onething['pageid'] : ''); ?>">
-    </div>
+
     <div class="col-md-offset-2 col-md-8">
 				</br>Enter Text: </br>
 				<textarea id="text" required name="text" rows="10" cols="50" style="resize: none;"><?= (isset( $this->onething['content'])) ? $this->onething['content'] :'' ; ?>

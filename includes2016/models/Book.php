@@ -27,8 +27,12 @@ class _Book extends Model
         return count($st);
     }
 
-    public function getBookPage($language, $book, $page){
-        return $this->db->select('SELECT content FROM book WHERE lang = :lang AND pageid = :page AND book = :book ', [':lang' => $language,':page' => $page, ':book' => $book]);
+    public function getBookPage($language, $book){
+        return $this->db->select('SELECT content FROM book WHERE lang = :lang  AND book = :book ', [':lang' => $language, ':book' => $book]);
+    }
+
+    public function getTeamPage($language, $book, $team){
+        return $this->db->select('SELECT content FROM book WHERE lang = :lang AND subpage= :team AND book = :book ', [':lang' => $language, ':book' => $book, ':team' => $team]);
     }
 
     //BACKEND BULLSHIT
@@ -61,7 +65,7 @@ class _Book extends Model
 
     public function addEntry()
     {
-        return $this->db->insert('book', array('book' => $_POST['book'], 'subpage' => $_POST['subpage'], 'pageid' => $_POST['pageid'], 'lang' => $_POST['lang'], 'content' => $_POST['text']));
+        return $this->db->insert('book', array('book' => $_POST['book'], 'subpage' => $_POST['subpage'], 'lang' => $_POST['lang'], 'content' => $_POST['text']));
     }
 
     public function removeEntry()

@@ -13,9 +13,8 @@
 			<th> Page </th>
 			<th> Subpage (blank if none) </th>
 			<th> Language </th>
-			<th> Page # </th>
-			<th width="500"> Text </th>
-			<th width="5"> Modify </th>
+			<th> Text </th>
+			<th > Modify </th>
 			</tr>
                 <?php
                     foreach ( $this->st  as $array ) {
