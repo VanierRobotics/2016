@@ -12,20 +12,57 @@
     .sj-book .pLast {
         background-color: white;
         background-image: url(<?=URL?>images/teams/<?= $this->team . 'Book.jpg'?>)!important;
+
     }
 
 </style>
-
 <div id="canvas" class="container-fluid">
     <div id="book-zoom">
         <div class="sj-book">
             <div depth="5" class="hard"> <div class="side"></div> </div>
             <div depth="5" class="hard front-side"> <div class="depth"></div> </div>
-            <div class="own-size "><div class="book-content"><p class="no-indent">Mr. McCollum. McCollum later recalled of one time when his pupil Steve called up David Hewlett himself, co-founder of HP, to get spare parts for his homework, and even a summer job at HP’s factory. Steve’s entrepreneurial skills showed up early in his life indeed.</p><p><img class="left-pic zoom-this" src="samples/steve-jobs/pics/highschool.jpg" width="172" height="159">At Homestead, Steve befriended Bill Fernandez, a neighbor who shared his interests in electronics. It was Bill who first introduced him to another computer whiz kid, an older guy named Stephen Wozniak, or — as everybody used to call him — Woz. Steve and Woz met in 1969, when they were respectively 14 and 19. At the time, Woz was building a little computer board with Bill Fernandez that they called “the Cream Soda Computer”.</p></div><span class="page-number">13</span></div><div class="own-size even"><div class="book-content"><p class="no-indent">Mr. McCollum. McCollum later recalled of one time when his pupil Steve called up David Hewlett himself, co-founder of HP, to get spare parts for his homework, and even a summer job at HP’s factory. Steve’s entrepreneurial skills showed up early in his life indeed.</p><p><img class="left-pic zoom-this" src="samples/steve-jobs/pics/highschool.jpg" width="172" height="159">At Homestead, Steve befriended Bill Fernandez, a neighbor who shared his interests in electronics. It was Bill who first introduced him to another computer whiz kid, an older guy named Stephen Wozniak, or — as everybody used to call him — Woz. Steve and Woz met in 1969, when they were respectively 14 and 19. At the time, Woz was building a little computer board with Bill Fernandez that they called “the Cream Soda Computer”.</p></div><span class="page-number">13</span></div>            <div class="hard fixed back-side pBeforeLast"> <div class="depth"></div> </div>
+            <?php
+            $i=0;
+            foreach($this->texts as $text) {
+                $i++;
+                ($i%2) ? $even= '' : $even= 'even'; //It's set to double display mode hence puting even pages as even. (why? because cover textures..)
+                echo('<div class="own-size '.$even.'">
+                       <div class="book-content">');
+                echo $text['content'];
+                echo('  </div>
+                        <span class="page-number">'.$i.'</span></div>');
+            }
+            if($i%2){
+                $i++;
+                ($i%2) ? $even= '' : $even= 'even';
+                echo('<div class="own-size '.$even.'">
+
+                       ');
+
+                echo('  <div class="book-content"> <p>END</p> </div>
+                        <span class="page-number">'.$i.'</span></div>');
+
+            }
+            ?>
+            <div class="hard fixed back-side pBeforeLast"> <div class="depth"></div> </div>
             <div class="hard pLast"></div>
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    // Hide canvas
+    $('#canvas').css('visibility', 'hidden');
+
+    // Load turn.js
+    yepnope({
+        test: Modernizr.csstransforms,
+        yep: ['<?=URL?>js/turnjs/turn.min.js'],
+        nope: ['<?=URL?>js/turnjs/turn.html4.min.js', '<?=URL?>css/jquery.ui.html4.css', '<?=URL?>css/book-html4.css'],
+        both: ['<?=URL?>js/turnjs/book.js', '<?=URL?>css/jquery.ui.css', '<?=URL?>css/book.css'],
+        complete: delayLoad
+    });
+</script>
 
 <script type="text/javascript">
     // Load turn.js
