@@ -167,8 +167,7 @@ body, ul, table, form{
 .sj-book .p3,
 .sj-book .pBeforeLast,
 .sj-book .pLast{
-    background-color:white;
-    background-image:url(../images/book/book-covers.jpg) !important;
+    background-image:url(../images/book/book-covers.jpg)!important;
 }
 
 .sj-book .p1{
