@@ -1,3 +1,11 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Alex
+ * Date: 2016-02-07
+ * Time: 12:32 AM
+ */
+?>
 <link rel="stylesheet" href="<?=URL?>css/journalismBooks.css">
 
 
@@ -7,7 +15,7 @@
     </header>
     <div class="main">
         <ul id="bk-list" class="bk-list clearfix">
-            <a href="" >
+            <a href="./Video" >
                 <li>
                     <div class="bk-book book-1">
                         <div class="bk-front">
@@ -21,7 +29,7 @@
                 </li>
             </a>
 
-            <a href="buildBook" >
+            <a href="./Build" >
                 <li>
                     <div class="bk-book book-2">
                         <div class="bk-front">
@@ -35,7 +43,7 @@
                 </li>
             </a>
 
-            <a href="" >
+            <a href="./Web" >
                 <li>
                     <div class="bk-book book-3">
                         <div class="bk-front">
@@ -49,7 +57,7 @@
                 </li>
             </a>
 
-            <a href="" >
+            <a href="./Kiosk" >
                 <li>
                     <div class="bk-book book-4">
                         <div class="bk-front">
@@ -67,4 +75,3 @@
         <div class="bookshelf"></div>
     </div>
 </div>
-

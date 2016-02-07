@@ -8,6 +8,16 @@
         background-image: url('<?=URL?>images/book/wood.jpg');
         background-size: cover;
     }
+
+    .sj-book .p1,
+    .sj-book .p2,
+    .sj-book .p3,
+    .sj-book .pBeforeLast,
+    .sj-book .pLast {
+        background-color: white;
+        background-image: url(<?=URL?>images/teams/<?= $this->team . 'Book.jpg'?>)!important;
+    }
+
 </style>
 
 <div id="canvas" class="container-fluid">

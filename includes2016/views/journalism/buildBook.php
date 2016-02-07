@@ -11,7 +11,7 @@
     .sj-book .pBeforeLast,
     .sj-book .pLast {
         background-color: white;
-        background-image: url(<?=URL?>images/journalism/AediBook.jpg)!important;
+        background-image: url(<?=URL?>images/teams/<?= $this->team . 'Book.jpg'?>)!important;
     }
 
 </style>
