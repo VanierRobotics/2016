@@ -20,7 +20,9 @@
 
         <div class="checkbox input-group">
             <span class="input-group-addon"> </span>
-                <input type="checkbox" name="inputRemember" id="inputRemember">Remember Me
+            <label for="inputRemember"><input type="checkbox" name="inputRemember" id="inputRemember">
+                Remember Me
+            </label>
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
     </form>
