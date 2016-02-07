@@ -18,6 +18,6 @@
 
 
     </div>
-    <div class="button enButton sparkley">English</div>
-    <div class="button frButton sparkley">Français</div>
+    <a href="<?=URL?>en/"><div class="button enButton sparkley">English</div></a>
+    <a href="<?=URL?>fr/"><div class="button frButton sparkley">Français</div></a>
 </div>
