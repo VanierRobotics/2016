@@ -46,12 +46,26 @@ $(document).ready(function($){
         position: {
             target: 'mouse', // Track the mouse as the positioning target
             adjust: { x: 5, y: 5 } // Offset it slightly from under the mouse
-        },
-        hide: {
-            effect: function() {
-                $(this).hide('puff', 500);
-            }
         }
+    });
+
+    $(document).ready(function(){
+        $('#q').qtip({
+            style: {
+                classes: 'qtip-dark qtip-shadow qtip-bootstrap',
+            },
+            position: {
+                adjust: { x: -250, y: 5 }
+            },
+            content: 'This is the tooltip',
+            show: {
+                when: false, // Don't specify a show event
+                ready: true // Show the tooltip when ready
+            },
+            hide: {
+
+            }
+        })
     });
 });
 
