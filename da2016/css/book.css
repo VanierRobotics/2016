@@ -66,20 +66,20 @@ body, ul, table, form {
 }
 
 .sj-book blockquote {
-    color: #586078;
+    color: #000000;
     margin: 10px 0;
     font-style: italic;
 }
 
 .sj-book blockquote:before {
     content: "\201C";
-    color: #333D53;
+    color: #000000;
     font-size: 20px;
 }
 
 .sj-book blockquote:after {
     content: "\201D";
-    color: #333D53;
+    color: #000000;
     font-size: 20px;
 }
 
@@ -88,7 +88,7 @@ body, ul, table, form {
     font-size: 13px;
     font-weight: 200;
     font-style: normal;
-    color: #666;
+    color: #000000;
 }
 
 .sj-book .book-content .center-pic {
@@ -267,21 +267,11 @@ body, ul, table, form {
 }
 
 .sj-book .even {
-    background: -webkit-gradient(linear, left top, right top, color-stop(0.95, #fff), color-stop(1, #dadada));
-    background-image: -webkit-linear-gradient(left, #fff 95%, #dadada 100%);
-    background-image: -moz-linear-gradient(left, #fff 95%, #dadada 100%);
-    background-image: -ms-linear-gradient(left, #fff 95%, #dadada 100%);
-    background-image: -o-linear-gradient(left, #fff 95%, #dadada 100%);
-    background-image: linear-gradient(left, #fff 95%, #dadada 100%);
+    background-image: url(../images/book/page-left.jpg);
 }
 
 .sj-book .odd {
-    background: -webkit-gradient(linear, right top, left top, color-stop(0.95, #fff), color-stop(1, #cacaca));
-    background-image: -webkit-linear-gradient(right, #fff 95%, #cacaca 100%);
-    background-image: -moz-linear-gradient(right, #fff 95%, #cacaca 100%);
-    background-image: -ms-linear-gradient(right, #fff 95%, #cacaca 100%);
-    background-image: -o-linear-gradient(right, #fff 95%, #cacaca 100%);
-    background-image: linear-gradient(right, #fff 95%, #cacaca 100%);
+    background-image: url(../images/book/page-right.jpg);
 }
 
 .sj-book .loader {
@@ -308,7 +298,7 @@ body, ul, table, form {
     font-size: 16px;
     width: 300px;
     margin: 80px auto;
-    color: #ccc;
+    color: #000000;
 }
 
 .sj-book .table-contents li {
@@ -325,7 +315,7 @@ body, ul, table, form {
     width: 100%;
     clear: both;
     text-decoration: none;
-    color: #333;
+    color: #000000;
     margin: 2px 0;
     padding: 0 10px;
 }
@@ -360,14 +350,14 @@ body, ul, table, form {
 
 .ie8 .sj-book .even,
 .ie9 .sj-book .even {
-    background-image: url(../images/book/gradient-page-left.jpg);
+    background-image: url(../images/book/page-left.jpg);
     background-position: right top;
     background-repeat: repeat-y;
 }
 
 .ie8 .sj-book .odd,
 .ie9 .sj-book .odd {
-    background-image: url(../images/book/gradient-page-right.jpg);
+    background-image: url(../images/book/page-right.jpg);
     background-position: left top;
     background-repeat: repeat-y;
 }
