@@ -1,7 +1,7 @@
 <body>
     <div id="wrapper" class="page-wrapper">
-        <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css' property="">
-        <link rel="stylesheet" href="<?=URL?>css/icewall.css" property=""/>
+        <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css' property="stylesheet">
+        <link rel="stylesheet" href="<?=URL?>css/icewall.css" property="stylesheet"/>
         <script src="<?=URL?>js/parallax/jquery.parallax.min.js"></script>
         <script src="<?=URL?>js/parallax/script.js"></script>
         <script src="<?=URL?>js/parallax/sparkles.js"></script>
