@@ -50,9 +50,11 @@
                     <?php
                     $page = '';
                     $params = '';
-                    if (array_key_exists(2,explode('/',$_SERVER['REQUEST_URI'])) && explode('/',$_SERVER['REQUEST_URI'])[2] != '') {
-                        $page = explode('/', $_SERVER['REQUEST_URI'])[2];
-                        $params = substr($_SERVER['REQUEST_URI'], strpos($_SERVER['REQUEST_URI'], $page) + strlen($page));
+
+                    $URI = substr($_SERVER['REQUEST_URI'], strpos($_SERVER['REQUEST_URI'], '/'.$this->language.'/'));
+                    if (array_key_exists(2,explode('/',$URI)) && explode('/',$URI)[2] != '') {
+                        $page = explode('/', $URI)[2];
+                        $params = substr($URI, strpos($URI, $page) + strlen($page));
                     }
                     if ($this->language === 'en') {
                         switch ($page) {
