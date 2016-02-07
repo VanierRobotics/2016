@@ -29,7 +29,7 @@ class fr extends Controller
         /** @var _Book $book */
         //$book = $this->getModel('Book');
         //$this->view->texts = $book->getBookPage($this->lang, 'GAME');
-        $this->view->render('book/index');
+        $this->view->render('robot/index');
     }
 	
     public function competition(){
@@ -44,7 +44,7 @@ class fr extends Controller
         /** @var _Book $book */
         $book = $this->getModel('Book');
         $this->view->texts = $book->getTeamPage($this->lang, 'JOURNALISM', 'VIDEO');
-        $this->view->render('book/index');
+        $this->view->render('vanier/index');
     }
 
     public function journalisme($subpage = 'index')
