@@ -35,7 +35,7 @@ class en extends Controller
     public function robot()
     {
         $this->view->book = 'robot';
-        $this->view->render('book/index');
+        $this->view->render('robot/index');
     }
 
     public function game()
