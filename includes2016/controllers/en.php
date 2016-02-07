@@ -5,7 +5,7 @@
  * Class Index
  *
  * Basic home class to test mvc
- * @property int language
+ * @property int lang
  */
 class en extends Controller
 {
@@ -45,15 +45,17 @@ class en extends Controller
     public function game()
     {
         $this->view->book = 'game';
-        $this->model = $this->getModel('Book');
-        $this->view->texts = $this->model->getBookPage($this->lang, 'GAME');
+        /** @var _Book $book */
+        $book= $this->getModel('Book');
+        $this->view->texts = $book->getBookPage($this->lang, 'GAME');
         $this->view->render('game/index');
     }
 
     public function vanier()
     {
         $this->view->book = 'vanier';
-        $this->model = $this->getModel('Book');
+        /** @var _Book $book */
+        $book = $this->getModel('Book');
         $this->view->render('vanier/index');
     }
 
@@ -63,8 +65,9 @@ class en extends Controller
         if($subpage=='index')
          $this->view->render('journalism/'.$subpage);
         else{
-            $this->model = $this->getModel('Book');
-            $this->view->texts = $this->model->getTeamPage($this->lang, 'JOURNALISM', strtoupper($subpage));
+            /** @var _Book $book */
+            $book = $this->getModel('Book');
+            $this->view->texts = $book->getTeamPage($this->lang, 'JOURNALISM', strtoupper($subpage));
             $this->view->team = $subpage;
             $this->view->render('journalism/buildBook');
         }
