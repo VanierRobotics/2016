@@ -45,7 +45,7 @@ class en extends Controller
     public function vanier(){
         $this->view->book = 'vanier';
         $this->model = $this->getModel('Book');
-        $this->view->texts = $this->model-> getTeamPage($this->lang, 'JOURNALISM', 'VIDEO');
+        $this->view->texts = $this->model-> getTeamPage($this->lang, 'JOURNALISM', 'BUILD');
         $this->view->render('book/index');
     }
 

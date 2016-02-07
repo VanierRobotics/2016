@@ -8,7 +8,7 @@ $bios_video = $team . '/video';
 $bios_kiosk = $team . '/kiosk';
 $gallery = 'galler' . (($this->language === 'en') ? 'ie' : 'y');
 $tuto = 'tutori' . (($this->language ==='en') ? 'el' : 'al');
-$popup = ($this->language === 'en') ? 'Click on banners, doors and other highlighted objects to navigate.' : 'Cliquer sur banner, porte, et autre merde. merci, baguette.';
+$popup = ($this->language === 'en') ? 'Click on banners, doors and other highlighted objects to navigate.' : 'Cliquer sur les bannières, les portes, et d\'autres objets pour naviguer.';
 ?>
 
 <!-- HRIM - Hoverable Responsive Image Maps -->
