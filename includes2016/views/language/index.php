@@ -1,3 +1,9 @@
+<!--
+    VALIDATED ON 02/06/2017 at 6:12 PM
+    ==================================
+    ANY MODIFICATIONS AFTER THIS TIME
+    MUST BE RE-VALIDATED
+-->
 <body>
     <div id="wrapper" class="page-wrapper">
         <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css' property="stylesheet">

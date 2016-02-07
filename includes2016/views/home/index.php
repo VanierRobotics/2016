@@ -1,3 +1,9 @@
+<!--
+    VALIDATED ON 02/06/2017 at 6:12 PM
+    ==================================
+    ANY MODIFICATIONS AFTER THIS TIME
+    MUST BE RE-VALIDATED
+-->
 <?php
 $link = URL . $this->language . '/';
 $team = ($this->language === 'en') ? 'team' : 'equipe';
