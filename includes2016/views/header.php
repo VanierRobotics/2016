@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <!--[if lt IE 7 ]>
-<html lang="en" class="ie6" manifest="demo.appcache">
+<html lang="en" class="ie6">
 <![endif]-->
 <!--[if IE 7 ]>
-<html lang="en" class="ie7" manifest="demo.appcache">
+<html lang="en" class="ie7">
 <![endif]-->
 <!--[if IE 8 ]>
-<html lang="en" class="ie8" manifest="demo.appcache">
+<html lang="en" class="ie8">
 <![endif]-->
 <!--[if IE 9 ]>
-<html lang="en" class="ie9" manifest="demo.appcache">
+<html lang="en" class="ie9">
 <![endif]-->
 <!--[if !IE]>
-<html lang="en" manifest="demo.appcache">
+<html lang="en">
 <![endif]-->
 
 <head>
