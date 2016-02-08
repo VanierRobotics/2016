@@ -18,11 +18,6 @@ class en extends Controller
         $this->lang = 0;
     }
 
-    public function evanshit()
-    {
-        $this->view->render('home/evanscorner');
-    }
-
     public function threejs()
     {
         $this->view->render('home/threejs');

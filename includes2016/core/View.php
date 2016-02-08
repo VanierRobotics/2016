@@ -33,7 +33,9 @@ class View
 
     public function render($name, $noInclude = false)
     {
-        if ($noInclude) {
+        if ($noInclude === 'fuckoff') {
+            require PATH . 'views/' . $name . '.php';
+        } elseif ($noInclude) {
             require PATH . 'views/header.php';
             require PATH . 'views/' . $name . '.php';
         } else {

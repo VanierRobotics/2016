@@ -1,0 +1,133 @@
+body {
+    background-image: url('../images/gallery/library.jpg');
+    background-size: cover;
+}
+
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.0);
+
+}
+
+.modal-footer {
+    border: none;
+}
+
+.gallery-border {
+
+    background: url("../images/gallery/galleryFrame.png") no-repeat;
+    background-size: contain;
+    width: 94%;
+    padding-top: 80%;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    display: block;
+
+}
+
+.gallery {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*background-color: red;*/
+    top: 0px;
+}
+
+.thumbnails {
+    position: absolute;
+    width: 100%;
+
+    margin: 0 auto 0;
+    bottom: 0%;
+    z-index: 2;
+
+    background-color: #F3BE4E;
+    opacity: 0.9;
+
+    overflow: hidden;
+
+}
+
+.aThumbnail {
+    background-size: cover;
+    z-index: 3;
+    border-right: 1px solid black;
+    -webkit-transition: opacity 0.2s; /* Safari */
+    transition: opacity 0.2s;
+
+}
+
+#thumbnail-container {
+    width: 100%;
+    height: 50px;
+    z-index: 1;
+}
+
+.aThumbnail:hover {
+    opacity: 0.5;
+}
+
+.viewGalleryButton {
+    width: 200px;
+    height: 22.5%;
+    border-radius: 100px;
+
+    border: none;
+
+    background-color: #f5d03b;
+    opacity: 0.5;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+
+    -webkit-box-shadow: 10px 10px 204px 0px rgba(235, 235, 132, 1);
+    -moz-box-shadow: 10px 10px 204px 0px rgba(235, 235, 132, 1);
+    box-shadow: 10px 10px 204px 0px rgba(235, 235, 132, 1);
+
+}
+
+.glyphicon-remove {
+    color: white;
+}
+
+.scrollButton {
+    position: absolute;
+    top: 50%;
+    height: 100%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    opacity: 0.4;
+    -webkit-transition: opacity 0.5s; /* Safari */
+    transition: opacity 0.5s;
+
+    display: inline-block;
+    z-index: 5;
+
+}
+
+.btnR {
+    right: 0px;
+}
+
+.btnL {
+    left: 0px;
+}
+
+.scrollButton:hover {
+    opacity: 0.95;
+    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.hide-bg {
+    height: 100%;
+    width: 100%;
+    /*background-color: red;*/
+}
+
+#currentPic {
+    position: absolute;
+    z-index: -3;
+}
