@@ -15,6 +15,12 @@
 
     }
 
+    .book-content img.left {
+        display: block;
+        float: left;
+        margin: 5px;
+    }
+
 </style>
 <div id="canvas" class="container-fluid">
     <div id="book-zoom">
@@ -28,7 +34,9 @@
                 ($i%2) ? $even= '' : $even= 'even'; //It's set to double display mode hence puting even pages as even. (why? because cover textures..)
                 echo('<div class="own-size '.$even.'">
                        <div class="book-content">');
-                echo $text['content'];
+                $words = $text['content'];
+                $words = str_replace('{{img_path}}', $this->imgPath, $words);
+                echo $words;
                 echo('  </div>
                         <span class="page-number">'.$i.'</span></div>');
             }

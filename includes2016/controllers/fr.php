@@ -15,6 +15,7 @@ class fr extends Controller
         //self::checkMember();
         $this->view->title = 'Robotique Vanier 2016';
         $this->view->language = 'fr';
+        $this->view->imgPath = URL . 'images/journalism';
         $this->lang = 1;
     }
 

@@ -15,6 +15,7 @@ class en extends Controller
         //self::checkMember();
         $this->view->title = 'Vanier Robotics 2016';
         $this->view->language = 'en';
+        $this->view->imgPath = URL . 'images/journalism';
         $this->lang = 0;
     }
 
@@ -33,7 +34,6 @@ class en extends Controller
         $this->view->book = 'robot';
         /** @var _Book $book */
         $book = $this->getModel('Book');
-        $this->view->imgPath = URL . 'images/journalism';
         $this->view->texts = $book->getBookPage($this->lang, 'ROBOT');
         $this->view->render('robot/index');
     }
@@ -41,7 +41,6 @@ class en extends Controller
     public function game($content = 'index')
     {
         if($content !== 'index') {
-            $this->view->book = 'game';
             /** @var _Book $book */
             $book= $this->getModel('Book');
             $this->view->texts = $book->getBookPage($this->lang, 'GAME');
@@ -151,8 +150,7 @@ class en extends Controller
 
     public function gallery()
     {
-        $this->view->book = 'gallery';
-        $this->view->render('book/index');
+        $this->view->render('gallery/index');
     }
 
     public function tutorial()

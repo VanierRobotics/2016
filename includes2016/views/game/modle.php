@@ -1,8 +1,9 @@
+<!-- Turn.js (aka HTML5 book thingny)-->
+<script type="text/javascript" src="<?=URL?>js/turnjs/hash.js"></script>
 <style>
     body {
-        background-image: url(<?=URL?>images/book/wood.jpg) !important;
+        background-image: url('<?=URL?>images/book/wood.jpg') !important;
         background-size: cover;
-        background-repeat: no-repeat;
     }
 
     .sj-book .p1,
@@ -14,11 +15,15 @@
         background-image: url(<?=URL?>images/book/CompetitionBook.jpg) !important;
     }
 
-</style>
 
-<!-- Turn.js (aka HTML5 book thingny)-->
-<script type="text/javascript" src="<?=URL?>js/turnjs/hash.js"></script>
-<div id="canvas" class="container-fluid">
+    .book-content img.left {
+        display: block;
+        float: left;
+        margin: 5px;
+    }
+
+</style>
+<div id="canvas" class="container-fluid" style="visibility: hidden">
     <div id="book-zoom">
         <div class="sj-book">
             <div depth="5" class="hard"> <div class="side"></div> </div>
@@ -31,7 +36,9 @@
                 ($i%2) ? $even= '' : $even= 'even'; //It's set to double display mode hence puting even pages as even. (why? because cover textures..)
                 echo('<div class="own-size '.$even.'">
                        <div class="book-content">');
-                echo $text['content'];
+                $words = $text['content'];
+                $words = str_replace('{{img_path}}', $this->imgPath, $words);
+                echo $words;
                 echo('</div> <span class="page-number">'.$i.'</span></div>');
             }
             if($i%2){
