@@ -41,7 +41,7 @@ $(document).ready(function($){
 
     $('area').qtip({
         style: {
-            classes: 'qtip-dark qtip-shadow qtip-bootstrap',
+            classes: 'qtip-dark qtip-shadow qtip-bootstrap'
         },
         position: {
             target: 'mouse', // Track the mouse as the positioning target

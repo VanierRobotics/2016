@@ -38,8 +38,7 @@ body {
 }
 
 body {
-    background: url(../images/teams/wall.jpg);
-    background-repeat: repeat;
+    background: url(../images/teams/wall.jpg) repeat;
 }
 
 a {
@@ -98,7 +97,7 @@ a {
     height: 400px;
     float: left;
     z-index: 1;
-    margin: 0px 0px 0px 80px;
+    margin: 0 0 0 80px;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
@@ -274,8 +273,7 @@ a {
 .book-4 .bk-back,
 .book-4 .bk-front:after,
 .book-4 .bk-cover {
-    background-color: red;
-    background-image: url(../images/teams/book4cover.png);
+    background: red url(../images/teams/book4cover.png);
     background-size: cover;
 }
 

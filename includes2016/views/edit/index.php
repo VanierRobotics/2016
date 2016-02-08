@@ -4,7 +4,7 @@
 		</div>
 	</div>
     <div class="col-md-offset-2">
-        <form action="<?=URL?>edit/item" method='post'><input class="btn" type='submit' name='Add' value='Add Text to Database' /></form></br>
+        <form action="<?=URL?>edit/item" method='post'><input class="btn" type='submit' name='Add' value='Add Text to Database' /></form><br/>
     </div>
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">

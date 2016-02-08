@@ -79,7 +79,7 @@ $.fn.sparkleh = function( options ) {
 
   });
 
-}
+};
 
 
 
