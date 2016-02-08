@@ -13,7 +13,7 @@ $bios_web = $team . '/web';
 $bios_video = $team . '/video';
 $bios_kiosk = $team . '/kiosk';
 $gallery = 'galler' . (($this->language === 'en') ? 'ie' : 'y');
-$tuto = 'tutori' . (($this->language === 'en') ? 'el' : 'al');
+$tuto = 'tutori' . (($this->language === 'en') ? 'al' : 'el');
 $popup = ($this->language === 'en') ? 'Click on banners, doors and other highlighted objects to navigate.' : 'Cliquer sur les bannières, les portes, et d\'autres objets pour naviguer.';
 ?>
 
@@ -65,7 +65,7 @@ $popup = ($this->language === 'en') ? 'Click on banners, doors and other highlig
           href="<?= $link . 'vanier' ?>"/>
 </map>
 
-<img src="<?= URL ?>images/home/got.jpg" usemap="#mymap" style="width: 100%" alt=""/>
+<img src="<?= URL ?>images/home/got.jpg" usemap="#mymap" style="width: 100%;" alt=""/>
 
 <script type="text/javascript">
     $(function () {

@@ -22,6 +22,8 @@ body {
     padding-bottom: 15px;
     font-family: Arvo, serif;
     font-weight: 800;
+    letter-spacing: -2px;
+    font-size: larger;
     color: black !important;
     margin-bottom: 0;
     z-index: 1000;
