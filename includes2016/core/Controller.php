@@ -116,4 +116,38 @@ abstract class Controller
             . $msg . '</div>';
 
     }
+    /**
+     * Lazy way of making a bootstrap styled qtip tooltip
+     * @param $msg String what you want to say
+     * @param string $target
+     * @param string $type
+     */
+    public static function aTooltip($msg,$target = 'nav .container-fluid', $type = 'qtip-bootstrap')
+    {
+        echo '<script type="text/javascript" src="'.URL.'js/tooltips/jquery.qtip.js"></script>
+              <link rel="stylesheet" href="'.URL.'css/jquery.qtip.min.css" property="stylesheet"/>
+           <script type="text/javascript">
+                setTimeout(function() {
+                    $(\' '.$target.' \').qtip({
+                        style: {
+                            classes: \' '.$type.' \'
+                        },
+                        position: {
+                            my: \'top center\',  // Position my top left...
+                            at: \'bottom center\', // at the bottom right of...
+                            target: $(\' '.$target.' \') // my target
+                        },
+                        content: \' '.$msg.' \',
+                        show: {
+                            delay: 1500,
+                            when: false, // Don\'t specify a show event
+                            ready: true // Show the tooltip when ready
+                        },
+                        hide: {
+                            delay: 4000
+                        }
+                    });
+                }, 1000);
+            </script>';
+    }
 }

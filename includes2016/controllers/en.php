@@ -6,6 +6,7 @@
  *
  * Basic home class to test mvc
  * @property int lang
+ * @property string tooltip
  */
 class en extends Controller
 {
@@ -17,6 +18,7 @@ class en extends Controller
         $this->view->language = 'en';
         $this->view->imgPath = URL . 'images/journalism';
         $this->lang = 0;
+        $this->tooltip = "Swipe, click or use arrow keys to flip pages. Click on images to zoom in.";
     }
 
     public function threejs()
@@ -35,6 +37,7 @@ class en extends Controller
         /** @var _Book $book */
         $book = $this->getModel('Book');
         $this->view->texts = $book->getBookPage($this->lang, 'ROBOT');
+        $this->view->qtips[] = [$this->tooltip];
         $this->view->render('robot/index');
     }
 
@@ -44,6 +47,7 @@ class en extends Controller
             /** @var _Book $book */
             $book= $this->getModel('Book');
             $this->view->texts = $book->getBookPage($this->lang, 'GAME');
+            $this->view->qtips[] = [$this->tooltip];
             $this->view->render('game/modle');
         } else {
             $this->view->render('game/index');
@@ -57,6 +61,7 @@ class en extends Controller
         $book = $this->getModel('Book');
         $this->view->imgPath = URL . 'images/journalism/';
 		$this->view->texts = $book->getBookPage($this->lang, 'VANIER');
+        $this->view->qtips[] = [$this->tooltip];
         $this->view->render('vanier/index');
     }
 
@@ -70,6 +75,7 @@ class en extends Controller
             $book = $this->getModel('Book');
             $this->view->texts = $book->getTeamPage($this->lang, 'JOURNALISM', strtoupper($subpage));
             $this->view->team = $subpage;
+            $this->view->qtips[] = [$this->tooltip];
             $this->view->render('journalism/buildBook');
         }
     }
@@ -144,7 +150,7 @@ class en extends Controller
                 break;
         }
         $this->view->mentors = $mentors;
-
+        $this->view->qtips[] = [$this->tooltip];
         $this->view->render('team/bioBook');
     }
 

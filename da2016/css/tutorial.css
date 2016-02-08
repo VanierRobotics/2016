@@ -1,0 +1,78 @@
+	/** Pre-Defined */
+	body{
+		border: 0;
+		margin: 0;
+		padding: 0;
+		
+		background: #000000;
+		color: #ff944d;
+	}
+	
+	/** Elements */
+	#tutorial_tab{
+	  background: #4380D0;
+	  
+	  border-style: solid;
+	  border-color: #7CA7DE;
+	  border-width: 3px 3px 3px 3px;
+	  
+	  padding: 5px 5px 5px 5px;
+	  margin : 5px 5px 5px 5px;
+	  
+	  float: left;
+	  width: 150px;
+	}
+
+	#tutorial_body{
+	  background: #4380D0;
+	  
+	  border-style: solid;
+	  border-color: #7CA7DE;
+	  border-width: 3px 3px 3px 3px;
+	  
+	  padding: 5px 5px 5px 5px;
+	  margin : 5px 5px 5px 5px;
+	  
+	  float: left;
+	  width: 800px;
+	}
+	
+	/** Tutorial Body */
+	#tutorial_body_code{
+	  border-style: solid;
+	  border-color: #7CA7DE;
+	  border-width: 0px 0px 3px 0px;
+		
+	}
+	
+	#tutorial_body_example{
+	  border-style: solid;
+	  border-color: #7CA7DE;
+	  border-width: 0px 0px 3px 0px;
+		
+	}
+	
+	#tutorial_body_abstract{
+	  border-style: solid;
+	  border-color: #7CA7DE;
+	  border-width: 0px 0px 3px 0px;
+		
+	}
+	
+	#tutorial_body_explanation{
+	  border-style: solid;
+	  border-color: #7CA7DE;
+	  border-width: 0px 0px 3px 0px;
+		
+	}
+	
+	/** Tutorial Tab */
+	#tutorial_tab_title{
+		font-size: 20px;
+	}
+	
+	.tutorial_tab_link{
+	  border-style: solid;
+	  border-color: #7CA7DE;
+	  border-width: 0px 0px 3px 0px;
+	}

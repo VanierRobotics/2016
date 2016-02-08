@@ -15,6 +15,8 @@ $bios_kiosk = $team . '/kiosk';
 $gallery = 'galler' . (($this->language === 'en') ? 'ie' : 'y');
 $tuto = 'tutori' . (($this->language === 'en') ? 'al' : 'el');
 $popup = ($this->language === 'en') ? 'Click on banners, doors and other highlighted objects to navigate.' : 'Cliquer sur les bannières, les portes, et d\'autres objets pour naviguer.';
+
+Controller::aTooltip($popup);
 ?>
 
 <!-- HRIM - Hoverable Responsive Image Maps -->
@@ -25,7 +27,6 @@ $popup = ($this->language === 'en') ? 'Click on banners, doors and other highlig
 <!-- qTip - Just the tip.. tooltip you dirty pleb -->
 <script src="<?= URL ?>js/tooltips/jquery.qtip.js"></script>
 <link rel="stylesheet" href="<?= URL ?>css/jquery.qtip.min.css" property="stylesheet"/>
-<script src="<?= URL ?>js/tooltips/imagesloaded.pkg.min.js"></script>
 
 <map id="mymap" name="mymap">
     <area shape="poly" alt="Build Bios" title="Build Bios" coords="709,317,838,314,833,599,768,536,700,590,708,318"
@@ -66,26 +67,3 @@ $popup = ($this->language === 'en') ? 'Click on banners, doors and other highlig
 </map>
 
 <img src="<?= URL ?>images/home/got.jpg" usemap="#mymap" style="width: 100%;" alt=""/>
-
-<script type="text/javascript">
-    $(function () {
-        $('#footer').qtip({
-            style: {
-                classes: 'qtip-dark qtip-shadow qtip-bootstrap'
-            },
-            position: {
-                adjust: {x: -1000, y: -300}
-            },
-            content: '<?=$popup?>',
-            show: {
-                delay: 1500,
-                when: false, // Don't specify a show event
-                ready: true // Show the tooltip when ready
-            },
-            hide: {
-                delay: 4000
-            }
-        });
-    });
-
-</script>

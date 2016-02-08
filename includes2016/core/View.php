@@ -15,6 +15,7 @@
  * @property string team
  * @property string tcText
  * @property  array teamCaptain
+ * @property  array qtips
  * @property string funcName
  * @property  array onething
  * @property string transistor
@@ -50,6 +51,12 @@ class View
             if (isset($this->alerts)) {
                 foreach ($this->alerts as $alert) {
                     Controller::anAlert($alert[0], $alert[1]);
+                }
+            }
+
+            if (isset($this->qtips)) {
+                foreach ($this->qtips as $qtip) {
+                    Controller::aTooltip($qtip[0]);
                 }
             }
 
