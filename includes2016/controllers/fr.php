@@ -153,13 +153,4 @@ class fr extends Controller
     {
         $this->view->render('tutorial/index');
     }
-
-    public function partenaires()
-    {
-        /** @var _Book $book */
-        $book = $this->getModel('Book');
-		$this->view->texts = $book->getBookPage($this->lang,'SPONSORS');
-        $this->view->render('sponsors/index');
-    }
-
 }
