@@ -16,11 +16,11 @@
     }
 </style>
 
-<div id="canvas" class="container-fluid">
+<div id="canvas" class="container-fluid" style="visibility: hidden">
     <div id="book-zoom">
         <div class="sj-book">
             <div depth="5" class="hard"> <div class="side"></div> </div>
-            <div depth="5" class="hard front-side"> <div class="depth"></div>
+            <div depth="5" class="hard front-side">
                 <div class="book-content">
                     <h1 style="font-size: 38px">Vanier College</h1>
                     <video autoplay="autoplay" style="position:relative; right: 25px" width="460" height="320">
@@ -28,6 +28,7 @@
                         <source src="<?=URL?>videos/vanier.mp4" type="video/mp4">
                     </video>
                 </div>
+                <div class="depth"></div>
             </div>
 			<?php
                 $i = 0;

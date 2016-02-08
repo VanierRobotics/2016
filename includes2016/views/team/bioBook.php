@@ -18,7 +18,7 @@
 
 </style>
 
-<div id="canvas" class="container-fluid">
+<div id="canvas" class="container-fluid" style="visibility: hidden">
     <div id="book-zoom">
         <div class="sj-book">
             <div depth="5" class="hard">

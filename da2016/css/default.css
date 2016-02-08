@@ -58,3 +58,8 @@ body {
 
     z-index: 1032;
 }
+
+.animsition-overlay-slide {
+    background: url(../images/transitions/fire.gif) no-repeat center center;
+    background-size: cover;
+}

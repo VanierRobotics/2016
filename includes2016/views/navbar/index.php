@@ -20,8 +20,10 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav animsition-overlay"
-                data-animsition-in-class="overlay-slide-in-left" data-animsition-overlay="true"
-                data-animsition-in-duration="1500">
+                data-animsition-in-class="zoom-in-sm"
+                data-animsition-out-class="fade-left-lg"
+                data-animsition-in-duration="1000"
+                data-animsition-out-duration="500">
                 <li><a href="<?= URL . $this->language ?>/vanier/">Vanier</a></li>
                 <li><a href="<?= URL . $this->language ?>/robot/">Robot</a></li>
                 <li>
@@ -129,4 +131,9 @@
 </div>
 
 <!-- Content provided by mvc. renders views-->
-<div id="content">
+<div id="content" class="animsition-overlay"
+     data-animsition-in-class="fade-in-down-lg"
+     data-animsition-in-duration="1000"
+     data-animsition-out-class="fade-out-down-lg"
+     data-animsition-out-duration="800"
+>
