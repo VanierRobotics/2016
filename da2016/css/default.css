@@ -4,16 +4,6 @@ body {
     padding:0;
     height:100%;
 }
-
-body {
-    /*position: fixed;*/
-    background-color: #e9eaed;
-    word-wrap: break-word;
-/*    width : 100%;
-    height : 100%;
-    display: block;
-    */
-}
 #wrapper {
     min-height:100%;
     position:relative;
@@ -28,6 +18,10 @@ body {
     background-size: 25% ;
     z-index: 1000;
     text-shadow: #7b7b7b 3px;
+}
+
+.navbar.navbar-default * {
+    height: 45px;
 }
 
 #content {
