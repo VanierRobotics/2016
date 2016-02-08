@@ -10,7 +10,7 @@ class auth extends Controller
 
     public function rob()
     {
-        $this->view->render('gallery/get',true);
+        $this->view->render('gallery/get','fuckoff');
     }
 
     public function __construct()

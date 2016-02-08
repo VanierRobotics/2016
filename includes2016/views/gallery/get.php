@@ -34,4 +34,6 @@ if(isset($_REQUEST["index"])) {
         }
     }
     echo json_encode($rows);
+} else {
+    header('Location: '.URL);
 }
