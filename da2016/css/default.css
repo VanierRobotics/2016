@@ -24,10 +24,13 @@ body {
     font-weight: 800;
     color: black !important;
     margin-bottom: 0;
-    background-image: url("../images/wood_texture.jpg");
-    background-size: 25% ;
     z-index: 1000;
     text-shadow: #7b7b7b 3px;
+}
+
+.navbar.navbar-default > .container-fluid {
+    background-image: url("../images/wood_texture.jpg");
+    background-size: contain;
 }
 
 .navbar.navbar-default * {
