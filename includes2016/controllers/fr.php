@@ -91,7 +91,7 @@ class fr extends Controller
                                 <img src="' . URL . 'images/bios/PhoenixRoy.jpg"/>
                             </div>
                             <div class="polaroid mentor topRight">
-                                <p>Mathew de Marchie<br/><span style="color:gray">(Construction)</span></p>
+                                <p style="font-size: 17px;">Mathew de Marchie<br/><span style="color:gray">(Construction)</span></p>
                                 <img src="' . URL . 'images/bios/nopic.jpg"/>
                             </div>';
                 break;

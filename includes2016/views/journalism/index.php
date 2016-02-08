@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="<?= URL ?>css/journalismBooks.css">
-
+<link rel="stylesheet" href="<?= URL ?>css/journalismBooks.css" property="stylesheet">
+<?php $link = URL . $this->language . (($this->language === 'en') ? '/journalism' : '/journalisme'); ?>
 
 <div class="container">
     <header class="clearfix">

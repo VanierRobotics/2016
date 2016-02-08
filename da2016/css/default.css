@@ -5,16 +5,16 @@ html {
 body {
     display: block;
     overflow: hidden;
+    background-color: black;
 }
 .navbar {
     margin: 0;
     min-height: 0;
-    height: 50px;
+    height: 60px;
 }
 
 .sponsorImage{
     height: 100px;
-
 }
 
 .navbar.navbar-default {
