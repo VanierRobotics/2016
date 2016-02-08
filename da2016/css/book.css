@@ -51,7 +51,7 @@ body, ul, table, form {
     font-family: 'MorrisRoman-Black', serif;
     font-size: 38px;
     font-weight: lighter;
-    margin: 20px 0;
+    margin: -30px 0 10px;
     color: #333;
     -webkit-text-fill-color: #333;
     -webkit-text-stroke-color: white;

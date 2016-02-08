@@ -48,4 +48,7 @@
             <div class="hard pLast"></div>
         </div>
     </div>
+    <script type="text/javascript">
+        $('.own-size img').addClass('zoom-this');
+    </script>
 </div>

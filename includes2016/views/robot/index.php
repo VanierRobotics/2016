@@ -20,7 +20,6 @@
         margin: 5px;
     }
 </style>
-
 <div id="canvas" class="container-fluid" style="visibility: hidden">
     <div id="book-zoom">
         <div class="sj-book">
@@ -55,4 +54,7 @@
             <div class="hard pLast"></div>
         </div>
     </div>
+    <script type="text/javascript">
+        $('.own-size img').addClass('zoom-this');
+    </script>
 </div>
