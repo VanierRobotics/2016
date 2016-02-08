@@ -1,4 +1,15 @@
 <body>
+    <script>
+        $("html").css({"background-color" : "black", "overlfow" : "hidden"});
+        $("body").css("opacity", "0");
+        $(function()
+        {
+            setTimeout(function()
+            {
+                $("body").fadeTo(1000, 1);
+            }, 500);
+        });
+    </script>
     <!--bootstrap navbar-->
     <nav class="navbar navbar-default">
         <div class="container-fluid">
