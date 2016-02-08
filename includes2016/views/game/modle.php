@@ -1,3 +1,21 @@
+<style>
+    body {
+        background-image: url(<?=URL?>images/book/wood.jpg) !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .sj-book .p1,
+    .sj-book .p2,
+    .sj-book .p3,
+    .sj-book .pBeforeLast,
+    .sj-book .pLast {
+        background-color: white;
+        background-image: url(<?=URL?>images/book/CompetitionBook.jpg) !important;
+    }
+
+</style>
+
 <!-- Turn.js (aka HTML5 book thingny)-->
 <script type="text/javascript" src="<?=URL?>js/turnjs/hash.js"></script>
 <div id="canvas" class="container-fluid">

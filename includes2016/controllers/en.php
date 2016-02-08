@@ -49,7 +49,7 @@ class en extends Controller
             /** @var _Book $book */
             $book= $this->getModel('Book');
             $this->view->texts = $book->getBookPage($this->lang, 'GAME');
-            include PATH . 'views/game/modle.php';
+            $this->view->render('game/modle');
         } else {
             $this->view->render('game/index');
         }
