@@ -8,8 +8,8 @@ body
 .container
 {
     position : absolute;
-    left : 0%;
-    top : 0px;
+    left : 0;
+    top : 0;
     width : 100%;
     height : 100%;
     overflow:hidden;
@@ -20,8 +20,8 @@ body
 #scene
 {
     position : absolute;
-    left : 0%;
-    top : 0px;
+    left : 0;
+    top : 0;
     width : 100%;
     height : 100%;
     background-image : url("../images/icewall/bg.png");
@@ -54,8 +54,8 @@ body
 .wallpaper
 {
     position : absolute;
-    left : 0%;
-    top : 0%;
+    left : 0;
+    top : 0;
     width : 100%;
     height : 100%;
 }
@@ -84,7 +84,7 @@ body
 {
     background:rgba(255,255,255,0.2);
     /*text-shadow: -1px 0px 5px rgba(255, 255, 255, 1);*/
-    text-shadow : -1px 0px 5px #ddd7c5;
+    text-shadow : -1px 0 5px #ddd7c5;
 }
 
 .enButton

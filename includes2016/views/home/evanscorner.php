@@ -13,7 +13,7 @@
 <style>
     .loader {
         position: fixed;
-        left: 0px;
+        left: 0;
         top: 5%;
         width: 100%;
         height: 85%;
@@ -29,7 +29,7 @@
 
         $(window).load(function() {
             $(".loader").fadeOut("slow");
-        })
+        });
         $("#content") .click(function() {
             $("#content").fadeOut(10000, function() {
                 window.location.href = "number2.html";
@@ -40,7 +40,7 @@
 </script>
 
 <div class="loader"></div>
-<h1 style="margin: 0px">THINGS</h1>
+<h1 style="margin: 0">THINGS</h1>
 
 
 

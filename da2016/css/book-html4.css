@@ -1,14 +1,10 @@
 /* Steve jobs' book */
 
 .my-book .even{
-	background-image:url(../images/book/page-left.jpg);
-	background-position:right top;
-	background-repeat:repeat-y;
+	background: url(../images/book/page-left.jpg) repeat-y right top;
 }
 
 .my-book .odd{
-	background-image:url(../images/book/page-right.jpg);
-	background-position:left top;
-	background-repeat:repeat-y;
+	background: url(../images/book/page-right.jpg) repeat-y left top;
 }
 

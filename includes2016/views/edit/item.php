@@ -1,7 +1,7 @@
 <script src="<?=URL?>js/ckeditor/ckeditor.js"></script>
 <form action="<?= URL.'edit'?>" method="post">
 
-    </br>
+    <br/>
     <div class="col-md-offset-2 col-md-8 form-group">
         <label for="page">Select from page list:</label>
         <select class="form-control" name="book" id="book">
@@ -36,8 +36,8 @@
     </div>
 
     <div class="col-md-offset-2 col-md-8">
-				</br>Enter Text: </br>
-				<textarea id="text" required name="text" rows="10" cols="50" style="resize: none;"><?= (isset( $this->onething['content'])) ? $this->onething['content'] :'' ; ?>
+				<br/>Enter Text: <br/>
+        <label for="text"></label><textarea id="text" required name="text" rows="10" cols="50" style="resize: none;"><?= (isset( $this->onething['content'])) ? $this->onething['content'] :'' ; ?>
                 </textarea>
 				<?php
 					$_SESSION["start_time"] = time();
