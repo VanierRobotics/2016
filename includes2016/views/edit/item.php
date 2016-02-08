@@ -4,7 +4,7 @@
     <br/>
     <div class="col-md-offset-2 col-md-8 form-group">
         <label for="page">Select from page list:</label>
-        <select class="form-control" name="book" id="book">
+        <label for="book"></label><select class="form-control" name="book" id="book">
             <option <?= (isset($this->onething) && strcmp($this->onething['book'],'HOME') == 0 ? 'selected' :''); ?>>Home</option>
             <option <?= (isset($this->onething) && strcmp($this->onething['book'],'GAME') == 0 ? 'selected' :''); ?>>Game</option>
             <option <?= (isset($this->onething) && strcmp($this->onething['book'],'VANIER') == 0 ? 'selected' :''); ?>>Vanier</option>
