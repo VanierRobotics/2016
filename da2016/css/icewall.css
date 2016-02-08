@@ -27,7 +27,7 @@ body
     background-image : url("../images/icewall/bg.png");
     background-size : cover;
     transform : translateZ(100px);
-    transition : 1s;
+    transition : .5s;
 }
 
 @keyframes fadeIn

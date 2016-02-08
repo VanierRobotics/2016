@@ -47,31 +47,32 @@ $(function()
 		else
 			selectedLanguage = "fr";
 
-		$(".button").addClass("fadeOut");
+		sceneAnimation();
 		setTimeout(function()
 		{
-			$(".button").remove();
-			zoomOutScene();
-			setTimeout(function()
+			$("#scene").remove();
+			$(".vLogo").fadeOut(3000, function()
 			{
-				$("#scene").remove();
-				$(".vLogo").fadeOut(3000, function()
+				if(selectedLanguage == "en")
 				{
-					if(selectedLanguage == "en")
-					{
-						alert("you selected en");
-					}
-				});
-			}, 1500);
-
-		}, 1200);
+					location = "/en";
+				}
+				
+				else
+				{
+					location = "/fr";
+				}
+			});
+			
+		}, 1500);
 	});
 
 
 	// Other functions....
-	function zoomOutScene()
+	function sceneAnimation()
 	{
-		$("#scene").css("transform", "translateZ(1000px)");
+		$("#scene").addClass("fadeOut");
+		$(".button").addClass("fadeOut");
 	}
 
 
