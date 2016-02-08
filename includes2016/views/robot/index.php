@@ -13,6 +13,12 @@
         background-color: white;
         background-image: url(<?=URL?>images/book/RobotBook.jpg) !important;
     }
+
+    .book-content img.left {
+        display: block;
+        float: left;
+        margin: 5px;
+    }
 </style>
 
 <div id="canvas" class="container-fluid" style="visibility: hidden">
