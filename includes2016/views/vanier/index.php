@@ -14,6 +14,12 @@
         background-color: white;
         background-image: url(<?=URL?>images/book/VanierBook.jpg) !important;
     }
+
+    .book-content img.left {
+        display: block;
+        float: left;
+        margin: 5px;
+    }
 </style>
 
 <div id="canvas" class="container-fluid">
@@ -38,7 +44,9 @@
                     ($i%2) ? $even= '' : $even= 'even';
 					echo('	<div class="own-size '.$even.'">
 								<div class="book-content">');
-					echo $text['content'];
+					$words = $text['content'];
+                    $words = str_replace('{{img_path}}', $this->imgPath, $words);
+                    echo $words;
 					echo(' 	</div>
 							<span class="page-number">'.($i+2).'</span></div>');
 				}

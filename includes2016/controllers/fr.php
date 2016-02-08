@@ -49,6 +49,7 @@ class fr extends Controller
         $this->view->book = 'vanier';
         /** @var _Book $book */
         $book = $this->getModel('Book');
+        $this->view->imgPath = URL . 'images/journalism/';
         $this->view->texts = $book->getBookPage($this->lang, 'VANIER');
         $this->view->render('Vanier/index');
     }
