@@ -47,6 +47,7 @@
     <!-- Font awesome-->
     <link rel="stylesheet" href="<?= URL ?>css/font-awesome.min.css">
 
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Arvo" />
     <!-- Bootstrap Original-->
     <!--link rel="stylesheet" href="<-?=URL?>/css/bootstrap.min.css" /-->
     <!--link rel="stylesheet" href="<-?=URL?>/css/bootstrap-theme.min.css" /-->

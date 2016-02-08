@@ -19,9 +19,15 @@ body {
     position:relative;
 }
 
-.navbar {
+.navbar.navbar-default {
+    font-family: Arvo, serif;
+    font-weight: 800;
+    color: black !important;
     margin-bottom: 0;
+    background-image: url("../images/wood.jpg");
+    background-size: 25% ;
     z-index: 1000;
+    text-shadow: #7b7b7b 3px;
 }
 
 #content {
