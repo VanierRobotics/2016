@@ -161,7 +161,8 @@ class en extends Controller
 
     public function sponsors()
     {
-		$book = $this->getModel('Book');
+        /** @var _Book $book */
+        $book = $this->getModel('Book');
 		$this->view->texts = $book->getBookPage($this->lang,'SPONSORS');
         $this->view->render('sponsors/index');
     }

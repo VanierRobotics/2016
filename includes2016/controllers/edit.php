@@ -17,20 +17,22 @@ class edit extends Controller
     public function index()
     {
         $this->view->title = 'Edit';
-        $this->model = $this->getModel("Book");
-        $this->model->DBManip();
-        $this->view->st =  $this->model->getAllEntries();
+        /** @var _Book $book */
+        $book = $this->getModel("Book");
+        $book->DBManip();
+        $this->view->st =  $book->getAllEntries();
         $this->view->render('edit/index');
     }
 
     public function item()
     {
         $this->view->title = 'Edit Text';
-        $this->model = $this->getModel("Book");
+        /** @var _Book $book */
+        $book = $this->getModel("Book");
         if(isset($_POST['textID'])) {
-            $this->view->onething = $this->model->getByID();
+            $this->view->onething = $book->getByID();
         }
-        $this->view->st =  $this->model->getAllEntries();
+        $this->view->st =  $book->getAllEntries();
         $this->view->render('edit/item');
     }
 

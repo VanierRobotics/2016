@@ -34,8 +34,9 @@ class fr extends Controller
 	
     public function competition(){
         $this->view->book = 'game';
-        $this->model = $this->getModel('Book');
-        $this->view->texts = $this->model->getBookPage($this->lang, 'GAME');
+        /** @var _Book $book */
+        $book = $this->getModel('Book');
+        $this->view->texts = $book->getBookPage($this->lang, 'GAME');
         $this->view->render('game/index');
     }
 
@@ -53,8 +54,9 @@ class fr extends Controller
         if($subpage=='index')
             $this->view->render('journalism/'.$subpage);
         else{
-            $this->model = $this->getModel('Book');
-            $this->view->texts = $this->model->getTeamPage($this->lang, 'JOURNALISM', strtoupper($subpage));
+            /** @var _Book $book */
+            $book = $this->getModel('Book');
+            $this->view->texts = $book->getTeamPage($this->lang, 'JOURNALISM', strtoupper($subpage));
             $this->view->team = $subpage;
             $this->view->render('journalism/buildBook');
         }
@@ -147,7 +149,8 @@ class fr extends Controller
 
     public function partenaires()
     {
-		$book = $this->getModel('Book');
+        /** @var _Book $book */
+        $book = $this->getModel('Book');
 		$this->view->texts = $book->getBookPage($this->lang,'SPONSORS');
         $this->view->render('sponsors/index');
     }

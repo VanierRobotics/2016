@@ -3,6 +3,21 @@
 /**
  * @property string language
  * @property string title
+ * @property string st
+ * @property  array texts
+ * @property string book
+ * @property string mentors
+ * @property string learningText
+ * @property string challengeText
+ * @property string captain
+ * @property  array captainBio
+ * @property mixed bios
+ * @property string team
+ * @property string tcText
+ * @property  array teamCaptain
+ * @property string funcName
+ * @property  array onething
+ * @property string transistor
  */
 class View
 {

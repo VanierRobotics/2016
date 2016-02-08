@@ -4,7 +4,6 @@
  * Class Login
  *
  * Deals with user authentication
- * @property _Recovery recovery
  */
 class auth extends Controller
 {
@@ -61,6 +60,7 @@ class auth extends Controller
             $pass = Hash::create('sha256', $_POST['inputPassword'], HASH_PW_KEY);
         }
 
+        /** @noinspection PhpParamsInspection */
         if ($user->authenticate($name, $pass)) {
             if (isset($_POST['inputRemember']))
                 setcookie('rememberBana', 'name=' . $name . '&pass=' . $pass, time() + (3600 * 24 * 30));

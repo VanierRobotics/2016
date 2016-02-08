@@ -7,6 +7,7 @@ class _User extends Model
     private $password;
     private $fname;
     private $lname;
+    private $email;
 
     //"Constructor makes generic if not own wall" -Evan
     /**
@@ -125,8 +126,8 @@ class _User extends Model
 
     /**
      * Verifies user/pass combo for website access
-     * @param $username username to verify
-     * @param $password hashed password to test
+     * @param $username string username to verify
+     * @param $password string hashed password to test
      * @return bool    result of the process....
      */
     public function authenticate($username, $password)
