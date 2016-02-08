@@ -11,7 +11,7 @@ class edit extends Controller
     public function __construct()
     {
         parent::__construct();
-        //self::checkMember();
+        self::checkMember();
     }
 
     public function index()
