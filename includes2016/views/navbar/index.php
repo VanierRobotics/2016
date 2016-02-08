@@ -25,22 +25,38 @@
                 <li><a href="<?= URL . $this->language ?>/vanier/">Vanier</a></li>
                 <li><a href="<?= URL . $this->language ?>/robot/">Robot</a></li>
                 <li>
-                    <a href="<?= URL . ($this->language === 'en' ? 'en/game/' : 'fr/jeu/') ?>"><?= ($this->language === 'en') ? 'Game' : 'Jeu' ?></a>
+                    <a href="<?= URL . ($this->language === 'en' ? 'en/game/' : 'fr/jeu/') ?>">
+                        <?= ($this->language === 'en') ? 'Game' : 'Jeu' ?>
+                    </a>
                 </li>
                 <li>
-                    <a href="<?= URL . ($this->language === 'en' ? 'en/team/' : 'fr/equipe') ?>"><?= ($this->language === 'en') ? 'Team' : 'Équipe' ?></a>
+                    <a href="<?= URL . ($this->language === 'en' ? 'en/team/' : 'fr/equipe') ?>">
+                        <?= ($this->language === 'en') ? 'Team' : 'Équipe' ?>
+                    </a>
                 </li>
                 <li>
-                    <a href="<?= URL . ($this->language === 'en' ? 'en/journalism/' : 'fr/journalisme/') ?>"><?= ($this->language === 'en') ? 'Journalism' : 'Journalisme' ?></a>
+                    <a href="<?= URL . ($this->language === 'en' ? 'en/journalism/' : 'fr/journalisme/') ?>">
+                        <?= ($this->language === 'en') ? 'Journalism' : 'Journalisme' ?>
+                    </a>
                 </li>
                 <li>
-                    <a href="<?= URL . ($this->language === 'en' ? 'en/gallery/' : 'fr/gallerie/') ?>"><?= ($this->language === 'en') ? 'Gallery' : 'Gallerie' ?></a>
+                    <a href="<?= URL . ($this->language === 'en' ? 'en/gallery/' : 'fr/gallerie/') ?>">
+                        <?= ($this->language === 'en') ? 'Gallery' : 'Gallerie' ?>
+                    </a>
                 </li>
                 <li>
-                    <a href="<?= URL . ($this->language === 'en' ? 'en/tutorial/' : 'fr/tutoriel/') ?>"><?= ($this->language === 'en') ? 'Tutorial' : 'Tutoriel' ?></a>
+                    <a href="<?= URL . ($this->language === 'en' ? 'en/tutorial/' : 'fr/tutoriel/') ?>">
+                        <?= ($this->language === 'en') ? 'Tutorial' : 'Tutoriel' ?>
+                    </a>
                 </li>
                 <li>
-                    <a href="<?= URL . ($this->language === 'en' ? 'en/sponsors/' : 'fr/partenaires/') ?>"><?= ($this->language === 'en') ? 'Sponsors' : 'Partenaires' ?></a>
+                    <style scoped>
+                        #spons:hover {
+                            cursor: pointer;
+                        }
+                    </style>
+                    <p id="spons" style="padding-top: 18px;" data-toggle="modal"
+                       data-target="#sponsorsModal"><?= ($this->language === 'en') ? 'Sponsors' : 'Commanditaires' ?></p>
                 </li>
             </ul>
 
