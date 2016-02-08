@@ -1,16 +1,23 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Evan
- * Date: 2016-02-07
- * Time: 11:42 AM
- */
-?>
+<style>
+    body {
+        background-image: url(<?=URL?>images/book/wood.jpg) !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .sj-book .p1,
+    .sj-book .p2,
+    .sj-book .p3,
+    .sj-book .pBeforeLast,
+    .sj-book .pLast {
+        background-color: white;
+        background-image: url(<?=URL?>images/book/CompetitionBook.jpg) !important;
+    }
+
+</style>
 
 <!-- Turn.js (aka HTML5 book thingny)-->
 <script type="text/javascript" src="<?=URL?>js/turnjs/hash.js"></script>
-
-
 <div id="canvas" class="container-fluid">
     <div id="book-zoom">
         <div class="sj-book">
@@ -25,8 +32,7 @@
                 echo('<div class="own-size '.$even.'">
                        <div class="book-content">');
                 echo $text['content'];
-                echo('  </div>
-                        <span class="page-number">'.$i.'</span></div>');
+                echo('</div> <span class="page-number">'.$i.'</span></div>');
             }
             if($i%2){
                 $i++;
@@ -34,8 +40,7 @@
                 echo('<div class="own-size '.$even.'">
 
                        ');
-
-                echo('  <div class="book-content"> <p>END</p> </div>
+                echo('  <div class="book-content"> </div>
                         <span class="page-number">'.$i.'</span></div>');
 
             }
@@ -45,14 +50,3 @@
         </div>
     </div>
 </div>
-
-<script type="text/javascript">
-    // Load turn.js
-    yepnope({
-        test : Modernizr.csstransforms,
-        yep: ['<?=URL?>js/turnjs/turn.min.js'],
-        nope: ['<?=URL?>js/turnjs/turn.html4.min.js', '<?=URL?>css/jquery.ui.html4.css', '<?=URL?>css/book-html4.css'],
-        both: ['<?=URL?>js/turnjs/book.js', '<?=URL?>css/jquery.ui.css', '<?=URL?>css/book.css'],
-        complete: delayLoad
-    });
-</script>

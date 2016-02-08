@@ -42,13 +42,17 @@ class en extends Controller
         $this->view->render('robot/index');
     }
 
-    public function game()
+    public function game($content = 'index')
     {
-        $this->view->book = 'game';
-        /** @var _Book $book */
-        $book= $this->getModel('Book');
-        $this->view->texts = $book->getBookPage($this->lang, 'GAME');
-        $this->view->render('game/index');
+        if($content !== 'index') {
+            $this->view->book = 'game';
+            /** @var _Book $book */
+            $book= $this->getModel('Book');
+            $this->view->texts = $book->getBookPage($this->lang, 'GAME');
+            $this->view->render('game/modle');
+        } else {
+            $this->view->render('game/index');
+        }
     }
 
     public function vanier()
