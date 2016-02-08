@@ -28,16 +28,16 @@ function updateDepth(book, newPage) {
 
 }
 
-function loadPage(page) {
-    $.ajax({
-        type: 'POST',
-        url: 'http://devbana.tk/index/cms?lang='+lang+'&book='+book_name+'&page='+page,
-        contentType: 'application/json; charset=utf-8',
-        dataType: 'json'
-    }).done(function(pageHtml) {
-			$('.sj-book .p' + page).html(pageHtml);
-		});
-}
+//function loadPage(page) {
+//    $.ajax({
+//        type: 'POST',
+//        url: 'http://devbana.tk/index/cms?lang='+lang+'&book='+book_name+'&page='+page,
+//        contentType: 'application/json; charset=utf-8',
+//        dataType: 'json'
+//    }).done(function(pageHtml) {
+//			$('.sj-book .p' + page).html(pageHtml);
+//		});
+//}
 
 function addPage(lang, book_name, page, book ) {
 

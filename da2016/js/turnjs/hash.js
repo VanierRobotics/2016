@@ -295,11 +295,12 @@ function delayLoad(){
 $('#canvas').css('visibility', 'hidden');
 
 // Load turn.js
+//TODO: CHANGE THESE FUCKERS
 yepnope({
     test : Modernizr.csstransforms,
-    yep: ['http://devbana.tk/js/turnjs/turn.min.js'],
-    nope: ['http://devbana.tk/js/turnjs/turn.html4.min.js', 'http://devbana.tk/css/jquery.ui.html4.css', 'http://devbana.tk/css/book-html4.css'],
-    both: ['http://devbana.tk/js/turnjs/book.js', 'http://devbana.tk/css/jquery.ui.css',
-		'http://devbana.tk/css/book.css', 'http://devbana.tk/js/book.css'],
+    yep: ['http://vanier-robotics.com/da2016/js/turnjs/turn.min.js'],
+    nope: ['http://vanier-robotics.com/da2016/js/turnjs/turn.html4.min.js', 'http://vanier-robotics.com/da2016/css/jquery.ui.html4.css', 'http://vanier-robotics.com/da2016/css/book-html4.css'],
+    both: ['http://vanier-robotics.com/da2016/js/turnjs/book.js', 'http://vanier-robotics.com/da2016/css/jquery.ui.css',
+		'http://vanier-robotics.com/da2016/css/book.css', 'http://vanier-robotics.com/da2016/js/book.css'],
     complete: delayLoad
 });

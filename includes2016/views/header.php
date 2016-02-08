@@ -17,7 +17,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="robots" content="noindex"> <!-- TODO: Remove this so google can index us and make us famous and bring us moneys -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=0.3"/>
 
     <!-- START OpenGraph Meta Tags -->
     <meta property="og:title" content="<?= (isset($this->title)) ? $this->title : 'NO TITLE'; ?>"/>

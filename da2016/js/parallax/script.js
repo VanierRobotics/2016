@@ -55,11 +55,11 @@ $(function()
 			{
 				if(selectedLanguage == "en")
 				{
-					location = "/en";
+					location = "en";
 				}
 				else
 				{
-					location = "/fr";
+					location = "fr";
 				}
 			});
 		}, 1000);
