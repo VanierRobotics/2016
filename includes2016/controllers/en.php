@@ -38,6 +38,7 @@ class en extends Controller
         $this->view->book = 'robot';
         /** @var _Book $book */
         $book = $this->getModel('Book');
+        $this->view->imgPath = URL . 'images/journalism';
         $this->view->texts = $book->getBookPage($this->lang, 'ROBOT');
         $this->view->render('robot/index');
     }
@@ -60,6 +61,7 @@ class en extends Controller
         $this->view->book = 'vanier';
         /** @var _Book $book */
         $book = $this->getModel('Book');
+        $this->view->imgPath = URL . 'images/journalism/';
 		$this->view->texts = $book->getBookPage($this->lang, 'VANIER');
         $this->view->render('vanier/index');
     }
