@@ -1,6 +1,4 @@
 <body>
-
-<div id="wrapper" class="page-wrapper">
     <!--bootstrap navbar-->
     <nav class="navbar navbar-default">
         <div class="container-fluid">

@@ -1,15 +1,16 @@
-html,
 body {
-    margin:0;
-    padding:0;
-    height:100%;
+    display: block;
+    overflow: hidden;
 }
-#wrapper {
-    min-height:100%;
-    position:relative;
+.navbar {
+    margin: 0;
+    min-height: 0;
+    height: 50px;
 }
 
 .navbar.navbar-default {
+    margin-top: -10px;
+    padding-bottom: 15px;
     font-family: Arvo, serif;
     font-weight: 800;
     color: black !important;
@@ -18,10 +19,6 @@ body {
     background-size: 25% ;
     z-index: 1000;
     text-shadow: #7b7b7b 3px;
-}
-
-.navbar.navbar-default * {
-    height: 45px;
 }
 
 #lightbox .modal-content {
