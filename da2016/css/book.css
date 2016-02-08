@@ -393,7 +393,7 @@ body, ul, table, form {
 
 .polaroid p {
     font-family: 'MorrisRoman-Black', serif;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 0.9;
     height: 24px;
     position: absolute;
@@ -416,14 +416,14 @@ body, ul, table, form {
 }
 
 .bioContent h4 {
-    font-size: 24px;
+    font-size: 22px;
     padding: 0;
     margin: 0;
 }
 
 .bioContent p {
     line-height: 20px;
-    font-size: 20px;
+    font-size: 18px;
     padding: 0;
     margin: 0;
 }
