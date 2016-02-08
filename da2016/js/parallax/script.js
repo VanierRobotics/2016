@@ -57,7 +57,10 @@ $(function()
 				$("#scene").remove();
 				$(".vLogo").fadeOut(3000, function()
 				{
-					// change url here using this statement -> location = "path_to_URL.html";
+					if(selectedLanguage == "en")
+					{
+						alert("you selected en");
+					}
 				});
 			}, 1500);
 
