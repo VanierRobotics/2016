@@ -8,6 +8,11 @@
 class auth extends Controller
 {
 
+    public function rob()
+    {
+        $this->view->render('gallery/get',true);
+    }
+
     public function __construct()
     {
         parent::__construct();
