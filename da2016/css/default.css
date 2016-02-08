@@ -8,6 +8,10 @@ body {
     height: 50px;
 }
 
+.sponsorImage{
+    height: 100px;
+}
+
 .navbar.navbar-default {
     margin-top: -10px;
     padding-bottom: 15px;
