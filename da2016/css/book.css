@@ -387,18 +387,21 @@ body, ul, table, form {
 }
 
 .polaroid p {
-    height: 28px;
+    font-family: 'MorrisRoman-Black', serif;
+    font-size: 22px;
+    line-height: 0.9;
+    height: 24px;
     position: absolute;
     text-align: center;
     width: 100%;
     bottom: 0;
-    font-size: 15px;
     font-weight: bold;
     color: #000000;
-    line-height: 20px;
 }
 
 .bioContent {
+    font-family: 'MorrisRoman-Black', serif;
+    line-height: 0.9;
     position: absolute;
     padding: 0 2% 5% 5%;
     bottom: 0;
@@ -407,14 +410,14 @@ body, ul, table, form {
 }
 
 .bioContent h4 {
-    font-size: 18px;
+    font-size: 24px;
     padding: 0;
     margin: 0;
 }
 
 .bioContent p {
     line-height: 20px;
-    font-size: 14px;
+    font-size: 20px;
     padding: 0;
     margin: 0;
 }
@@ -433,7 +436,16 @@ body, ul, table, form {
 }
 
 .polaroid.mentor {
-    width: 140px;
+    width: 150px;
+}
+
+.polaroid.mentor p {
+    height: 20px;
+    font-size: 20px;
+}
+
+.polaroid.mentor p>span {
+    font-size: 16px;
 }
 
 .polaroid.mentor img {
@@ -470,9 +482,12 @@ body, ul, table, form {
 }
 
 .mentors > .page-footer {
+    font-family: 'MorrisRoman-Black', serif;
+    line-height: 0.9;
     position: absolute;
+    height: 20px;
     bottom: -5px;
-    font-size: 14px;
+    font-size: 20px;
     text-align: center;
     width: 100%;
 }

@@ -36,7 +36,7 @@
                 ?>
                 <div class="own-size">
                     <div class="polaroid captain">
-                        <p><?= $this->tcText . ' ' . $capbio['bio_GOTName'] ?>
+                        <p style="font-size: 20px;"><?= $this->tcText . ' ' . $capbio['bio_GOTName'] ?>
                             <br/><?= '(' . $capbio['bio_FullName'] . ')' ?></p>
                         <img src="<?= URL ?>images/bios/<?= $capbio['bio_Image'] ?>"/>
                     </div>
