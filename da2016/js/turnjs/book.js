@@ -147,7 +147,7 @@ function zoomOut() {
         completeTransition = function(e) {
             $('#book-zoom').unbind(transitionEnd);
             $('.sj-book').turn('disable', false);
-            $('body').css({'overflow': 'auto'});
+            $('body').css({'overflow': 'hidden'});
             moveBar(false);
         };
 

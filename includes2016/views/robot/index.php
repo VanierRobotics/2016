@@ -47,7 +47,7 @@
 					$i++;
 					($i%2) ? $even= '' : $even= 'even';
 					echo('<div class="own-size '.$even.'">');
-					echo('  <div class="book-content"> <p>END</p> </div>
+					echo('  <div class="book-content"></div>
 							<span class="page-number">'.($i+2).'</span></div>');
 				}
             ?>

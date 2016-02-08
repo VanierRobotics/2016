@@ -28,6 +28,7 @@ class fr extends Controller
         $this->view->book = 'robot';
         /** @var _Book $book */
         $book = $this->getModel('Book');
+        $this->view->imgPath = URL . 'images/journalism';
         $this->view->texts = $book->getBookPage($this->lang, 'ROBOT');
         $this->view->render('robot/index');
     }
