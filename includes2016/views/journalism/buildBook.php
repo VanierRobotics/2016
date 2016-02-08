@@ -49,28 +49,3 @@
         </div>
     </div>
 </div>
-
-<script type="text/javascript">
-    // Hide canvas
-    $('#canvas').css('visibility', 'hidden');
-
-    // Load turn.js
-    yepnope({
-        test: Modernizr.csstransforms,
-        yep: ['<?=URL?>js/turnjs/turn.min.js'],
-        nope: ['<?=URL?>js/turnjs/turn.html4.min.js', '<?=URL?>css/jquery.ui.html4.css', '<?=URL?>css/book-html4.css'],
-        both: ['<?=URL?>js/turnjs/book.js', '<?=URL?>css/jquery.ui.css', '<?=URL?>css/book.css'],
-        complete: delayLoad
-    });
-</script>
-
-<script type="text/javascript">
-    // Load turn.js
-    yepnope({
-        test : Modernizr.csstransforms,
-        yep: ['http://devbana.tk/js/turnjs/turn.min.js'],
-        nope: ['http://devbana.tk/js/turnjs/turn.html4.min.js', 'http://devbana.tk/css/jquery.ui.html4.css', 'http://devbana.tk/css/book-html4.css'],
-        both: ['http://devbana.tk/js/turnjs/book.js', 'http://devbana.tk/css/jquery.ui.css', 'http://devbana.tk/css/book.css'],
-        complete: delayLoad
-    });
-</script>

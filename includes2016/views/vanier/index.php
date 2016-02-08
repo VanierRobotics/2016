@@ -20,7 +20,14 @@
     <div id="book-zoom">
         <div class="sj-book">
             <div depth="5" class="hard"> <div class="side"></div> </div>
-            <div depth="5" class="hard front-side"> <div class="depth"></div> </div>            
+            <div depth="5" class="hard front-side"> <div class="depth"></div>
+                <div class="book-content">
+                    <h1 style="font-size: 38px">Vanier College</h1>
+                    <video autoplay loop name="intro" style="position:relative; right: 25px" width="460" height="320">
+                        <source src="<?=URL?>videos/vanier.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </div>
 			<?php
                 $i = 0;
 				
@@ -40,7 +47,7 @@
 					$i++;
 					($i%2) ? $even= '' : $even= 'even';
 					echo('<div class="own-size '.$even.'">');
-					echo('  <div class="book-content"> <p>END</p> </div>
+					echo('  <div class="book-content"> </div>
 							<span class="page-number">'.($i+2).'</span></div>');
 				}
             ?>			
@@ -49,14 +56,3 @@
         </div>
     </div>
 </div>
-
-<script type="text/javascript">
-    // Load turn.js
-    yepnope({
-        test : Modernizr.csstransforms,
-        yep: ['http://devbana.tk/js/turnjs/turn.min.js'],
-        nope: ['http://devbana.tk/js/turnjs/turn.html4.min.js', 'http://devbana.tk/css/jquery.ui.html4.css', 'http://devbana.tk/css/book-html4.css'],
-        both: ['http://devbana.tk/js/turnjs/book.js', 'http://devbana.tk/css/jquery.ui.css', 'http://devbana.tk/css/book.css'],
-        complete: delayLoad
-    });
-</script>
