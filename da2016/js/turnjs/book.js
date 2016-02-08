@@ -94,19 +94,6 @@ function zoomThis(pic) {
         },
         completeTransition = function() {
             $('#book-zoom').unbind(transitionEnd);
-
-            if ($('.sj-book').data().zoomIn) {
-                tmpContainer.appendTo($('body'));
-
-                $('body').css({'overflow': 'hidden'});
-
-                tmpPic.css({
-                    margin: position.top + 'px ' + position.left+'px'
-                }).
-                appendTo(tmpContainer).
-                fadeOut(0).
-                fadeIn(500);
-            }
         };
 
     $('.sj-book').data().zoomIn = true;
@@ -118,8 +105,8 @@ function zoomThis(pic) {
     tmpContainer.click(zoomOut);
 
     tmpPic.load(function() {
-        var realWidth = $(this)[0].width,
-            realHeight = $(this)[0].height,
+        var realWidth = $(this)[0].width/2,
+            realHeight = $(this)[0].height/2,
             zoomFactor = realWidth/pic.width(),
             picPosition = {
                 top:  (picPos.top - zCenterY)*zoomFactor + zCenterY + bookPos.top,
@@ -138,8 +125,6 @@ function zoomThis(pic) {
         };
 
         $('.samples .bar').css({visibility: 'hidden'});
-        $('#slider-bar').hide();
-
 
         $('#book-zoom').transform(
             'translate('+translate.left+'px, '+translate.top+'px)' +
