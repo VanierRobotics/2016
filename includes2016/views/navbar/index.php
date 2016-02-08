@@ -1,6 +1,15 @@
 <body>
-
-<div id="wrapper" class="page-wrapper">
+<script>
+	$("html").css({"background-color" : "black", "overlfow" : "hidden"});
+	$("body").css("opacity", "0");
+	$(function()
+	{
+		setTimeout(function()
+		{
+			$("body").fadeTo(1000, 1);
+		}, 500);
+	});
+</script>
     <!--bootstrap navbar-->
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -21,7 +30,8 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav animsition-overlay"
+                <!--<ul class="nav navbar-nav animsition-overlay"-->
+				<ul class="nav navbar-nav"
                     data-animsition-in-class="overlay-slide-in-left" data-animsition-overlay="true"
                     data-animsition-in-duration="1500">
                     <li><a href="<?= URL . $this->language ?>/vanier/">Vanier</a></li>

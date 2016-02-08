@@ -51,7 +51,7 @@ $(function()
 		setTimeout(function()
 		{
 			$("#scene").remove();
-			$(".vLogo").fadeOut(3000, function()
+			$(".vLogo").fadeOut(1000, function()
 			{
 				if(selectedLanguage == "en")
 				{
@@ -64,7 +64,7 @@ $(function()
 				}
 			});
 			
-		}, 1500);
+		}, 1000);
 	});
 
 
