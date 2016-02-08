@@ -2,7 +2,7 @@
 <script type="text/javascript" src="<?=URL?>js/turnjs/hash.js"></script>
 <style>
     body {
-        background-image : url('<?=URL?>images/book/wood.jpg');
+        background-image : url('<?=URL?>images/robotworkshop.jpg');
         background-size: cover;
     }
     .sj-book .p1,
