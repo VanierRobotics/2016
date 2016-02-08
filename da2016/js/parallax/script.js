@@ -57,15 +57,15 @@ $(function()
 				{
 					location = "/en";
 				}
-				
 				else
 				{
 					location = "/fr";
 				}
 			});
-			
 		}, 1500);
 	});
+
+
 
 
 	// Other functions....
