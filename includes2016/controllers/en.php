@@ -38,7 +38,7 @@ class en extends Controller
         $this->view->book = 'robot';
         /** @var _Book $book */
         $book = $this->getModel('Book');
-        $this->view->texts = $book->getBookPage($this->lang, 'GAME');
+        $this->view->texts = $book->getBookPage($this->lang, 'ROBOT');
         $this->view->render('robot/index');
     }
 
