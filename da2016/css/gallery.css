@@ -49,6 +49,7 @@ body {
 }
 
 .aThumbnail {
+    cursor: pointer;
     background-size: cover;
     z-index: 3;
     border-right: 1px solid black;
