@@ -82,6 +82,7 @@ body
     transition : .5s;
     font-family: 'Satisfy', cursive;
     font-size:35px;
+    transform : translateZ(100px);
 }
 
 .button:hover
@@ -116,6 +117,7 @@ body
 
     background-image : url("../images/vLogo.png");
     background-size: cover;
+    transform : translateZ(100px);
 }
 
 
