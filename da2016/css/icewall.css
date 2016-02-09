@@ -3,7 +3,7 @@ body
 {
     overflow : hidden;
     background:#000;
-	cursor: url(cursor.png), auto;
+	cursor: url(cursor.png), url(cursor.cur), auto;
 }
 
 .container
@@ -78,7 +78,7 @@ body
     text-align : center;
     color : #ddd7c5;
 
-    cursor: url(cursor.png), pointer;
+    cursor: url(cursor.png), (cursor.cur), pointer;
     transition : .5s;
     font-family: 'Satisfy', cursive;
     font-size:35px;
