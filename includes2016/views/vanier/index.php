@@ -11,12 +11,7 @@
                 </div>
                 <div class="hard front-side">
                     <div class="book-content">
-                        <h1 style="font-size: 38px">Vanier College</h1>
-                        <video class="zoom-this" autoplay="autoplay" style="position:relative; right: 25px" width="460"
-                               height="320">
-                            <source src="<?= URL ?>videos/vanier.webm" type="video/webm">
-                            <source src="<?= URL ?>videos/vanier.mp4" type="video/mp4">
-                        </video>
+
                     </div>
                     <div class="depth"></div>
                 </div>
