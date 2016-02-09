@@ -35,11 +35,11 @@ $(function()
 	// pop up the buttons (cuz why not???!!)
 	setTimeout(function()
 	{
-		$(".button").css("transform", "translateZ(100px)");
+		$(".button").css("transform", "translateZ(250px)");
 
 		setTimeout(function()
 		{
-			$(".button").css("transform", "translateZ(0px)");
+			$(".button").css("transform", "translateZ(100px)");
 		}, 500);
 	}, 2000);
 
