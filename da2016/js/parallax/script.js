@@ -7,7 +7,16 @@ $(function()
 		$("#ground").attr("data-depth", "0.35");
 		$(".enButton").css("left", "25%");
 		$(".frButton").css("right", "25%");
-		resizeElements();
+		
+		if( /iPad/i.test(navigator.userAgent))
+		{
+			resizeElements();
+			
+			$(window).resize(function()
+			{
+				resizeElements();
+			});
+		}
 	}
 
 	else
@@ -72,12 +81,6 @@ $(function()
 		$("#scene").addClass("fadeOut");
 		$(".button").addClass("fadeOut");
 	}
-
-
-	$(window).resize(function()
-	{
-		resizeElements();
-	});
 	
 	function resizeElements()
 	{
