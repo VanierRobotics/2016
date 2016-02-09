@@ -47,6 +47,7 @@ class fr extends Controller
             $this->view->qtips[] = [$this->tooltip];
             $this->view->render('game/modle');
         } else {
+            $this->view->qtips[] = ['Cliquer le parchemin.'];
             $this->view->render('game/index');
         }
     }

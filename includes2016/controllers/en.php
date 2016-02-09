@@ -50,6 +50,7 @@ class en extends Controller
             $this->view->qtips[] = [$this->tooltip];
             $this->view->render('game/modle');
         } else {
+            $this->view->qtips[] = ['Click the scroll.'];
             $this->view->render('game/index');
         }
     }
