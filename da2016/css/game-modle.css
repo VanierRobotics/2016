@@ -1,0 +1,20 @@
+body {
+    background-image: url('../images/book/wood.jpg') !important;
+    background-size: cover;
+}
+
+.sj-book .p1,
+.sj-book .p2,
+.sj-book .p3,
+.sj-book .pBeforeLast,
+.sj-book .pLast {
+    background-color: white;
+    background-image: url(../images/book/CompetitionBook.jpg) !important;
+}
+
+
+.book-content img.left {
+    display: block;
+    float: left;
+    margin: 5px;
+}

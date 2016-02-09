@@ -1,30 +1,11 @@
 <!-- Turn.js (aka HTML5 book thingny)-->
 <script type="text/javascript" src="<?=URL?>js/turnjs/hash.js"></script>
-<style>
-    body {
-        background-image : url('<?=URL?>images/robotworkshop.jpg');
-        background-size: cover;
-    }
-    .sj-book .p1,
-    .sj-book .p2,
-    .sj-book .p3,
-    .sj-book .pBeforeLast,
-    .sj-book .pLast {
-        background-color: white;
-        background-image: url(<?=URL?>images/book/RobotBook.jpg) !important;
-    }
-
-    .book-content img.left {
-        display: block;
-        float: left;
-        margin: 5px;
-    }
-</style>
+<link rel="stylesheet" href="<?=URL?>css/robot-index.css" property="stylesheet">
 <div id="canvas" class="container-fluid" style="visibility: hidden">
     <div id="book-zoom">
         <div class="sj-book">
-            <div depth="5" class="hard"> <div class="side"></div> </div>
-            <div depth="5" class="hard front-side"> <div class="depth"></div> </div>
+            <div class="hard"> <div class="side"></div> </div>
+            <div class="hard front-side"> <div class="depth"></div> </div>
             <?php
                 $i = 0;
 				

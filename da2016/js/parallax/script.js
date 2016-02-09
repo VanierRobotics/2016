@@ -5,18 +5,24 @@ $(function()
 	{
 		$("#iceWall").attr("data-depth", "0.15");
 		$("#ground").attr("data-depth", "0.35");
-		$("#ground img").attr("src", "images/icewall/layer3_ipad.png");
-		$("#iceWall img").attr("src", "images/icewall/layer2.png");
 		$(".enButton").css("left", "25%");
 		$(".frButton").css("right", "25%");
-		$(window).trigger("resize");
+		
+		if( /iPad/i.test(navigator.userAgent))
+		{
+			resizeElements();
+			
+			$(window).resize(function()
+			{
+				resizeElements();
+			});
+		}
 	}
 
 	else
 	{
 		$("#iceWall").attr("data-depth", "0.04");
 		$("#ground").attr("data-depth", "0.1");
-		$("#ground img").attr("src", "images/icewall/layer3.png");
 		$(".enButton").css("left", "35%");
 		$(".frButton").css("right", "35%");
 
@@ -71,14 +77,14 @@ $(function()
 	// Other functions....
 	function sceneAnimation()
 	{
+		$("#scene").css("transition", ".5s");
 		$("#scene").addClass("fadeOut");
 		$(".button").addClass("fadeOut");
 	}
-
-
-	$(window).resize(function()
+	
+	function resizeElements()
 	{
 		var height = $(window).height();
-		$(".wallpaper img").css("height", height);
-	});
+		$(".wallpaper img").css("height", "100%");
+	}
 });
