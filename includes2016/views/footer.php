@@ -71,6 +71,7 @@
             height: 25%;
         }
     </style>
+
     <?php if ($this->language == 'en') { ?>
         <div id="sponsorsModal" class="modal fade" style="z-index: 15000;" role="dialog">
             <!-- Modal content-->

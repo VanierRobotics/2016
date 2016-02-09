@@ -11,8 +11,6 @@ body {
     background-color: white;
     background-image: url(../images/book/CompetitionBook.jpg) !important;
 }
-
-
 .book-content img.left {
     display: block;
     float: left;
