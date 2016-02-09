@@ -39,7 +39,7 @@ $(function()
 
 		setTimeout(function()
 		{
-			$(".button").css("transform", "translateZ(100px)");
+			$(".button").css("transform", "translateZ(130px)");
 		}, 500);
 	}, 2000);
 
