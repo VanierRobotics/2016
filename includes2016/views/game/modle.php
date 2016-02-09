@@ -1,6 +1,6 @@
 <!-- Turn.js (aka HTML5 book thingny)-->
 <script type="text/javascript" src="<?=URL?>js/turnjs/hash.js"></script>
-<style>
+<style scoped>
     body {
         background-image: url('<?=URL?>images/book/wood.jpg') !important;
         background-size: cover;
