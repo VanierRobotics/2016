@@ -17,6 +17,7 @@ class index extends Controller
 
     public function index()
     {
+        $this->view->viewportOveride = '<meta name="viewport" content="width=device-width, initial-scale=0.3"/>';
         $this->view->render('language/index',true);
     }
 
