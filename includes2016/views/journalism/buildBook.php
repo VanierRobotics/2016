@@ -1,32 +1,11 @@
 <!-- Turn.js (aka HTML5 book thingny)-->
 <script type="text/javascript" src="<?=URL?>js/turnjs/hash.js"></script>
-<style scoped>
-    body {
-        background-image : url('http://devbana.tk/images/book/wood.jpg');
-        background-size: cover;
-    }
-    .sj-book .p1,
-    .sj-book .p2,
-    .sj-book .p3,
-    .sj-book .pBeforeLast,
-    .sj-book .pLast {
-        background-color: white;
-        background-image: url(<?=URL?>images/teams/<?= $this->team . 'Book.jpg'?>)!important;
-
-    }
-
-    .book-content img.left {
-        display: block;
-        float: left;
-        margin: 5px;
-    }
-
-</style>
+<link rel="stylesheet" href="<?=URL?>css/journal-<?=strtolower($this->team)?>.css" property="stylesheet" />
 <div id="canvas" class="container-fluid">
     <div id="book-zoom">
         <div class="sj-book">
-            <div depth="5" class="hard"> <div class="side"></div> </div>
-            <div depth="5" class="hard front-side"> <div class="depth"></div> </div>
+            <div class="hard"> <div class="side"></div> </div>
+            <div class="hard front-side"> <div class="depth"></div> </div>
             <?php
             $i=0;
             foreach($this->texts as $text) {
