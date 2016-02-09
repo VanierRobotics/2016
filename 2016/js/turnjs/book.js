@@ -47,7 +47,7 @@ function addPage(lang, book_name, page, book ) {
 
         var element = $('<div />',
             {'class': 'own-size',
-                css: {width: 460, height: 582} //TODO: RESPONSIVE
+                css: {width: 460, height: 582}
             }).
         html('<div class="loader"></div>');
 

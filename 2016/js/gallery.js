@@ -31,7 +31,7 @@ preload([
 ]);
 
 
-var server = 'http://vanier-robotics.com/da2016';
+var server = 'http://vanier-robotics.com/2016';
 
 $(function(){
 
