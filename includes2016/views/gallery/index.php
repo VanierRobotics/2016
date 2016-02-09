@@ -14,8 +14,8 @@
                         <div id="pic-wrapper">
                         <img id="currentPic" src=""/>
 
-                            <div id="description">
-
+                            <div id="description-wrapper">
+                                <div id="description"> </div>
                             </div>
                         </div>
                     </div>

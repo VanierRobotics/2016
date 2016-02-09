@@ -30,13 +30,36 @@ preload([
     '<?=URL?>images/gallery/thumbnail_images/WebThinking.JPG'
 ]);
 
+
+
 $(function(){
-    $('#myModal').modal();                   // initialized with defaults
-    $('#myModal').modal({keyboard: false});  // initialized with no keyboard
-    $('#myModal').modal('show');
+
+
 
     var currentIndex = 1; // current index scrolling through gallery to get pictures
     var selectedIndex = 0; // selected picture out of the 4 thumbnails (0-3)
+
+    $(document).keydown(function(e) {
+        switch(e.which) {
+            case 37: // left
+                if(selectedIndex == 0)
+                    getPrevious();
+                else
+                    selectedIndex -= 1;
+                    updateGallery();
+                break;
+            case 39: // right
+                if(selectedIndex == 3)
+                    getNext();
+                else
+                    selectedIndex += 1;
+                    updateGallery();
+                break;
+
+            default: return; // exit this handler for other keys
+        }
+        e.preventDefault(); // prevent the default action (scroll / move caret)
+    });
 
     var descriptions = ["","","",""];
     var pictureArray = ["","","",""];
@@ -136,6 +159,12 @@ $(function(){
 
             // gets selected index and choses that one to be selected picture
             document.getElementById("currentPic").src = '../../images/gallery/gallery_images/' + pictureArray[selectedIndex];
+
+            // set selected thumbail to selected class
+            resetThumbnails();
+            var id = "pic" + (selectedIndex+1);
+            document.getElementById(id).className = "col-xs-3 aThumbnail selectedThumbnail";
+
             document.getElementById("description").innerHTML = '<p>' + descriptions[selectedIndex] + '</p>';
 
 
@@ -149,6 +178,14 @@ $(function(){
         xdr.open("GET", url, true);
         xdr.send(null); //run the request
 
+    }
+
+    function resetThumbnails()
+    {
+        document.getElementById("pic1").className = "col-xs-3 aThumbnail";
+        document.getElementById("pic2").className = "col-xs-3 aThumbnail";
+        document.getElementById("pic3").className = "col-xs-3 aThumbnail";
+        document.getElementById("pic4").className = "col-xs-3 aThumbnail";
     }
 
 
