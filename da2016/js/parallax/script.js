@@ -7,7 +7,7 @@ $(function()
 		$("#ground").attr("data-depth", "0.35");
 		$(".enButton").css("left", "25%");
 		$(".frButton").css("right", "25%");
-		$(window).trigger("resize");
+		resizeElements();
 	}
 
 	else
@@ -68,6 +68,7 @@ $(function()
 	// Other functions....
 	function sceneAnimation()
 	{
+		$("#scene").css("transition", ".5s");
 		$("#scene").addClass("fadeOut");
 		$(".button").addClass("fadeOut");
 	}
@@ -75,7 +76,23 @@ $(function()
 
 	$(window).resize(function()
 	{
-		var height = $(window).height();
-		$(".wallpaper img").css("height", height);
+		resizeElements();
 	});
+	
+	function resizeElements()
+	{
+		var height = $(window).height();
+		$(".wallpaper img").css("height", "100%");
+		
+		if($(window).width() < $(window).height())
+		{
+			// tempory fix to this nonsense
+			$("#scene").css({"transform" : "translateY(1125px) translateZ(650px)"});
+		}
+		
+		else
+		{
+			$("#scene").css({"transform" : "translateZ(700px) translateX(850px) translateY(500px)"});
+		}
+	}
 });
