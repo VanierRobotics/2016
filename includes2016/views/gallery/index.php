@@ -1,8 +1,8 @@
-<link rel="stylesheet" href="<?=URL?>css/gallery.css"/>
+<link rel="stylesheet" href="<?=URL?>css/gallery.css" property="stylesheet"/>
 <script type="text/javascript">
     function preload(arrayOfImages) {
         $(arrayOfImages).each(function(){
-            $('<img/>')[0].src = this;
+            $('<img src="/"  alt="" >')[0].src = this;
         });
     }
     // Usage:
