@@ -30,7 +30,7 @@
     ]);
 
 
-    var server = 'http://devbana.tk/';
+    var server = 'http://vanier-robotics.com/2016/';
 
     $(function(){
 
