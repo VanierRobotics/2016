@@ -3,7 +3,9 @@
 
 <div class="container">
     <header class="clearfix">
+        <h1><?php echo (($this->language === 'en') ? 'Journalism' : 'Journalisme'); ?></h1>
     </header>
+
     <div class="main">
         <ul id="bk-list" class="bk-list clearfix">
             <li onclick="window.location = '<?= $link ?>/Video';">
