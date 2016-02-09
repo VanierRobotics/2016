@@ -102,45 +102,45 @@ class fr extends Controller
             case 'build':
                 $mentors = '<div class="polaroid mentor topLeft">
                                 <p>Phoenix Roy <br/><span style="color:gray">(Conception)</span></p>
-                                <img src="' . URL . 'images/bios/PhoenixRoy.jpg"/>
+                                <img src="' . URL . 'images/bios/PhoenixRoy.jpg" alt=""/>
                             </div>
                             <div class="polaroid mentor topRight">
                                 <p style="font-size: 17px;">Mathew de Marchie<br/><span style="color:gray">(Construction)</span></p>
-                                <img src="' . URL . 'images/bios/nopic.jpg"/>
+                                <img src="' . URL . 'images/bios/nopic.jpg" alt=""/>
                             </div>';
                 break;
             case 'kiosk':
                 $mentors = '<div class="polaroid mentor topLeft">
                                 <p>Richard Mondoux <br/><span style="color:gray">(Conception)</span></p>
-                                <img src="' . URL . 'images/bios/RichardMondoux.jpg"/>
+                                <img src="' . URL . 'images/bios/RichardMondoux.jpg" alt=""/>
                             </div>
                             <div class="polaroid mentor topRight">
                                 <p>John Lynch <br/><span style="color:gray">(Charpenterie)</span></p>
-                                <img src="' . URL . 'images/bios/nopic.jpg"/>
+                                <img src="' . URL . 'images/bios/nopic.jpg" alt=""/>
                             </div>';
                 break;
             case 'web':
                 $mentors = '<div class="polaroid mentor topLeft">
                                 <p>Haritos Kavallos <br/><span style="color:gray">(PHP + MySQL)</span></p>
-                                <img src="' . URL . 'images/bios/HaritosKavallos.jpg"/>
+                                <img src="' . URL . 'images/bios/HaritosKavallos.jpg" alt=""/>
                             </div>
                             <div class="polaroid mentor topRight">
                                 <p>Maksym Gryb <br/><span style="color:gray">(PHP + Backend)</span></p>
-                                <img src="' . URL . 'images/bios/MaksymGryb.jpg"/>
+                                <img src="' . URL . 'images/bios/MaksymGryb.jpg" alt=""/>
                             </div>
                             <div class="polaroid mentor bottomLeft">
                                 <p>Thush Sitham <br/><span style="color:gray">(HTML + jQuery)</span></p>
-                                <img src="' . URL . 'images/bios/ThushanthSithambararajan.jpg"/>
+                                <img src="' . URL . 'images/bios/ThushanthSithambararajan.jpg" alt=""/>
                             </div>
                             <div class="polaroid mentor bottomRight">
                                 <p>Manpreet Singh <br/><span style="color:gray">(HTML + Conception)</span></p>
-                                <img src="' . URL . 'images/bios/ManpreetSingh.jpg"/>
+                                <img src="' . URL . 'images/bios/ManpreetSingh.jpg" alt=""/>
                             </div>';
                 break;
             case 'video':
                 $mentors = '<div class="polaroid mentor topLeft">
                                 <p>Marco Purich <br/><span style="color:gray">(Blender)</span></p>
-                                <img src="' . URL . 'images/bios/MarcoPurich.jpg"/>
+                                <img src="' . URL . 'images/bios/MarcoPurich.jpg" alt=""/>
                             </div>';
                 break;
             default:
