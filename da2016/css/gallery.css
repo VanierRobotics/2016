@@ -33,6 +33,62 @@ body {
     top: 0px;
 }
 
+#gallery-wrapper
+{
+    position: relative;
+}
+
+#description
+{
+    position: absolute;
+    bottom:0px;
+    height: 11%;
+    background-color: rgba(229,232,232,0.7);
+    width: 99%;
+    text-align: center;
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+    #description{
+        font-size: 0.8em;
+    }
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+    #description{
+        font-size: 1em;
+    }
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    #description{
+        font-size: 1.5em;
+    }
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    #description{
+        font-size: 1.5em;
+    }
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    #description{
+        font-size: 1.5em;
+    }
+
+}
+
 .thumbnails {
     position: absolute;
     width: 100%;

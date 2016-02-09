@@ -1,6 +1,14 @@
 <?php
 $db = Database::noParam();
 
+$language = 'en';
+/*$queryParam = "";
+
+if(strcmp($language,'en'))
+    $queryParam = "gal_desc_EN";
+else*/
+    $queryParam = "gal_desc_EN";
+
 if(isset($_REQUEST["index"])) {
 
     $q = $_REQUEST["index"];
@@ -17,7 +25,7 @@ if(isset($_REQUEST["index"])) {
         $indexes = array(20, 1, 2, 3);
 
 
-    $query = $db->prepare("SELECT gal_img FROM gallery WHERE gal_id IN (:index1, :index2, :index3, :index4) ORDER BY FIELD(gal_id,:o1,:o2,:o3,:o4)");
+    $query = $db->prepare("SELECT gal_img, gal_desc_EN FROM gallery WHERE gal_id IN (:index1, :index2, :index3, :index4) ORDER BY FIELD(gal_id,:o1,:o2,:o3,:o4)");
     $query->execute(array(":index1" => $indexes[0], ":index2" => $indexes[1], ":index3" => $indexes[2], ":index4" => $indexes[3], ":o1" => $indexes[0], ":o2" => $indexes[1], ":o3" => $indexes[2], ":o4" => $indexes[3]));
 
 
@@ -31,6 +39,7 @@ if(isset($_REQUEST["index"])) {
         {
 
             $rows[] = array($data['gal_img']);
+            $rows[] = array($data['gal_desc_EN']);
         }
     }
     echo json_encode($rows);
