@@ -27,7 +27,7 @@ if ($this->language === 'fr') {
         'jou' => 'Journalism Chronicles',
         'kio' => 'Kiosk Bios',
         'web' => 'Web Bios',
-        'bui' => 'Biuld Bios',
+        'bui' => 'Build Bios',
         'vid' => 'Video Bios',
     ];
 }
