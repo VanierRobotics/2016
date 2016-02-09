@@ -5,8 +5,6 @@ $(function()
 	{
 		$("#iceWall").attr("data-depth", "0.15");
 		$("#ground").attr("data-depth", "0.35");
-		$("#ground img").attr("src", "images/icewall/layer3_ipad.png");
-		$("#iceWall img").attr("src", "images/icewall/layer2.png");
 		$(".enButton").css("left", "25%");
 		$(".frButton").css("right", "25%");
 		$(window).trigger("resize");
@@ -16,7 +14,6 @@ $(function()
 	{
 		$("#iceWall").attr("data-depth", "0.04");
 		$("#ground").attr("data-depth", "0.1");
-		$("#ground img").attr("src", "images/icewall/layer3.png");
 		$(".enButton").css("left", "35%");
 		$(".frButton").css("right", "35%");
 
