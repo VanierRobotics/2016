@@ -8,8 +8,9 @@
 class auth extends Controller
 {
 
-    public function rob()
+    public function rob($lang)
     {
+        $this->view->language = $lang;
         $this->view->render('gallery/get','fuckoff');
     }
 
