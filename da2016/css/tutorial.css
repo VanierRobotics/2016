@@ -11,12 +11,10 @@
 	/** Elements */
 	#tutorial_tab{
 	  background: #4380D0;
-	  
-	  border-style: solid;
-	  border-color: #7CA7DE;
-	  border-width: 3px 3px 3px 3px;
-	  
-	  padding: 5px 5px 5px 5px;
+
+		border: 3px solid #7CA7DE;
+
+		padding: 5px 5px 5px 5px;
 	  margin : 5px 5px 5px 5px;
 	  
 	  float: left;
@@ -25,12 +23,10 @@
 
 	#tutorial_body{
 	  background: #4380D0;
-	  
-	  border-style: solid;
-	  border-color: #7CA7DE;
-	  border-width: 3px 3px 3px 3px;
-	  
-	  padding: 5px 5px 5px 5px;
+
+		border: 3px solid #7CA7DE;
+
+		padding: 5px 5px 5px 5px;
 	  margin : 5px 5px 5px 5px;
 	  
 	  float: left;
@@ -39,31 +35,27 @@
 	
 	/** Tutorial Body */
 	#tutorial_body_code{
-	  border-style: solid;
-	  border-color: #7CA7DE;
-	  border-width: 0px 0px 3px 0px;
-		
+		border: 0px solid #7CA7DE;
+		border-bottom-width: 3px;
+
 	}
 	
 	#tutorial_body_example{
-	  border-style: solid;
-	  border-color: #7CA7DE;
-	  border-width: 0px 0px 3px 0px;
-		
+		border: 0px solid #7CA7DE;
+		border-bottom-width: 3px;
+
 	}
 	
 	#tutorial_body_abstract{
-	  border-style: solid;
-	  border-color: #7CA7DE;
-	  border-width: 0px 0px 3px 0px;
-		
+		border: 0px solid #7CA7DE;
+		border-bottom-width: 3px;
+
 	}
 	
 	#tutorial_body_explanation{
-	  border-style: solid;
-	  border-color: #7CA7DE;
-	  border-width: 0px 0px 3px 0px;
-		
+		border: 0px solid #7CA7DE;
+		border-bottom-width: 3px;
+
 	}
 	
 	/** Tutorial Tab */
@@ -72,7 +64,6 @@
 	}
 	
 	.tutorial_tab_link{
-	  border-style: solid;
-	  border-color: #7CA7DE;
-	  border-width: 0px 0px 3px 0px;
+		border: 0px solid #7CA7DE;
+		border-bottom-width: 3px;
 	}

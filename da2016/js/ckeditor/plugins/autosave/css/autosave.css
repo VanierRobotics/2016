@@ -53,7 +53,7 @@ table.diff tbody th {
 table.diff thead {
 	border-bottom:1px solid #BBC;
 	background:#EFEFEF;
-	font-family:Verdana
+	font-family: Verdana, serif
 }
 table.diff thead th.texttitle {
 	text-align:left

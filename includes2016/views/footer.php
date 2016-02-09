@@ -59,10 +59,7 @@
 
         .modalText > img {
             position: relative;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            margin: 20px auto;
         }
 
         .modalText > h5 {

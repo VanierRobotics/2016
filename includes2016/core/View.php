@@ -19,6 +19,8 @@
  * @property string funcName
  * @property  array onething
  * @property string transistor
+ * @property string imgPath
+ * @property string viewportOveride
  */
 class View
 {

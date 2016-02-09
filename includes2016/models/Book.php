@@ -17,16 +17,6 @@ class _Book extends Model
         parent::__construct();
     }
 
-    //FOR FLIPBOOK... Github has a feature called blame, I will find you if you change this.
-    public function getTotalPages($language, $book)
-    {
-        $pass = [':lang' => $language, ':book' => $book];
-        //is_null($subpage) ? :$pass[] = [':subpage' => $subpage];
-        $st = $this->db->select('SELECT pageid FROM book WHERE lang = :lang AND book = :book', $pass);
-        //. (is_null($subpage) ? :' AND subpage = :subpage'),$pass);
-        return count($st);
-    }
-
     public function getBookPage($language, $book)
     {
         return $this->db->select('SELECT content FROM book WHERE lang = :lang  AND book = :book ', [':lang' => $language, ':book' => $book]);
