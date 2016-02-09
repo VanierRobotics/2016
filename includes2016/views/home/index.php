@@ -20,7 +20,7 @@ if ($this->language === 'fr') {
     ];
 } else { $nav =[
         'van' => 'Vanier College',
-        'rob' => 'Description du robot',
+        'rob' => 'Robot Description',
         'tut' => 'Tutorial',
         'gal' => 'Photo Gallery',
         'gam' => 'Rules of the Game',
