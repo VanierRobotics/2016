@@ -58,7 +58,7 @@ class fr extends Controller
         $this->view->imgPath = URL . 'images/journalism/';
         $this->view->texts = $book->getBookPage($this->lang, 'VANIER');
         $this->view->qtips[] = [$this->tooltip];
-        $this->view->render('Vanier/index');
+        $this->view->render('vanier/index');
     }
 
     public function journalisme($subpage = 'index')

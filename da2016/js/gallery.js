@@ -131,7 +131,7 @@ $(function(){
 
         };
         // change this to new url!!!!!!!!!
-        var url = "http://devbana.tk/auth/rob?index=" + currentIndex;
+        var url = "http://vanier-robotics.com/da2016/auth/rob?index=" + currentIndex;
 
         xdr.open("GET", url, true);
         xdr.send(null); //run the request
