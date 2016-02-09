@@ -1,5 +1,5 @@
 body {
-    background-image: url('../images/book/wood.jpg');
+    background-image: url('../images/book/wood.jpg') !important;
     background-size: cover;
 }
 
@@ -9,8 +9,9 @@ body {
 .sj-book .pBeforeLast,
 .sj-book .pLast {
     background-color: white;
-    background-image: url(<?=URL?>images/book/VanierBook.jpg) !important;
+    background-image: url(<?=URL?>images/book/CompetitionBook.jpg) !important;
 }
+
 
 .book-content img.left {
     display: block;
