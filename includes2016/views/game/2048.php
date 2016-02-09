@@ -1,4 +1,4 @@
-<link href="./CAGE-2048_files/main.css" rel="stylesheet" type="text/css">
+<link href="<?=URL?>css/2048.css" rel="stylesheet" type="text/css">
 <div class="container">
     <div class="heading">
         <h1 class="title">CAGE<span style="color:red">2</span><span style="color:#00FF00">0</span><span style="color:blue">4</span><span style="color:#00FFFF">8</span>
@@ -65,13 +65,13 @@
 <div class="footer">
 </div>
 
-<script src="./CAGE-2048_files/keyboard_input_manager.js"></script>
-<script src="./CAGE-2048_files/html_actuator.js"></script>
-<script src="./CAGE-2048_files/grid.js"></script>
-<script src="./CAGE-2048_files/tile.js"></script>
-<script src="./CAGE-2048_files/local_score_manager.js"></script>
-<script src="./CAGE-2048_files/game_manager.js"></script>
-<script src="./CAGE-2048_files/application.js"></script>
+<script src="<?=URL?>js/2048/keyboard_input_manager.js"></script>
+<script src="<?=URL?>js/2048/html_actuator.js"></script>
+<script src="<?=URL?>js/2048/grid.js"></script>
+<script src="<?=URL?>js/2048/tile.js"></script>
+<script src="<?=URL?>js/2048/local_score_manager.js"></script>
+<script src=".<?=URL?>js/2048/game_manager.js"></script>
+<script src="<?=URL?>js/2048/application.js"></script>
 <div id="lSidebar">
     <p>
         <script async="" src="./CAGE-2048_files/"></script>

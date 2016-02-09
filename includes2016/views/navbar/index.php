@@ -128,6 +128,17 @@
                         </span>
                     </a>
                 </li>
+
+                <li>
+                    <a href="<?=URL?>video">
+                        <i class="fa fa-lg fa-youtube-play"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/VanierRobotics">
+                        <i class="fa fa-lg fa-facebook-square"></i>
+                    </a>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->

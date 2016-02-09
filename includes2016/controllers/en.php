@@ -26,6 +26,11 @@ class en extends Controller
         $this->view->render('home/threejs');
     }
 
+    public function got2048()
+    {
+        $this->view->render('game/2048',true);
+    }
+
     public function index()
     {
         $this->view->render('home/index');
