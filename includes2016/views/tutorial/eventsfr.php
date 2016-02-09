@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="<?=URL?>css/tutorial.css">
+<link rel="stylesheet" type="text/css" href="<?=URL?>css/tutorial.css" property="stylesheet">
 <?php $link = URL.$this->language.(($this->language === 'en') ? '/tutorial/': '/tutoriel/'); ?>
 
 <div onload="alert('this page has finished loading!')">

@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="<?=URL?>css/tutorial.css">
+<link rel="stylesheet" type="text/css" href="<?=URL?>css/tutorial.css" property="">
 <?php $link = URL.$this->language.(($this->language === 'en') ? '/tutorial/': '/tutoriel/'); ?>
 <div>
 	<div id="tutorial_tab">
