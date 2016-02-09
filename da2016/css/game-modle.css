@@ -9,7 +9,7 @@ body {
 .sj-book .pBeforeLast,
 .sj-book .pLast {
     background-color: white;
-    background-image: url(<?=URL?>images/book/CompetitionBook.jpg) !important;
+    background-image: url(../images/book/CompetitionBook.jpg) !important;
 }
 
 

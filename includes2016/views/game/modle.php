@@ -1,11 +1,11 @@
 <!-- Turn.js (aka HTML5 book thingny)-->
 <script type="text/javascript" src="<?=URL?>js/turnjs/hash.js"></script>
-<link rel="stylesheet" href="<?=URL?>css/robot-modle.css" property="stylesheet" />
+<link rel="stylesheet" href="<?=URL?>css/game-modle.css" property="stylesheet" />
 <div id="canvas" class="container-fluid" style="visibility: hidden">
     <div id="book-zoom">
         <div class="sj-book">
-            <div depth="5" class="hard"> <div class="side"></div> </div>
-            <div depth="5" class="hard front-side"> <div class="depth"></div> </div>
+            <div class="hard"> <div class="side"></div> </div>
+            <div class="hard front-side"> <div class="depth"></div> </div>
             <?php
 
             $i=0;

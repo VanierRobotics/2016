@@ -1,10 +1,9 @@
 <?php $link = URL . $this->language . (($this->language === 'en') ? '/team' : '/equipe'); ?>
-<link rel="stylesheet" href="<?= URL ?>css/journalismBooks.css">
+<link rel="stylesheet" href="<?= URL ?>css/journalismBooks.css" property="stylesheet">
 
 
 <div class="container">
     <header class="clearfix">
-        <h1></h1>
     </header>
     <div class="main">
         <ul id="bk-list" class="bk-list clearfix">
