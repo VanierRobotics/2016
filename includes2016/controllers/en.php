@@ -159,9 +159,9 @@ class en extends Controller
         $this->view->render('gallery/index');
     }
 
-    public function tutorial()
+    public function tutorial($subpage = 'intro')
     {
-        $this->view->render('tutorial/index');
+        $this->view->render('tutorial/'.$subpage);
     }
 
 }

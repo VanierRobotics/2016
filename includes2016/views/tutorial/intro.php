@@ -1,14 +1,13 @@
-<link rel="stylesheet" type="text/css" href="stylesheet.css">
-
-<body>
+<link rel="stylesheet" type="text/css" href="<?=URL?>css/tutorial.css">
+<?php $link = URL.$this->language.(($this->language === 'en') ? '/tutorial/': '/tutoriel/'); ?>
 <div>
   <div id="tutorial_tab">
     <div id="tutorial_tab_title" class="tutorial_tab_link">Simply JavaScript</div>
     <div class="tutorial_tab_link">Intro</div><!-- Current Page -->
-    <div class="tutorial_tab_link"><a href="math.php">Math</a></div>
-    <div class="tutorial_tab_link"><a href="functions.php">Functions</a></div>
-    <div class="tutorial_tab_link"><a href="events.php">Events</a></div>
-    <div class="tutorial_tab_link"><a href="comments.php">Comments</a></div>
+    <div class="tutorial_tab_link"><a href="<?=$link?>math">Math</a></div>
+    <div class="tutorial_tab_link"><a href="<?=$link?>functions">Functions</a></div>
+    <div class="tutorial_tab_link"><a href="<?=$link?>events">Events</a></div>
+    <div class="tutorial_tab_link"><a href="<?=$link?>comments">Comments</a></div>
   </div>
 
   <div id="tutorial_body">
@@ -43,4 +42,3 @@
 	</div>
   </div>
 </div>
-</body>

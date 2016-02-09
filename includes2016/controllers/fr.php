@@ -156,8 +156,8 @@ class fr extends Controller
         $this->view->render('gallery/index');
     }
 
-    public function tutoriel()
+    public function tutoriel($subpage = 'intro')
     {
-        $this->view->render('tutorial/index');
+        $this->view->render('tutorial/'.$subpage.'fr');
     }
 }
