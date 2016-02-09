@@ -1,30 +1,14 @@
 <!-- Turn.js (aka HTML5 book thingny)-->
 <script type="text/javascript" src="<?= URL ?>js/turnjs/hash.js"></script>
 <script type="text/javascript" src="<?= URL ?>js/turnjs/zoom.min.js"></script>
-<style>
-    body {
-        background-image: url('<?=URL?>images/book/wood.jpg');
-        background-size: cover;
-    }
-
-    .sj-book .p1,
-    .sj-book .p2,
-    .sj-book .p3,
-    .sj-book .pBeforeLast,
-    .sj-book .pLast {
-        background-color: white;
-        background-image: url(<?=URL?>images/teams/<?= $this->team . 'Book.jpg'?>) !important;
-    }
-
-</style>
-
+<link rel="stylesheet" href="<?=URL?>css/team-<?=strtolower($this->team)?>.css" property="stylesheet" >
 <div id="canvas" class="container-fluid" style="visibility: hidden">
     <div id="book-zoom">
         <div class="sj-book">
-            <div depth="5" class="hard">
+            <div class="hard">
                 <div class="side"></div>
             </div>
-            <div depth="5" class="hard front-side">
+            <div class="hard front-side">
                 <div class="depth"></div>
             </div>
 
@@ -38,7 +22,7 @@
                     <div class="polaroid captain">
                         <p style="font-size: 20px;"><?= $this->tcText . ' ' . $capbio['bio_GOTName'] ?>
                             <br/><?= '(' . $capbio['bio_FullName'] . ')' ?></p>
-                        <img src="<?= URL ?>images/bios/<?= $capbio['bio_Image'] ?>"/>
+                        <img src="<?= URL ?>images/bios/<?= $capbio['bio_Image'] ?>" alt=""/>
                     </div>
                     <div class="bioContent">
                         <h4><?= $this->challengeText ?></h4>
@@ -62,7 +46,7 @@
                 <div class="polaroid captain">
                     <p><?= $this->captain . ' ' . $capbio['bio_GOTName'] ?>
                         <br/><?= '(' . $capbio['bio_FullName'] . ')' ?></p>
-                    <img src="<?= URL ?>images/bios/<?= $capbio['bio_Image'] ?>"/>
+                    <img src="<?= URL ?>images/bios/<?= $capbio['bio_Image'] ?>" alt=""/>
                 </div>
                 <div class="bioContent">
                     <h4><?= $this->challengeText ?></h4>
@@ -83,7 +67,7 @@
                     <div class="polaroid">
                         <p><?= $bio['bio_GOTName'] ?>
                             <br/><?= '(' . $bio['bio_FullName'] . ')' ?></p>
-                        <img src="<?= URL ?>images/bios/<?= $bio['bio_Image'] ?>"/>
+                        <img src="<?= URL ?>images/bios/<?= $bio['bio_Image'] ?>" alt=""/>
                     </div>
                     <div class="bioContent">
                         <h4><?= $this->challengeText ?></h4>
