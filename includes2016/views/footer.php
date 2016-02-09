@@ -113,12 +113,12 @@
         <div id="sponsorsModal" class="modal fade" style="z-index: 15000;" role="dialog">
             <!-- Modal content-->
             <div class="modal-content">
-                <img src="<?= URL ?>images/scroll.gif"/>
+                <img src="<?= URL ?>images/scroll.gif" alt=""/>
                 <div class="modalText">
                     <h3>Commanditaires</h3>
                     <p>Un gros merci à tous nos commanditaires, à qui nous devons notre succès. </p>
                     <h5>Conseils des pupils/Conseil étudiants des élèves Vanier</h5>
-                    <img align="center" src="<?= URL ?>images/sponsors/vcsa.png" alt="" class="sponsorImage">
+                    <img src="<?= URL ?>images/sponsors/vcsa.png" alt="" class="sponsorImage">
                     <p>Depuis le 20 octobre 2014, le conseil étudiants des élèves Vanier a aidé à financer les
                         projets
                         de l’équipe de forgeron et longeron (robotique). Cette année, ils les aident à fonder
