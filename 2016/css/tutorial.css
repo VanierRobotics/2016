@@ -2,7 +2,13 @@
 		background-image: url(../images/tutorial.jpg);
         background-size: 100%;
 		border: 0;
+		cursor: url(cursor.png), url(cursor.cur), auto;
 	}
+	
+	a, #spons, button
+{
+	cursor: url(cursor.png), url(cursor.cur), pointer !important;
+}
 
 	#content {
         padding-top: 50px;

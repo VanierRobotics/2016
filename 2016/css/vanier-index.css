@@ -18,3 +18,8 @@ body {
     float: left;
     margin: 5px;
 }
+
+a, #spons
+{
+	cursor: url(cursor.png), url(cursor.cur), pointer !important;
+}
