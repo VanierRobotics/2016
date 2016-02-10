@@ -15,6 +15,11 @@ a, #spons, button, li[onclick] div
 {
 	cursor: url(cursor.png), url(cursor.cur), pointer !important;
 }
+
+area
+{
+	cursor: url(cursor_trans.png), url(cursor_trans.cur), pointer;
+}
 @media all and (max-device-width: 350px)  {
     html {
         height: 100%;
