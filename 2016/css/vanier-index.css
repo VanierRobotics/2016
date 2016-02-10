@@ -1,6 +1,7 @@
 body {
     background-image: url('../images/book/wood.jpg');
     background-size: cover;
+	cursor: url(cursor.png), url(cursor.cur), auto;
 }
 
 .sj-book .p1,
