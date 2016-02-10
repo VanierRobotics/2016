@@ -46,12 +46,11 @@ $popup = ($this->language === 'en') ? 'Click on banners, doors and other highlig
 
 Controller::aTooltip($popup);
 ?>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <!-- HRIM - Hoverable Responsive Image Maps -->
 <script src="<?= URL ?>js/hoverImageMaps/jquery.maphilight.min.js"></script>
 <script src="<?= URL ?>js/hoverImageMaps/imageMapResizer.js"></script>
 <script src="<?= URL ?>js/hoverImageMaps/rollover.js"></script>
-
 <!-- qTip - Just the tip.. tooltip you dirty pleb -->
 <script src="<?= URL ?>js/tooltips/jquery.qtip.js"></script>
 <link rel="stylesheet" href="<?= URL ?>css/jquery.qtip.min.css" property="stylesheet"/>
