@@ -1,6 +1,12 @@
 body {
     background-image: url('../images/gallery/library.jpg');
     background-size: cover;
+	cursor: url(cursor.png), url(cursor.cur), auto;
+}
+
+a, #spons, .aThumbnail
+{
+	cursor: url(cursor.png), url(cursor.cur), pointer !important;
 }
 
 .modal-content {
