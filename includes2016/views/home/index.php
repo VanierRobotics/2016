@@ -55,6 +55,22 @@ Controller::aTooltip($popup);
 <script src="<?= URL ?>js/tooltips/jquery.qtip.js"></script>
 <link rel="stylesheet" href="<?= URL ?>css/jquery.qtip.min.css" property="stylesheet"/>
 
+<script>
+	$(function()
+	{
+		$(window).resize(function()
+		{
+			resizeHome();
+		});
+		
+		function resizeHome()
+		{
+			var top = $(".container-fluid").height();
+			$("#content").css("top", top);	
+		}
+	});
+</script>
+
 <map id="mymap" name="mymap">
     <area shape="poly" alt="<?=$nav['bui']?>" title="<?=$nav['bui']?>" coords="709,317,838,314,833,599,768,536,700,590,708,318"
           href="<?= $link . $bios_build ?>"/>
