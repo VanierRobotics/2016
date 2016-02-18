@@ -4,6 +4,10 @@
     ANY MODIFICATIONS AFTER THIS TIME
     MUST BE RE-VALIDATED
 -->
+<head>
+	<link rel="shortcut icon" href="../icon.ico"/>
+</head>
+
 <body>
     <div id="wrapper" class="page-wrapper">
         <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css' property="stylesheet">

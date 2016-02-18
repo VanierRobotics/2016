@@ -23,21 +23,21 @@ class index extends Controller
 			if( /iPad/i.test(navigator.userAgent))
 			{
 				<?php
-				$this->view->viewportOveride = '<meta name="viewport" content="width=device-width, initial-scale=0.8"/>'; 
+				$this->view->viewportOveride = '<meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=0.8, user-scalable=no"/>'; 
 				?>
 			}
 			
 			else if(/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
 			{
 				<?php
-				$this->view->viewportOveride = '<meta name="viewport" content="width=device-width, initial-scale=0.5"/>'; 
+				$this->view->viewportOveride = '<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=no"/>'; 
 				?>
 			}
 			
 			else
 			{
 				<?php
-				$this->view->viewportOveride = '<meta name="viewport" content="width=device-width, initial-scale=0.5"/>'; 
+				$this->view->viewportOveride = '<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=no"/>'; 
 				?>
 			}
 		</script>
