@@ -1,5 +1,12 @@
 <link rel="stylesheet" href="<?=URL?>css/gallery.css" property="stylesheet"/>
 <script type="text/javascript">
+    //TODO: CHANGE SERVER
+    var local = true;
+    var server = 'http://devbana.tk/';
+    if (local === false) {
+        server = 'http://vanier-robotics.com/2016/';
+    }
+
     function preload(arrayOfImages) {
         $(arrayOfImages).each(function(){
             $('<img src="/"  alt="" >')[0].src = this;
@@ -28,9 +35,6 @@
         '<?=URL?>images/gallery/thumbnail_images/WebRobThinking.JPG',
         '<?=URL?>images/gallery/thumbnail_images/WebThinking.JPG'
     ]);
-
-
-    var server = 'http://vanier-robotics.com/2016/';
 
     $(function(){
 
@@ -171,8 +175,6 @@
 
 
             };
-            // change this to new url!!!!!!!!!
-            //var url = "http://vanier-robotics.com/da2016/auth/rob?index=" + currentIndex;
             var url = server+"/auth/rob/<?=$this->language?>/?index=" + currentIndex;
 
             xdr.open("GET", url, true);

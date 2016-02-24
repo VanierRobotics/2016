@@ -84,3 +84,7 @@ area
     background: url(../images/transitions/fire.gif) no-repeat center center;
     background-size: cover;
 }
+
+.qtip-bootstrap {
+    font-size: 1vw !important;
+}

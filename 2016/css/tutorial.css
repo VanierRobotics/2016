@@ -1,8 +1,9 @@
 	body{
 		background-image: url(../images/tutorial.jpg);
-        background-size: 100%;
+        background-size: cover;
 		border: 0;
 		cursor: url(cursor.png), url(cursor.cur), auto;
+		overflow: auto;
 	}
 	
 	a, #spons, button

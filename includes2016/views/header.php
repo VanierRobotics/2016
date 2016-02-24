@@ -16,8 +16,6 @@
 <![endif]-->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="robots" content="noindex">
-    <!-- TODO: Remove this so google can index us and make us famous and bring us moneys -->
     <?php
     if (isset($this->viewportOveride)) {
         echo $this->viewportOveride;
