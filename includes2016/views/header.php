@@ -23,13 +23,13 @@
         echo $this->viewportOveride;
     } else {
         ?>
-        <meta name="viewport" content="width=device-width, initial-scale=0.3"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
         <?php
     }
     ?>
 
     <!-- START OpenGraph Meta Tags -->
-    <meta property="og:title" content="<?= (isset($this->title)) ? $this->title : 'NO TITLE'; ?>"/>
+    <meta property="og:title" content="<?= (isset($this->title)) ? $this->title : 'Vanier Robotics'; ?>"/>
     <meta property="og:type" content="website"/>
     <meta property="og:description"
           content="Vanier Robotics's entry for the CRC's Pythagorium 2016 Web Design and Journalism competition.">
@@ -65,7 +65,7 @@
     <!-- END JavaScripts -->
 
     <title>
-        <?= (isset($this->title)) ? $this->title : 'NO TITLE'; ?>
+        <?= (isset($this->title)) ? $this->title : 'Vanier Robotics'; ?>
     </title>
 </head>
 

@@ -8,7 +8,7 @@ define('LIBS', PATH . 'core/');
 
 
 define('DB_TYPE', 'mysql');
-define('DB_HOST', 'teambana.com');
+define('DB_HOST', 'localhost');
 define('DB_NAME', 'robotics_2016');
 define('DB_USER', 'readshit');
 define('DB_PASS', 'ezeze8a8e');

@@ -52,13 +52,7 @@
                     </a>
                 </li>
                 <li>
-                    <style scoped>
-                        #spons:hover {
-                            cursor: pointer;
-                        }
-                    </style>
-                    <p id="spons" style="padding-top: 18px;" data-toggle="modal"
-                       data-target="#sponsorsModal"><?= ($this->language === 'en') ? 'Sponsors' : 'Commanditaires' ?></p>
+                    <a href="#" data-toggle="modal" data-target="#sponsorsModal"><?= ($this->language === 'en') ? 'Sponsors' : 'Commanditaires' ?></a>
                 </li>
             </ul>
 
