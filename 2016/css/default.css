@@ -11,7 +11,11 @@ body {
 	cursor: url(cursor.png), url(cursor.cur), auto !important;
 }
 
-a, #spons, button, li[onclick] div
+#content {
+    margin-top: 10vh;
+}
+
+a, button, li[onclick] div
 {
 	cursor: url(cursor.png), url(cursor.cur), pointer !important;
 }
@@ -20,6 +24,14 @@ area
 {
 	cursor: url(cursor_trans.png), url(cursor_trans.cur), pointer;
 }
+
+@media screen and (min-aspect-ratio: 13/9){ }   /*landscape*/
+@media screen and (max-aspect-ratio: 13/9){     /*portrait*/
+    .navbar-brand {
+        display: none;
+    }
+}
+
 @media all and (max-device-width: 350px)  {
     html {
         height: 100%;
@@ -36,15 +48,15 @@ area
 .navbar {
     margin: 0;
     min-height: 0;
-    height: 60px;
+    height: 1vh;
 }
 
 .navbar.navbar-default {
     margin-top: -10px;
-    padding-bottom: 15px;
+    padding-bottom: 2vh;
     font-family: Arvo, serif;
     font-weight: 800;
-    font-size: 0.9vw;
+    font-size: 1.3vw;
     color: black !important;
     margin-bottom: 0;
     z-index: 1000;
@@ -59,6 +71,11 @@ area
 .navbar.navbar-default * {
     font-weight: 800;
     color: black !important;
+}
+
+.nav > li > a {
+    padding-left: 0.70vw;
+    padding-right: 0.70vw;
 }
 
 #lightbox .modal-content {

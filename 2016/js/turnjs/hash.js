@@ -1,3 +1,4 @@
+//TODO: CHANGE SERVER
 var production = true;
 
 /**
@@ -301,9 +302,9 @@ if (production === true) {
 	yepnope({
 		test : Modernizr.csstransforms,
 		yep: ['http://vanier-robotics.com/2016/js/turnjs/turn.min.js'],
-		nope: ['http://vanier-robotics.com/2016/js/turnjs/turn.html4.min.js', 'http://vanier-robotics.com/da2016/css/jquery.ui.html4.css', 'http://vanier-robotics.com/da2016/css/book-html4.css'],
-		both: ['http://vanier-robotics.com/2016/js/turnjs/book.js', 'http://vanier-robotics.com/da2016/css/jquery.ui.css',
-			'http://vanier-robotics.com/2016/css/book.css', 'http://vanier-robotics.com/da2016/js/book.css'],
+		nope: ['http://vanier-robotics.com/2016/js/turnjs/turn.html4.min.js', 'http://vanier-robotics.com/2016/css/jquery.ui.html4.css', 'http://vanier-robotics.com/da2016/css/book-html4.css'],
+		both: ['http://vanier-robotics.com/2016/js/turnjs/book.js', 'http://vanier-robotics.com/2016/css/jquery.ui.css',
+			'http://vanier-robotics.com/2016/css/book.css', 'http://vanier-robotics.com/2016/js/book.css'],
 		complete: delayLoad
 	});
 } else {
