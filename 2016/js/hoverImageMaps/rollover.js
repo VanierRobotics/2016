@@ -35,11 +35,11 @@ $(window).bind('resize', function(e)
 });
 
 $(document).ready(function($){
-
+    var area = $('area');
     $('img[usemap]').maphilight();
     $('map').imageMapResize();
 
-    $('area').qtip({
+    area.qtip({
         style: {
             classes: 'qtip-dark qtip-shadow qtip-bootstrap'
         },
@@ -48,6 +48,8 @@ $(document).ready(function($){
             adjust: { x: 5, y: 5 } // Offset it slightly from under the mouse
         }
     });
+
+    FastClick.attach(document.body);
 });
 
 

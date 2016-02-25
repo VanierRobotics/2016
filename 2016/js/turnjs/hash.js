@@ -291,7 +291,7 @@ function loadApp() {
 }
 
 function delayLoad(){
-    setTimeout(loadApp,1000);
+    setTimeout(loadApp,150);
 }
 
 // Hide canvas
