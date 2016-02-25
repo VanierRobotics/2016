@@ -1,5 +1,5 @@
 //TODO: CHANGE SERVER
-var production = true;
+var production = false;
 
 /**
  * hash.js
@@ -291,7 +291,7 @@ function loadApp() {
 }
 
 function delayLoad(){
-    setTimeout(loadApp,100);
+    setTimeout(loadApp,1000);
 }
 
 // Hide canvas

@@ -1,4 +1,28 @@
-/* Steve jobs' book */
+function getSize() {
+    var width = document.body.clientWidth;
+    var height = document.body.clientHeight;
+
+    return {
+        width: width-300,
+        height: height-300
+    }
+}
+
+function resizeBook() {
+    console.log('resize event triggered');
+
+    var size = getSize();
+    //console.log(size);
+
+    if (size.width > size.height) { // landscape
+        $('.sj-book').turn('display', 'double');
+    }
+    else {
+        $('.sj-book').turn('display', 'single');
+    }
+
+    $('.sj-book').turn('size', size.width, size.height);
+}
 
 function updateDepth(book, newPage) {
 
@@ -47,7 +71,7 @@ function addPage(lang, book_name, page, book ) {
 
         var element = $('<div />',
             {'class': 'own-size',
-                css: {width: 460, height: 582}
+                css: {width: 460, height: 582} //
             }).
         html('<div class="loader"></div>');
 
@@ -221,3 +245,10 @@ function isChrome() {
     return navigator.userAgent.indexOf('Chrome')!=-1;
 
 }
+
+//window.addEventListener('resize', resizeBook);
+
+//document.body.addEventListener('touchmove', function(e) {
+//    e.preventDefault();
+// e.stopPropagation();
+//});
