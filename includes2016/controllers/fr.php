@@ -18,7 +18,7 @@ class fr extends Controller
         $this->view->language = 'fr';
         $this->view->imgPath = URL . 'images/journalism';
         $this->lang = 1;
-        $this->tooltip = "Faites glisser votre doigt, cliquer les coins ou utiliser les flèches pour tourner les pages. Cliquer sur les images pour les agrandir.";
+        //$this->tooltip = "Faites glisser votre doigt, cliquer les coins ou utiliser les flèches pour tourner les pages. Cliquer sur les images pour les agrandir.";
     }
 
     public function index()
