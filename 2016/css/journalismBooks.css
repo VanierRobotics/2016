@@ -76,6 +76,7 @@ a {
     height: 21em;
     z-index: -1;
     margin-top: -25px;
+    margin-left: -80px;
     background: transparent url(../images/teams/shelf.png) no-repeat center center;
     position: relative;
 }
