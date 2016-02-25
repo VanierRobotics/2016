@@ -21,7 +21,7 @@
         echo $this->viewportOveride;
     } else {
         ?>
-        <meta name="viewport" content="width=device-width, initial-scale=0.7, user-scalable=no"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
         <?php
     }
     ?>

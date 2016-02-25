@@ -30,6 +30,7 @@ body, ul, table, form {
 
 #canvas {
     margin: 10px auto !important;
+    margin-left: 11vw !important;
     width: 960px;
     height: 600px;
 }

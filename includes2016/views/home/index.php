@@ -50,6 +50,7 @@ Controller::aTooltip($popup);
 <!-- HRIM - Hoverable Responsive Image Maps -->
 <script src="<?= URL ?>js/hoverImageMaps/jquery.maphilight.min.js"></script>
 <script src="<?= URL ?>js/hoverImageMaps/imageMapResizer.js"></script>
+<script src="<?= URL ?>js/hoverImageMaps/fastclick.js"></script>
 <script src="<?= URL ?>js/hoverImageMaps/rollover.js"></script>
 <!-- qTip - Just the tip.. tooltip you dirty pleb -->
 <script src="<?= URL ?>js/tooltips/jquery.qtip.js"></script>
