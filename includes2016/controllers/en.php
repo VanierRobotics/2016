@@ -18,7 +18,7 @@ class en extends Controller
         $this->view->language = 'en';
         $this->view->imgPath = URL . 'images/journalism';
         $this->lang = 0;
-        //$this->tooltip = "Swipe, click or use arrow keys to flip pages. Click on images to zoom in.";
+        $this->tooltip = "Swipe, click or use arrow keys to flip pages. Click on images to zoom in.";
     }
 
     public function threejs()

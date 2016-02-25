@@ -56,11 +56,11 @@ class View
                 }
             }
 
-            if (isset($this->qtips)) {
+            /*if (isset($this->qtips)) {
                 foreach ($this->qtips as $qtip) {
                     Controller::aTooltip($qtip[0]);
                 }
-            }
+            }*/
 
             /** @noinspection PhpIncludeInspection */
             /** @noinspection PhpIncludeInspection */
